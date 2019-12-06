@@ -2,6 +2,7 @@ import React from "react"
 import Navigation from "./nav"
 import Footer from "./footer"
 import {Helmet } from "react-helmet"
+import layoutStyles from "./layout.module.css"
 
 export default ({ children }) => {
   return (
@@ -23,7 +24,7 @@ export default ({ children }) => {
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       </Helmet>
       <Navigation />
-      {children}
+      <div id={layoutStyles.main}>{children}</div>
       <Footer />
     </>
   )

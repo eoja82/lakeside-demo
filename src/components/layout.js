@@ -6,7 +6,7 @@ import layoutStyles from "./layout.module.css"
 
 export default ({ children }) => {
   return (
-    <>
+    <div id={layoutStyles.body}>
       <Helmet>
         <html lang="en" />
         <meta charset="UTF-8" />
@@ -26,6 +26,6 @@ export default ({ children }) => {
       <Navigation />
       <div id={layoutStyles.main}>{children}</div>
       <Footer />
-    </>
+    </div>
   )
 }

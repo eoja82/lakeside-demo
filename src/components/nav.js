@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-export default () => {
+export default () => { 
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <Link className="navbar-brand" to="/"><img src="/img/logo.png" alt="logo" width="100px" height="57px" /></Link>

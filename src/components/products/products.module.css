@@ -1,0 +1,25 @@
+h1 {
+  margin-top: 2%;
+  text-transform: capitalize;
+  text-align: center;
+}
+#productImg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3%;
+}
+.productImage {
+  display: flex;
+  flex-direction: row;
+}
+#products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3%;
+}

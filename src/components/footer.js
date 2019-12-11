@@ -18,7 +18,8 @@ export default () => {
     </div>
     <div id={footerStyles.contact}>
       <h5>Contact Us</h5>
-      <p><strong>Phone: </strong><br />218-832-3300</p>
+      <p><strong>Phone: </strong><br /><a href="tel:1-218-832-3300">218-832-3300</a></p>
+      <p><strong>Fax: </strong><br />218-832-2302</p>
       <div>
         <a id={footerStyles.facebook} href="https://www.facebook.com/pg/LakesideMarcell/photos/?ref=page_internal" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook-square"></i></a>
         <a id={footerStyles.email} href="/contact/"><i className="fa fa-envelope-square"></i></a>

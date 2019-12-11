@@ -1,0 +1,16 @@
+.about {
+  text-align: center;
+}
+#employees {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.employee {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

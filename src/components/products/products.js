@@ -5,10 +5,10 @@ import React from "react"
 import productStyles from "./products.module.css"
 
 class Display extends React.Component {
-  constructor(props) {
+  /* constructor(props) {
     super(props);
-    //this.state = {product: windows, images: windowsImages}
-  }
+    this.state = {product: windows, images: windowsImages}
+  } */
   
   render() {
     //this.props.product.images.map( x => console.log(x.image));

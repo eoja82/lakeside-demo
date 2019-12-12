@@ -1,0 +1,15 @@
+{
+  "description": "Whether you want a metal or asphalt roof, Lakeside Lumber can supply your roofing needs.",
+  "slug": "/products/roofing/",
+  "product": [
+    {"manufacturer": "Metal Sales", "type": "roofing",
+    "logo": "/img/products/metalsales-logo.png", "link": "https://www.metalsales.us.com/"},
+    {"manufacturer": "Whirlwind", "type": "roofing",
+      "logo": "/img/products/whirlwind-logo.png", "link": "https://www.whirlwindsteel.com/"},
+    {"manufacturer": "Malarkey", "type": "roofing", "logo": "/img/products/malarkey-logo.png", "link": "https://malarkeyroofing.com/products"},
+    {"manufacturer": "Certainteed", "type": "roofing", "logo": "/img/products/certainteed-logo.png", "link": "https://www.certainteed.com/residential-roofing/"},
+    {"manufacturer": "Tamko", "type": "roofing", "logo": "/img/products/tamko-logo.png", "link": "https://www.tamko.com/"},
+    {"manufacturer": "GAF", "type": "roofing", "logo": "/img/products/gaf-logo.png", "link": "https://www.gaf.com/en-us/roofing-products/residential-roofing-products/shingles?Action=GetGrid&ZipCode=56484"}],
+  "images": [{"type": "roofing", "image": "/img/products/metalRoof.jpg"}, 
+    {"type": "roofing", "image": "/img/products/asphaltRoof.jpg"}]  
+}

@@ -27,7 +27,7 @@ class Display extends React.Component {
         </div>
         <div id={productStyles.products}>
           {this.props.product.product.map( (x, i) => 
-            <div key={i}>
+            <div key={i} id={productStyles.logoDiv}>
               <a href={x.link} target="_blank" rel="noopener noreferrer">
                 <img src={x.logo} alt={x.manufacturer} />
               </a>

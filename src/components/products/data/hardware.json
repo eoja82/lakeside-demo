@@ -1,0 +1,13 @@
+{
+  "description": "We have what you need - fasteners, plumbing, electrical, automotive, household items and more!",
+  "slug": "/products/hardware/",
+  "product": [
+    {"manufacturer": "United Hardware", "type": "hardware", "logo": "/img/products/unitedHardware-logo.png", "link": "http://newsite.unitedhardware.com/"},
+    {"manufacturer": "Jeske", "type": "hardware", "logo": "/img/products/jeske-logo.png", "link": "https://www.jeskecompany.com/"}, 
+    {"manufacturer": "Manion's", "type": "hardware", "logo": "/img/products/manions-logo.png", "link": "http://manionswholesale.com/"}
+  ],
+  "images": [
+    {"type": "hardware", "image": "/img/products/plumbing.jpg"},
+    {"type": "hardware", "image": "/img/products/screws.jpg"}
+  ]
+}

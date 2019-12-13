@@ -1,6 +1,6 @@
 {
   "description": "We carry a large selection of paints, stains and finishes from Valspar, Cabot, and Old Masters.",
-  "slug": "/products/paint-stain/",
+  "slug": "/products/paints-and-stains/",
   "product": [
     {"manufacturer": "Valspar", "type": "paint-stain", "logo": "/img/products/valspar-logo.png", "link": "https://www.valsparpaint.com/en/index.html"},
     {"manufacturer": "Cabot", "type": "paint-stain", "logo": "/img/products/cabot-logo.png", "link": "https://www.cabotstain.com/"},

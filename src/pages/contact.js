@@ -5,7 +5,7 @@ import styles from "./contacts.module.css"
 export default () => {
   return (
     <Layout>
-      <h1>Contact Lakeside Lumber & Hardware</h1>
+      <h1 className={styles.about}>Contact Lakeside Lumber & Hardware</h1>
       <p className={styles.about}>No project is too big or to small.  <a href="tel:1-218-832-3300">Call</a>, email, or contact us on <a href="https://www.facebook.com/pg/LakesideMarcell/photos/?ref=page_internal" target="_blank" rel="noopener noreferrer">Facebook <i className="fa fa-facebook-square"></i></a>.  
       </p>
       <p className={styles.about}>We are here to help you with all your building and project needs!</p>

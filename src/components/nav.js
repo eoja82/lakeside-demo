@@ -17,7 +17,9 @@ export default () => {
   data.allDataJson.nodes.forEach( ({slug}, i) => {
     //console.log(slug)
     let split = slug.split("/")
-    let listItem = split[2];
+    console.log(split[2])
+    let listItem = split[2].replace(/-/g, " ");
+    console.log(listItem)
     list.push({path: slug, key: i, name: listItem})
   })
   //console.log(list)

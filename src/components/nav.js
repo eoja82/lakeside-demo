@@ -13,16 +13,17 @@ export default () => {
     }
   }
   `)
+  // for active Link
+  const activeStyles = {
+    color: "white"
+  };
   let list = [];
   data.allDataJson.nodes.forEach( ({slug}, i) => {
-    //console.log(slug)
     let split = slug.split("/")
-    console.log(split[2])
     let listItem = split[2].replace(/-/g, " ");
-    console.log(listItem)
     list.push({path: slug, key: i, name: listItem})
   })
-  //console.log(list)
+  
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
       <Link className="navbar-brand" to="/"><img src="/img/logo.png" alt="logo" width="100px" height="57px" /></Link>
@@ -33,24 +34,24 @@ export default () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" activeStyle={activeStyles}>Products</a>
               <div className="dropdown-menu">
                 {list.map( x => (
                   <Link to={x.path} key={x.key} className="dropdown-item" id={styles.dropdown}>
                     {x.name}
-                  </Link>
+                  </Link> 
                   )
                 )}
               </div>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/rental/">Rental</Link>
+              <Link className="nav-link" to="/rental/" activeStyle={activeStyles}>Rental</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/specials/">Specials</Link>
+              <Link className="nav-link" to="/specials/" activeStyle={activeStyles}>Specials</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact/">Contact</Link>
+              <Link className="nav-link" to="/contact/" activeStyle={activeStyles}>Contact</Link>
             </li>
           </ul>
           <form className="form-inline my-2 my-lg-0">

@@ -21,7 +21,7 @@ class Display extends React.Component {
         </div>
         <div id={productStyles.productImg}>
           {this.props.product.images.map( (x, i) => 
-            <div className={productStyles.productImage} key={i} style={{maxWidth: "400px", height: "auto"}}>
+            <div className={productStyles.productImage} key={i} /* style={{maxWidth: "400px", height: "auto"}} */>
               <img src={x.image} alt={x.type} />
             </div>)}
         </div>

@@ -35,3 +35,7 @@ h4 {
 #logoDiv {
   margin: 5px;
 }
+img {
+  max-width: 400px;
+  height: auto;
+}

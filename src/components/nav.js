@@ -1,6 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import styles from "./nav.module.css"
 
 export default () => { 
@@ -22,7 +21,7 @@ export default () => {
     let split = slug.split("/")
     let listItem = split[2].replace(/-/g, " ");
     list.push({path: slug, key: i, name: listItem})
-  })
+  });
   
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
@@ -34,7 +33,7 @@ export default () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" activeStyle={activeStyles}>Products</a>
+              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
               <div className="dropdown-menu">
                 {list.map( x => (
                   <Link to={x.path} key={x.key} className="dropdown-item" id={styles.dropdown}>

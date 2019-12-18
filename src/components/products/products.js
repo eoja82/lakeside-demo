@@ -20,10 +20,9 @@ class Display extends React.Component {
           </h4>
         </div>
         <div id={productStyles.productImg}>
-          {this.props.product.images.map( (x, i) => 
-            <div className={productStyles.productImage} key={i} /* style={{maxWidth: "400px", height: "auto"}} */>
-              <img src={x.image} alt={x.type} />
-            </div>)}
+          {this.props.product.images.map( (x, i) =>
+            <img src={x.image} alt={x.type} key={i} />
+          )}
         </div>
         <div id={productStyles.products}>
           {this.props.product.product.map( (x, i) => 

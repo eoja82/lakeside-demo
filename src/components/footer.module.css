@@ -7,6 +7,16 @@
   padding: 1% 0 1% 0;
   background-color: lightgray;
 }
+@media only screen and (max-width: 400px) {
+  #footer {
+    max-width: 95%;
+    margin: 1% auto 0 auto;
+    justify-content: left;
+  }
+  #address, #hours, #contact, #facebook {
+    padding-left: 8px;
+  }
+}
 /* @media footer justify content flex-start
 } */
 #hours p, #address p, #contact p {

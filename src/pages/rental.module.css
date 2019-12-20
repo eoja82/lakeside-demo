@@ -1,0 +1,24 @@
+#allEquipment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+}
+.equipHeader {
+  font-size: 1.5rem;
+  color: rgb(2, 117, 69);
+}
+.equipment {
+  margin: 10px;
+}
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+@media only screen and (max-width: 400px) {
+  #allEquipment {
+    justify-content: left;
+  }
+}

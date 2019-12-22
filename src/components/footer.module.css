@@ -7,22 +7,12 @@
   padding: 1% 0 1% 0;
   background-color: lightgray;
 }
-@media only screen and (max-width: 400px) {
-  #footer {
-    max-width: 95%;
-    margin: 1% auto 0 auto;
-    justify-content: left;
-  }
-  #address, #hours, #contact, #facebook {
-    padding-left: 8px;
-  }
-}
-/* @media footer justify content flex-start
-} */
-#hours p, #address p, #contact p {
+.section p {
   margin-bottom: 0;
+  text-align: left;
+  font-size: 1rem;
 }
-#hours h5, #address h5, #contact h5 {
+.section h5 {
   margin-top: 2%;
 }
 #facebook, #email {
@@ -32,4 +22,13 @@
 }
 #facebook:hover, #email:hover {
   color: rgb(34, 83, 218, .8);
+}
+@media only screen and (max-width: 400px) {
+  #footer, #map {
+    margin: 1% auto 0 auto;
+    justify-content: left;
+  }
+  .section {
+    padding-left: 8px;
+  }
 }

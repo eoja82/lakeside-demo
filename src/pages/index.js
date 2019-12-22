@@ -47,7 +47,7 @@ class Index extends React.Component {
             <ul>
               <li>Lumber</li>
               <li>Hardware</li>
-              <li>Paints & Stain</li>
+              <li>Paint & Stain</li>
               <li>Roofing</li>
             </ul>
             <ul>
@@ -60,6 +60,42 @@ class Index extends React.Component {
         </div>
         <div id={indexStyles.slideshow}>
           <img src={this.state.src} alt={this.state.alt} className={indexStyles.introSlides} />
+        </div>
+      </div>
+      <div id={indexStyles.moreInfo}>
+        <div className={indexStyles.flex}>
+          <div>
+          <img src="/img/storeFront.jpg" />
+          </div>
+          <div>
+          <p>Our retail store in Marcell, MN offers everything a builder or homeowner will need.</p>
+          <p>​With a knowledgeable and courteous staff, we are always happy to help you with your projects.</p>
+          </div>
+        </div>
+        <div className={indexStyles.flex}>
+          <div>
+            <p>We have a wide variety of treated, SPF, and cedar lumber.</p>
+          </div>
+          <div>
+            <img src="/img/wharehouseInside.jpg" alt="inside wharehouse" />
+          </div>
+        </div>  
+        <div className={indexStyles.flex}>
+          <div>
+            <img src="/img/truckShingles.jpg" alt="delivery truck" />
+          </div>
+          <div>
+            <p>We have supplies for a new roof or to repair an existing one - from steel to tar-paper.</p>
+          </div>
+        </div>
+        <div className={indexStyles.flex}>
+          <div>
+            <p>WE DELIVER!</p>
+            <p>Proudly serving the Edge of the Wilderness area - Marcell, Bigfork, Effie, as well as Deer River, Balsom, Talmoon, and Grand Rapids areas.</p>
+          </div>
+          <div>
+            <img src="/img/loadedTruck.jpg" alt="delivery truck" />
+          </div>
         </div>
       </div>
     </Layout>

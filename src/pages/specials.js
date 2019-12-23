@@ -3,42 +3,14 @@ import Layout from "../components/layout"
 import styles from "./specials.module.css"
 
 class Specials extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {isLoaded: false};
-    this.refresh = this.refresh.bind(this);
-  }
-  refresh() {
-    console.log("refresh " + this.state.isLoaded)
-    if (!this.state.isLoaded) {
-      this.setState({isLoaded: true});
-      window.location.reload();
-      /* setTimeout(function() {
-        window.location.reload();
-      }, 4000); */
-    }
-  }
-  componentDidMount() {
-    if (!this.state.isLoaded) {
-      //this.refresh();
-      //this.setState({isLoaded: true});
-    }  
-    console.log("didMount " + this.state.isLoaded);
-  }
-  componentWillUnmount() {
-    this.setState({isLoaded: false});
-    console.log("unMount " + this.state.isLoaded);
-  } 
   render() {
-    console.log("render " + this.state.isLoaded);
     return (
       <Layout>
-        <div id="fb-root"></div>
-        <p>Scroll to see more specials.</p>
-        <div id={styles.facebook} className="fb-page" data-href="https://www.facebook.com/LakesideMarcell/" data-tabs="timeline" data-width="500" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/LakesideMarcell/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/LakesideMarcell/">Lakeside Lumber &amp; Hardware LLC</a></blockquote>
-        </div>
-        <p>If you don't see specials here click the link above to see our specials on Facebook.</p>
-        <button onClick={this.refresh}>Button</button>
+        <p>Scroll through the Facebook feed to see our specials.</p>
+        <p id={styles.p6}>
+          If you don't see the specials click <a href="https://www.facebook.com/pg/LakesideMarcell/posts/?ref=page_internal" target="_blank" rel="noopener noreferrer">here </a>to view the specials on Facebook.
+        </p>
+        <iframe id={styles.facebook} src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLakesideMarcell%2F&tabs=timeline&small_header=true&width=500&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" style={{border: "none", overflow: "hidden"}} scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
       </Layout>
     )
   }

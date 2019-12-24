@@ -1,5 +1,12 @@
+#container {
+  background-image: url("/img/cedarPanel.jpg");
+  background-size: cover;
+  color: white;
+}
 .about {
   text-align: center;
+  padding-top: 1%;
+  margin: 0;
 }
 #employees {
   display: flex;
@@ -8,9 +15,25 @@
   justify-content: space-around;
   max-width: 80%;
   margin: 0 auto;
+  padding: 1% 0 2% 0;
 }
 .employee {
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding: 1%;
 }
+.employeeImg {
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px rgb(121, 85, 61);
+}
+.link {
+  color: white;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+@media only screen and (max-width: 400px) {
+  .about {
+    padding: 0 8px 0 8px;
+  }
+} 

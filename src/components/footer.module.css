@@ -24,10 +24,10 @@
 }
 @media only screen and (max-width: 400px) {
   #footer, #map {
-    margin: 1% auto 0 auto;
+    margin: 0 auto 0 auto;
     justify-content: left;
   }
   .section {
-    padding-left: 8px;
+    padding: 0 8px 0 8px;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import styles from "./index.module.css"
+import { Link } from "gatsby"
 
 let slides = [{src: "img/slideShow/kitchen.jpg", alt: "kitchen"},
               {src: "img/slideShow/houseWDeck.jpg", alt: "house with deck"},
@@ -58,7 +59,7 @@ class Index extends React.Component {
           <img src={this.state.src} alt={this.state.alt} className={styles.introSlides} />
         </div>
         <div id={styles.arrowDown}>
-        <a href="#moreInfo" id={styles.arrow}><i class="fa fa-angle-down"></i></a>
+        <Link to="#index-module--arrowDown--1Y143" id={styles.arrow}><i className="fa fa-angle-down"></i></Link>
         </div>
       </div>
       <div id={styles.moreInfo}>

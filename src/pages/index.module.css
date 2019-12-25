@@ -43,8 +43,9 @@ body {
 }
 #slideshow {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  max-width: 80%;
+  max-width: 50%;
   max-height: 90vh;
   margin: 4% auto 0 auto;
 }

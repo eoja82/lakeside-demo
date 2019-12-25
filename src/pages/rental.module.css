@@ -1,24 +1,70 @@
+#container {
+  background-image: url("/img/cedarPanel.jpg");
+  background-size: cover;
+  color: white;
+  padding-top: 2%;
+}
 #allEquipment {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  color: white;
   max-width: 80%;
-  margin: auto;
+  padding-bottom: 2%;
+  margin: 0 auto 0 auto;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  /* justify-content: center; */
+  max-width: 100%;
+  margin: 2% 0 1% 0;
+}
+/* .imgDiv {
+  display: flex;
+  justify-content: center; 
+  max-width: 50%;
+  margin: 0 auto 0 auto;
+} */
+.listDiv {
+  width: 400px;
 }
 .equipHeader {
   font-size: 1.5rem;
-  color: rgb(2, 117, 69);
+  text-align: left;
 }
 .equipment {
   margin: 10px;
 }
 li {
   text-decoration: none;
-  list-style-type: none;
+  /* list-style-type: none; */
+}
+.productImg {
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px rgb(121, 85, 61);
 }
 @media only screen and (max-width: 400px) {
   #allEquipment {
     justify-content: left;
+  }
+  /* .flex {
+    flex-wrap: wrap;
+  } */
+  .padding {
+    width: 95%;
+  }
+  .productImg {
+    max-height: 100px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .productImg {
+    max-height: 200px;
+  }
+  #allEquipment {
+    justify-content: center;
   }
 }

@@ -19,7 +19,7 @@ export default () => {
       <div className={footerStyles.section}>
         <h5><strong>Contact Us</strong></h5>
         <p><i className="fa fa-phone"></i> Phone: <br /><a href="tel:1-218-832-3300">218-832-3300</a></p>
-        <p><i class="fa fa-fax"></i> Fax: <br />218-832-2302</p>
+        <p><i className="fa fa-fax"></i> Fax: <br />218-832-2302</p>
         <div>
           <a id={footerStyles.facebook} href="https://www.facebook.com/LakesideMarcell/" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook-square"></i></a>
           <a id={footerStyles.email} href="/contact/"><i className="fa fa-envelope-square"></i></a>

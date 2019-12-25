@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import indexStyles from "./index.module.css"
+import styles from "./index.module.css"
 
 let slides = [{src: "img/slideShow/kitchen.jpg", alt: "kitchen"},
               {src: "img/slideShow/houseWDeck.jpg", alt: "house with deck"},
@@ -40,61 +40,60 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-      <div id={indexStyles.intro}>
-        <div id={indexStyles.about}>
-          <h3>Lakeside Lumber is your source for:</h3>
-          <div id={indexStyles.aboutList}>
-            <ul>
-              <li>Lumber</li>
-              <li>Hardware</li>
-              <li>Paint & Stain</li>
-              <li>Roofing</li>
-            </ul>
-            <ul>
-              <li>Doors</li>
-              <li>Windows</li>
-              <li>Docks</li>
-              <li>And More!</li>
-            </ul>
-          </div>
+      <div id={styles.intro}> 
+        <div id={styles.about}>
+        <h3 id={styles.h3}>Lakeside Lumber is your source for:</h3>
+        <div id={styles.list}>
+          <a href="/products/lumber/"><p className={styles.p}>Lumber</p></a>
+          <a href="/products/hardware/"><p className={styles.p}>Hardware</p></a>
+          <a href="/products/paints-and-stains/"><p className={styles.p}>Paint & Stain</p></a>
+          <a href="/products/roofing/"><p className={styles.p}>Roofing</p></a>
+          <a href="/products/doors/"><p className={styles.p}>Doors</p></a>
+          <a href="/products/windows/"><p className={styles.p}>Windows</p></a>
+          <a href="/products/docks/"><p className={styles.p}>Docks</p></a>
+          <p className={styles.p}>And More!</p>
         </div>
-        <div id={indexStyles.slideshow}>
-          <img src={this.state.src} alt={this.state.alt} className={indexStyles.introSlides} />
+        </div>
+        <div id={styles.slideshow}>
+          <img src={this.state.src} alt={this.state.alt} className={styles.introSlides} />
+        </div>
+        <div id={styles.arrowDown}>
+        <a href="#moreInfo" id={styles.arrow}><i class="fa fa-angle-down"></i></a>
         </div>
       </div>
-      <div id={indexStyles.moreInfo}>
-        <div className={indexStyles.flex}>
+      <div id={styles.moreInfo}>
+        <div className={styles.flex + " " + styles.reverse}>
           <div>
-          <img src="/img/storeFront.jpg" />
+            <img className={styles.moreInfoImg} src="/img/storeFront.jpg" alt="store front" />
           </div>
           <div>
-          <p>Our retail store in Marcell, MN offers everything a builder or homeowner will need.</p>
-          <p>​With a knowledgeable and courteous staff, we are always happy to help you with your projects.</p>
+            <p>Our retail store in Marcell, MN offers everything a builder or homeowner will need.</p>
+            <p>​With a knowledgeable and courteous staff, we are always happy to help you with your projects.</p>
           </div>
         </div>
-        <div className={indexStyles.flex}>
+        <div className={styles.flex + " " + styles.wrap}>
           <div>
             <p>We have a wide variety of treated, SPF, and cedar lumber.</p>
           </div>
           <div>
-            <img src="/img/wharehouseInside.jpg" alt="inside wharehouse" />
+            <img className={styles.moreInfoImg} src="/img/wharehouseInside.jpg" alt="inside wharehouse" />
           </div>
         </div>  
-        <div className={indexStyles.flex}>
+        <div className={styles.flex + " " + styles.reverse}>
           <div>
-            <img src="/img/truckShingles.jpg" alt="delivery truck" />
+            <img className={styles.moreInfoImg} src="/img/truckShingles.jpg" alt="delivery truck" />
           </div>
           <div>
             <p>We have supplies for a new roof or to repair an existing one - from steel to tar-paper.</p>
           </div>
         </div>
-        <div className={indexStyles.flex}>
+        <div className={styles.flex + " " + styles.wrap}>
           <div>
             <p>WE DELIVER!</p>
             <p>Proudly serving the Edge of the Wilderness area - Marcell, Bigfork, Effie, as well as Deer River, Balsom, Talmoon, and Grand Rapids areas.</p>
           </div>
           <div>
-            <img src="/img/loadedTruck.jpg" alt="delivery truck" />
+            <img className={styles.moreInfoImg} src="/img/loadedTruck.jpg" alt="delivery truck" />
           </div>
         </div>
       </div>

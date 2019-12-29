@@ -1,10 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 import styles from "./rental.module.css"
 
 export default () => {
   return (
     <Layout>
+      <Helmet>
+        <title>Lakeside Lumber - rental equipment</title>
+        <meta name="description" content="We have a selection of rental equipment availble that will enable you to complete your projects efficiently." />
+        <meta name="keywords" content="rent, rental, tools, drywall, lift, skidsteer, nailer, scaffold, insulation, blower" />
+      </Helmet>
       <div id={styles.container}>
         <h4>
           We have a selection of rental equipment availble that will enable you to complete your projects efficiently.

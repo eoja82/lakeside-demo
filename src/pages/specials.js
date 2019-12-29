@@ -1,11 +1,16 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
 import styles from "./specials.module.css"
 
 class Specials extends React.Component {
   render() {
     return (
       <Layout>
+        <Helmet>
+          <title>Lakeside Lumber - current specials</title>
+          <meta name="description" content="Current specials at Lakeside Lumber" />
+        </Helmet>
         <div id={styles.container}>
           <p>Scroll through the Facebook feed to see our specials.</p>
           <p id={styles.p6}>

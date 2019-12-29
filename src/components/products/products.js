@@ -1,19 +1,18 @@
 import React from "react"
-//import { Link } from "gatsby"
-//import { windowsImages, windows } from "./prodData.js";
-//import products from "../../pages/products.js";
+import { Helmet } from "react-helmet"
 import styles from "./products.module.css"
 
 class Display extends React.Component {
-  /* constructor(props) {
-    super(props);
-    this.state = {product: windows, images: windowsImages}
-  } */
-  
   render() {
-    //this.props.product.images.map( x => console.log(x.image));
+    let split = this.props.product.slug.split("/")
+    let titleInfo = split[2].replace(/-/g, " ");
     return (
       <div id={styles.container}>
+        <Helmet>
+          <title>{`Lakeside Lumber is your source for ${titleInfo}`}</title>
+          <meta name="description" content={this.props.product.description} />
+          <meta name="keywords" content={`marcell, bigfok, effie, deer river, talmoon, grand rapids, ${titleInfo}`} />
+        </Helmet>
         <div id={styles.header}>
           <h4 id={styles.productHeader}>
             {this.props.product.description}

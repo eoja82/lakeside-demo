@@ -14,7 +14,7 @@ export default () => {
   `)
   // for active Link
   const activeStyles = {
-    backgroundColor: "rgb(65, 65, 65)",
+    backgroundColor: "rgb(58, 65, 76, .7)",
     color: "white"
   };
   let list = [];
@@ -24,12 +24,12 @@ export default () => {
     list.push({path: slug, key: i, name: listItem})
   });
   return (
-    <nav className="nav flex-column navbar-light bg-light fixed-left" id={styles.sidebar}>
+    <div id={styles.sidebar}>
       {list.map( x => (
-        <Link to={x.path} className="nav-link" id={styles.link} activeStyle={activeStyles} key={x.key}>
+        <Link to={x.path} id={styles.link} activeStyle={activeStyles} key={x.key}>
           {x.name}
         </Link>
       ))}
-    </nav>
+    </div>
   )
 }

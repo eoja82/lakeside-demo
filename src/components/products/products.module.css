@@ -51,9 +51,10 @@ img {
     padding: 2px 0 2px 0;
   }
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 800px) {
   .productImg {
-    max-width: 70%;
+    max-width: 300px;
+    max-height: 200px;
     padding: 3px 0 3px 0;
   }
 }

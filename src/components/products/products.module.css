@@ -27,6 +27,7 @@ h4 {
 .productImg {
   border-radius: 5px;
   box-shadow: 5px 5px 8px rgb(121, 85, 61);
+  max-height: 375px;
 }
 #products {
   display: flex;

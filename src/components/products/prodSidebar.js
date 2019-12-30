@@ -14,7 +14,7 @@ export default () => {
   `)
   // for active Link
   const activeStyles = {
-    backgroundColor: "rgb(58, 65, 76, .7)",
+    backgroundColor: "rgb(58, 65, 76, .95)",
     color: "white"
   };
   let list = [];

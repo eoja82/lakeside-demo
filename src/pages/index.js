@@ -47,7 +47,7 @@ class Index extends React.Component {
         <div id={styles.list}>
           <a href="/products/lumber/"><p className={styles.p}>Lumber</p></a>
           <a href="/products/hardware/"><p className={styles.p}>Hardware</p></a>
-          <a href="/products/paints-and-stains/"><p className={styles.p}>Paint & Stain</p></a>
+          <a href="/products/paint-and-stain/"><p className={styles.p}>Paint & Stain</p></a>
           <a href="/products/roofing/"><p className={styles.p}>Roofing</p></a>
           <a href="/products/doors/"><p className={styles.p}>Doors</p></a>
           <a href="/products/windows/"><p className={styles.p}>Windows</p></a>

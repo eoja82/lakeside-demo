@@ -1,6 +1,7 @@
 {
   "description": "We have what you need - fasteners, plumbing, electrical, automotive, household items and more!",
   "slug": "/products/hardware/",
+  "descriptionLogos": "",
   "product": [
     {"manufacturer": "United Hardware", "type": "hardware", "logo": "/img/products/unitedHardware-logo.png", "link": "http://newsite.unitedhardware.com/"},
     {"manufacturer": "Jeske", "type": "hardware", "logo": "/img/products/jeske-logo.png", "link": "https://www.jeskecompany.com/"}, 

@@ -1,5 +1,6 @@
 {
-  "description": "We have a large selection of lumber - SPF, treated, cedar, and sheet goods.  Click on the lists below the pictures to see a list of the lumber demensions we keep in stock.",
+  "description": "We have a large selection of lumber - SPF, treated, cedar, and sheet goods.  Click on the lists below the pictures to see a list of the lumber demensions we keep in stock.12",
+  "descriptionLogos": "",
   "slug": "/products/lumber/",
   "product": [
     {"manufacturer": "spf", "type": "lumber", "logo": "/lumber/spf.png", "link": "/lumber/spf.pdf"},

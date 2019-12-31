@@ -1,5 +1,6 @@
 {
-  "description": "We offer natural wood siding from BlueLinx, wood composite siding from Diamond Kote and LP, steel siding from Quality Edge and Edco, cement siding from James Hardie, vinyl siding from Certainteed, Gentek or Timbermill, and finish off your project with siding accesories from Mid America.",
+  "description": "We have siding available in a varity of materials to match your project's needs.",
+  "descriptionLogos": "NATURAL WOOD: BlueLinx.*WOOD COMPOSITE: Diamond Kote and LP.*STEEL: Quality Edge and Edco.*CEMENT: James Hardie.*VINYL: Certainteed, Gentek, AND Timbermill.*SIDING ACCESORIES: Mid America.",
   "slug": "/products/siding/",
   "product": [
     {"manufacturer": "BlueLinx", "type": "siding", "logo": "/img/products/blueLinx-logo.png", "link": "https://northcentral.bluelinxco.com/products/exteriors/natural-wood-siding/"},

@@ -20,6 +20,7 @@ export const query = graphql`
   query ($slug: String!) {
     dataJson(slug: {eq: $slug}) {
       description
+      descriptionLogos
       images {
         image 
         type

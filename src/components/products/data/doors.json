@@ -1,6 +1,7 @@
 {
-  "description": "We are your local supplier for interior, exterior, storm, and garage doors!",
+  "description": "We are your local source for exterior doors, interior doors, and garage doors!",
   "slug": "/products/doors/",
+  "descriptionLogos": "EXTERIOR DOORS: Manions, Tru Tech, Therma Tru and Waudena Millwork.*STORM DOORS:  Pella and Larson.*INTERIOR DOORS: Manion's, Masonite, Koch Doors, and Stallion Collection.*LOCKSETS: Stone Harbor.*GARAGE DOORS: North Central Door and Holmes Garage Door.*GARAGE DOOR OPENERS: Chaimberlain.",
   "product": [
     {"manufacturer": "Manion's", "type": "doors", "logo": "/img/products/manionDoor-logo.jpg", "link": "http://manionswholesale.com/manions-door-catalog/"},
     {"manufacturer": "Tru Tech", "type": "doors", "logo": "/img/products/truTech-logo.jpg", "link": "https://trutechdoors.com/"},

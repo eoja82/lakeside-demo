@@ -1,0 +1,18 @@
+{
+  "description": "We have a wide varity of siding available - wood, vinyl, composite, or cement.",
+  "slug": "/products/siding/",
+  "product": [
+    {"manufacturer": "Diamond Kote", "type": "siding", "logo": "/img/products/diamondKote-logo.png", "link": "https://diamondkotesiding.com/"},
+    {"manufacturer": "LP", "type": "siding", "logo": "/img/products/lp-logo.png", "link": "https://lpcorp.com/products/exterior/siding-trim"},
+    {"manufacturer": "Quality Edge", "type": "siding", "logo": "/img/products/qualityedge.png", "link": "https://www.qualityedge.com/siding/"},
+    {"manufacturer": "Mid America", "type": "siding", "logo": "/img/products/midAmerica-logo.png", "link": "https://www.midamericacomponents.com/"},
+    {"manufacturer": "James Hardie", "type": "siding", "logo": "/img/products/jamesHardie-logo.png", "link": "https://www.jameshardie.com/"},
+    {"manufacturer": "Certainteed", "type": "siding", "logo": "/img/products/certainteed-logo.png", "link": "https://www.certainteed.com/siding/vinyl/"},
+    {"manufacturer": "Gentek", "type": "siding", "logo": "/img/products/gentek-logo.png", "link": "https://www.gentekinc.com/default/Siding/VinylSiding.aspx"},
+    {"manufacturer": "Timber Mill", "type": "siding", "logo": "/img/products/timberMill-logo.png", "link": "https://timbermillsiding.com/"}
+  ],
+  "images": [
+    {"type": "siding", "image": "/img/products/siding1.jpg"},
+    {"type": "siding", "image": "/img/products/siding2.jpg"}
+  ]
+}

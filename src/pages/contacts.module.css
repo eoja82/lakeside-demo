@@ -29,8 +29,9 @@
 }
 .link {
   color: white;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+}
+.link:hover {
+  color: rgb(194, 194, 194);
 }
 @media only screen and (max-width: 440px) {
   .about {

@@ -4,7 +4,8 @@
   "product": [
     {"manufacturer": "Valspar", "type": "paint-stain", "logo": "/img/products/valspar-logo.png", "link": "https://www.valsparpaint.com/en/index.html"},
     {"manufacturer": "Cabot", "type": "paint-stain", "logo": "/img/products/cabot-logo.png", "link": "https://www.cabotstain.com/"},
-    {"manufacturer": "Old Masters", "type": "paint-stain", "logo": "/img/products/oldMasters-logo.png", "link": "https://myoldmasters.com/"}
+    {"manufacturer": "Old Masters", "type": "paint-stain", "logo": "/img/products/oldMasters-logo.png", "link": "https://myoldmasters.com/"},
+    {"manufacturer": "Rust-oleum", "type": "paint-stain", "logo": "/img/products/rustoleum-logo.png", "link": "https://www.rustoleum.com/product-catalog/consumer-brands/chalked/"}
   ],
   "images": [
     {"type": "paint-stain", "image": "/img/products/valsparIdea.jpg"},

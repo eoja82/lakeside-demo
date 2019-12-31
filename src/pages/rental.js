@@ -58,7 +58,7 @@ export default () => {
             <div className={styles.listDiv}>
               <p className={styles.equipHeader}>Insulation Blower:</p>
               <ul>
-                <li>Free With Purchase of $250 Insulation</li>
+                <li>Free Rental With Insulation Purchase of $250 or more</li>
                 <li>100' Hose</li>
               </ul>
             </div>
@@ -66,7 +66,7 @@ export default () => {
           </div>
           <div className={styles.flex}>
             <div className={styles.listDiv}>
-              <p className={styles.equipHeader}>Other Tools:</p>
+              <p className={styles.equipHeader}>Other Equipment:</p>
               <ul>
                 <li>Drywall Lift</li>
                 <li>Pex Tool</li>

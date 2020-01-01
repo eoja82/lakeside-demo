@@ -15,7 +15,7 @@ class Display extends React.Component {
           <meta name="keywords" content={`marcell, bigfok, effie, deer river, talmoon, grand rapids, ${titleInfo}`} />
         </Helmet>
         <div id={styles.header}>
-          <p>{this.props.product.description}</p>
+          <h1 id={styles.h1}>{this.props.product.description}</h1>
         </div>
         <div id={styles.productImg}>
           {this.props.product.images.map( (x, i) =>

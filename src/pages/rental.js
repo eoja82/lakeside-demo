@@ -12,7 +12,7 @@ export default () => {
         <meta name="keywords" content="rent, rental, tools, drywall, lift, skidsteer, nailer, scaffold, insulation, blower" />
       </Helmet>
       <div id={styles.container}>
-        <h4>
+        <h4 id={styles.h4}>
           We have a selection of rental equipment availble that will enable you to complete your projects efficiently.
         </h4>
         <div id={styles.allEquipment}>

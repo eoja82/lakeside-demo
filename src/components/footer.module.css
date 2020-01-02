@@ -4,8 +4,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 1% 0 1% 0;
-  background-color: rgb(148, 148, 148);
-  color: white;
+  background-color: rgb(83, 83, 83);
+  color: rgb(221, 221, 221);
 }
 .section p {
   margin-bottom: 0;
@@ -16,15 +16,15 @@
   margin-top: 2%;
 }
 #phone {
-  color: white;
+  color: rgb(221, 221, 221);
 }
 #facebook, #email {
   margin: 0 3px;
-  color: white;
+  color: rgb(221, 221, 221);
   font-size: 3rem;
 }
 #facebook:hover, #email:hover, #phone:hover {
-  color: rgb(34, 83, 218, .8);
+  color: white;
 }
 @media only screen and (max-width: 400px) {
   #footer, #map {

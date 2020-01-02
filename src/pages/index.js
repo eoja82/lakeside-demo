@@ -15,11 +15,12 @@ let slides = [{src: "img/slideShow/kitchen.jpg", alt: "kitchen"},
               {src: "img/slideShow/metalGarage.jpg", alt: "metalGarage"}
             ];
 let slideIndex = 0;
+let activeDot = 0;
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {src: slides[0].src, alt: slides[0].alt};
+    this.state = {src: slides[slideIndex].src, alt: slides[slideIndex].alt};
     this.setSlide = this.setSlide.bind(this);
     this.newSlide = this.newSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
@@ -29,15 +30,20 @@ class Index extends React.Component {
     e.target.className = (styles.slideDot) + " " + (styles.activeDot);
     let index = e.target.getAttribute("data-index");
     slideIndex = index;
+    activeDot = index;
     this.setState({src: slides[index].src, alt: slides[index].alt})
     clearInterval(this.next);
   }
   newSlide() {
-    this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
-    slideIndex++;
-    if (slideIndex === slides.length) {
+    if (slideIndex === slides.length - 1) {
       slideIndex = 0;
-    } 
+      activeDot = 0;
+      this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+    } else {
+      slideIndex++;
+      activeDot++;
+      this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+    }
   }
   nextSlide() {
     this.next = setInterval(this.newSlide, 2500);
@@ -47,7 +53,7 @@ class Index extends React.Component {
   }
   componentWillUnmount() {
     clearInterval(this.next);
-    slideIndex = 0;
+    slideIndex = slideIndex;
   }
   render() {
     return (
@@ -74,7 +80,7 @@ class Index extends React.Component {
           <img src={this.state.src} alt={this.state.alt} className={styles.introSlides} />
           <div id={styles.slideDots}>
             {slides.map( (x, i) => {
-              let isActive = i === slideIndex ? true : false;
+              let isActive = i === activeDot ? true : false;
               return (
                 <div className={styles.slideDot + " " + (isActive ? styles.activeDot : "")} key={`${x.alt}${i}`} data-index={i} onClick={this.setSlide}></div>
               )

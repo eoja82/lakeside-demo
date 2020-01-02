@@ -52,6 +52,22 @@
 .introSlides {
   max-width: 100%;
 }
+#slideDots{
+  display: flex;
+  flex-direction: row;
+  max-width: 80%;
+  margin: -30px auto 0 auto;
+}
+.slideDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255, .5);
+  margin: 5px;
+}
+.activeDot {
+  background-color: white;
+}
 #arrowDown {
   display: flex;
   flex-direction: row;

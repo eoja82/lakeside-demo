@@ -1,7 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import styles from "./index.module.css"
-import { Link } from "gatsby"
+//import { Helmet } from "react-helmet"
+//import { Link } from "gatsby"
 
 let slides = [{src: "img/slideShow/kitchen.jpg", alt: "kitchen"},
               {src: "img/slideShow/houseWDeck.jpg", alt: "house with deck"},
@@ -13,24 +14,37 @@ let slides = [{src: "img/slideShow/kitchen.jpg", alt: "kitchen"},
               {src: "img/slideShow/house1.jpg", alt: "house"},
               {src: "img/slideShow/metalGarage.jpg", alt: "metalGarage"}
             ];
-let slideIndex = 1;
+let slideIndex = 0;
+let activeDot = 0;
 
 class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {src: slides[0].src, alt: slides[0].alt};
+    this.setSlide = this.setSlide.bind(this);
     this.newSlide = this.newSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
+  }
+  setSlide(e) {
+    //console.log(e.target.getAttribute("class"))
+    e.target.className = (styles.slideDot) + " " + (styles.activeDot);
+    let index = e.target.getAttribute("data-index");
+    slideIndex = index;
+    activeDot = index;
+    this.setState({src: slides[index].src, alt: slides[index].alt})
+    clearInterval(this.next);
   }
   newSlide() {
     this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
     slideIndex++;
+    activeDot++;
     if (slideIndex === slides.length) {
       slideIndex = 0;
+      activeDot = 0;
     } 
   }
   nextSlide() {
-    this.next = setInterval(this.newSlide, 2000);
+    this.next = setInterval(this.newSlide, 2500);
   }
   componentDidMount() {
     this.nextSlide();
@@ -41,6 +55,9 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
+      {/* <Helmet>
+        <script src="util.js"></script>
+      </Helmet>   */}
       <div id={styles.intro}> 
         <div id={styles.about}>
         <h3 id={styles.h3}>Lakeside Lumber is your source for:</h3>
@@ -58,9 +75,48 @@ class Index extends React.Component {
         </div>
         <div id={styles.slideshow}>
           <img src={this.state.src} alt={this.state.alt} className={styles.introSlides} />
-        </div>
+          <div id={styles.slideDots}>
+            {slides.map( (x, i) => {
+              let isActive = i === activeDot ? true : false;
+              return (
+                <div className={styles.slideDot + " " + (isActive ? styles.activeDot : "")} key={`${x.alt}${i}`} data-index={i} onClick={this.setSlide}></div>
+              )
+            })}
+          </div>
+        </div> 
+        {/* <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src="img/slideShow/kitchen.jpg" className="d-block w-100" alt="kitchen" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/houseWDeck.jpg" className="d-block w-100" alt="house with deck" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/deck.jpg" className="d-block w-100" alt="deck" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/delivery1.jpg" className="d-block w-100" alt="delivery truck" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/garageFrame.jpg" className="d-block w-100" alt="framed garage" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/lightLogo.jpg" className="d-block w-100" alt="Lakeside Lumber logo" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/garageFinished.jpg" className="d-block w-100" alt="finished garage" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/house1.jpg" className="d-block w-100" alt="house" />
+            </div>
+            <div className="carousel-item">
+              <img src="img/slideShow/metalGarage.jpg" className="d-block w-100" alt="metal garage" />
+            </div>
+          </div>
+        </div> */}
         <div id={styles.arrowDown}>
-        <Link to="#index-module--arrowDown--1Y143" id={styles.arrow}><i className="fa fa-angle-down"></i></Link>
+        <a href="#index-module--arrowDown--1Y143" id={styles.arrow}><i className="fa fa-angle-down"></i></a>
         </div>
       </div>
       <div id={styles.moreInfo}>

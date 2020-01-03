@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
-import styles from "./contacts.module.css"
+import styles from "./styles/contacts.module.css"
 
 export default () => {
   return (

@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
-import styles from "./rental.module.css"
+import styles from "./styles/rental.module.css"
 
 export default () => {
   return (

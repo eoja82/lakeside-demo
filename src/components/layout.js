@@ -2,7 +2,7 @@ import React from "react"
 import Navigation from "./nav"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
-import layoutStyles from "./layout.module.css"
+import layoutStyles from "./styles/layout.module.css"
 
 export default ({ children }) => {
   return (

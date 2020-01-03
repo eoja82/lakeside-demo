@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import styles from "./products.module.css"
+import styles from "./styles/products.module.css"
 
 class Display extends React.Component {
   render() {

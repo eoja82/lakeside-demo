@@ -1,15 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
-import styles from "./index.module.css"
+import styles from "./styles/index.module.css"
 
-let slides = [{src: "img/slideShow/kitchen.jpg", alt: "kitchen", isActive: true, index: 0},
-              {src: "img/slideShow/houseWDeck.jpg", alt: "house with deck", isAvtive: false, index: 1},
-              {src: "img/slideShow/deck.jpg", alt: "deck", isAvtive: false, index: 2},
-              {src: "img/slideShow/delivery1.jpg", alt: "delivery truck", isAvtive: false, index: 3},
+let slides = [{src: "img/slideShow/ccHome.jpg", alt: "finished home", isActive: true, index: 0},
+              {src: "img/slideShow/ccHome2.jpg", alt: "house with housewrap", isAvtive: false, index: 1},
+              {src: "img/slideShow/delivery1.jpg", alt: "delivery truck", isAvtive: false, index: 2},
+              {src: "img/slideShow/deck.jpg", alt: "deck", isAvtive: false, index: 3},
               {src: "img/slideShow/garageFrame.jpg", alt: "framed garage", isAvtive: false, index: 4},
-              {src: "img/slideShow/lightLogo.jpg", alt: "Lakeside Lumber", isAvtive: false, index: 5},
-              {src: "img/slideShow/garageFinished.jpg", alt: "finished garage", isAvtive: false, index: 6},
-              {src: "img/slideShow/house1.jpg", alt: "house", isAvtive: false, index: 7},
+              {src: "img/slideShow/kitchen.jpg", alt: "kitchen", isAvtive: false, index: 5},
+              {src: "img/slideShow/house1.jpg", alt: "house", isAvtive: false, index: 6},
+              {src: "img/slideShow/ccFireplace.jpg", alt: "fireplace", isActive: false, index: 7},
               {src: "img/slideShow/metalGarage.jpg", alt: "metalGarage", isAvtive: false, index: 8}
             ];
 let slideIndex = 0;

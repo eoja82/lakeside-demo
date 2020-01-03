@@ -14,8 +14,8 @@ export default () => {
   `)
   // for active Link
   const activeStyles = {
-    backgroundColor: "rgb(58, 65, 76, .95)",
-    color: "white"
+    backgroundColor: "rgb(198, 198, 198, .7)",
+    color: "black"
   };
   let list = [];
   data.allDataJson.nodes.forEach( ({slug}, i) => {

@@ -49,13 +49,17 @@
 }
 #slideshow img {
   border-radius: 5px;
-  /* for Carousel */
   width:  100%;
 }
-.introSlides {
+#introSlides {
   max-width: 100%;
 }
+#pauseMsg {
+  color: white;
+}
 #prev, #next {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -76,7 +80,6 @@
 }
 #playPause {
   position: absolute;
-  color: rgb(255, 255, 255, .8);
   font-size: 2rem;
   transition: 0.6s ease;
   border-radius: 3px;
@@ -85,23 +88,21 @@
   height: auto;
   top: 50%;
   right: calc(50% - (20px));
-  /* for carousel */
-  z-index: 1;
 }
 #playPause:hover {
   background-color: rgba(0,0,0,0.8);
 }
 #play, #pause {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  color: rgb(255, 255, 255, .8);
 }
 #slideDots{
   display: flex;
   flex-direction: row;
   max-width: 80%;
   margin: 0 auto;
-  /* position: absolute;
-  bottom: 0;
-  right: calc(50% - (11px * 9)); */
 }
 .slideDot {
   width: 12px;

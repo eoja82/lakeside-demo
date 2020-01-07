@@ -1,7 +1,35 @@
 import React from "react";
 import Layout from "../components/layout";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import styles from "./styles/index.module.css";
 import Slideshow from "../components/slideshow";
+
+let List = () => {
+  const data = useStaticQuery(graphql`
+  query SlugToQuery {
+    allDataJson {
+      nodes {
+        slug
+      }
+    }
+  }
+  `)
+  let list = [];
+  data.allDataJson.nodes.forEach( ({slug}, i) => {
+    let split = slug.split("/")
+    let listItem = split[2].replace(/-/g, " ");
+    list.push({path: slug, key: i, name: listItem})
+  });
+  return (
+    <div id={styles.list}>
+      {list.map( x => (
+        <Link to={x.path} key={x.key} className={styles.listItem}>
+          {x.name}
+        </Link>
+      ))}
+    </div>
+  )
+}
 
 class Index extends React.Component {
   render() {
@@ -10,17 +38,7 @@ class Index extends React.Component {
       <div id={styles.intro}> 
         <div id={styles.about}>
         <h3 id={styles.h3}>Lakeside Lumber is your source for:</h3>
-        <div id={styles.list}>
-          <a href="/products/lumber/"><p className={styles.p}>Lumber</p></a>
-          <a href="/products/hardware/"><p className={styles.p}>Hardware</p></a>
-          <a href="/products/paint-and-stain/"><p className={styles.p}>Paint & Stain</p></a>
-          <a href="/products/siding/"><p className={styles.p}>Siding</p></a>
-          <a href="/products/roofing/"><p className={styles.p}>Roofing</p></a>
-          <a href="/products/doors/"><p className={styles.p}>Doors</p></a>
-          <a href="/products/windows/"><p className={styles.p}>Windows</p></a>
-          <a href="/products/docks/"><p className={styles.p}>Docks</p></a>
-          <p className={styles.p}>And More!</p>
-        </div>
+        <List />
         </div>
         <Slideshow />
         <div id={styles.arrowDown} className="animated bounce">

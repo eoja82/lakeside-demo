@@ -11,6 +11,16 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.listItem {
+  margin: 0;
+  padding: 0 10px 0 10px;
+  color: black;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.listItem:hover {
+  color: rgb(0, 0, 192);
+}
 #about {
   margin-top: 1%;
   width: 100%;
@@ -19,12 +29,6 @@
 }
 #h3 {
   margin: 0;
-}
-.p {
-  margin: 0;
-  padding: 0 10px 0 10px;
-  color: black;
-  font-size: 1.1rem;
 }
 #aboutList {
   display: flex;

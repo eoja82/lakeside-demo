@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import styles from "./styles/nav.module.css"
+import styles from "./styles/nav.module.css";
 
 export default () => { 
   const data = useStaticQuery(graphql`
@@ -33,7 +33,7 @@ export default () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+              <button className="nav-link dropdown-toggle" id={styles.dropButton} data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Products</button>
               <div className="dropdown-menu">
                 {list.map( x => (
                   <Link to={x.path} key={x.key} className="dropdown-item" id={styles.dropdown}>
@@ -52,12 +52,14 @@ export default () => {
             <li className="nav-item">
               <Link className="nav-link" to="/contact/" activeStyle={activeStyles}>Contact</Link>
             </li>
-          </ul>
+          </ul> */
           {/* <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2" type="search" placeholder="Search" />
               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form> */}
     </div>
   </nav>
+    
+
   )
 }

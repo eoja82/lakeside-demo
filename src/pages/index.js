@@ -4,9 +4,6 @@ import styles from "./styles/index.module.css";
 import Slideshow from "../components/slideshow";
 
 class Index extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <Layout>
@@ -27,7 +24,7 @@ class Index extends React.Component {
         </div>
         <Slideshow />
         <div id={styles.arrowDown} className="animated bounce">
-        <a href="#index-module--arrowDown--1Y143" id={styles.arrow}><i className="fa fa-angle-down"></i></a>
+        <a href="#index-module--arrowDown--tD_Bm" id={styles.arrow}><i className="fa fa-angle-down"></i></a>
         </div>
       </div>
       <div id={styles.moreInfo}>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../pages/styles/index.module.css"
+import styles from "./styles/slideshow.module.css"
 
 let slides = [{src: "img/slideShow/ccHome.jpg", alt: "finished home"},
               {src: "img/slideShow/ccHome2.jpg", alt: "house with housewrap"},

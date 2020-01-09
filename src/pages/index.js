@@ -27,6 +27,7 @@ let List = () => {
           {x.name}
         </Link>
       ))}
+      <Link className={styles.listItem + " " + styles.noLink}>And More!</Link>
     </div>
   )
 }
@@ -41,9 +42,7 @@ class Index extends React.Component {
         <List />
         </div>
         <Slideshow />
-        <div id={styles.arrowDown} className="animated bounce">
-        <a href="#index-module--arrowDown--tD_Bm" id={styles.arrow}><i className="fa fa-angle-down"></i></a>
-        </div>
+      
       </div>
       <div id={styles.moreInfo}>
         <div className={styles.flex + " " + styles.reverse}>
@@ -51,7 +50,7 @@ class Index extends React.Component {
             <img className={styles.moreInfoImg} src="/img/storeFront.jpg" alt="store front" />
           </div>
           <div>
-            <p>Our retail store in Marcell, MN offers everything a builder or homeowner will need.</p>
+            <p>Family owned and operated, Lakeside Lumber offers everything a builder or homeowner will need.</p>
             <p>​With a knowledgeable and courteous staff, we are always happy to help you with your projects.</p>
           </div>
         </div>

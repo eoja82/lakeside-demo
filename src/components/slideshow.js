@@ -1,16 +1,12 @@
 import React from "react";
 import styles from "./styles/slideshow.module.css"
 
-let slides = [{src: "img/slideShow/ccHome.jpg", alt: "finished home"},
-              {src: "img/slideShow/ccHome2.jpg", alt: "house with housewrap"},
-              {src: "img/slideShow/delivery1.jpg", alt: "delivery truck"},
-              {src: "img/slideShow/deck.jpg", alt: "deck"},
-              {src: "img/slideShow/garageFrame.jpg", alt: "framed garage"},
-              {src: "img/slideShow/kitchen.jpg", alt: "kitchen"},
-              {src: "img/slideShow/house1.jpg", alt: "house"},
-              {src: "img/slideShow/ccFireplace.jpg", alt: "fireplace"},
-              {src: "img/slideShow/metalGarage.jpg", alt: "metalGarage"}
-            ];
+let slides = [
+  {src: "img/slideshow/twoTrucks.jpg", alt: "two delivery trucks"},
+  {src: "img/slideshow/truckTRT.jpg", alt: "truck with treated lumber"},
+  {src: "img/slideshow/catUnloading.jpg", alt: "cat unloading lumber"}
+];
+
 let slideIndex = 0;
 
 class Slideshow extends React.Component {
@@ -63,7 +59,7 @@ class Slideshow extends React.Component {
     }
   }
   autoSlide() {
-    this.next = setInterval(this.nextSlide, 2500);
+    this.next = setInterval(this.nextSlide, 4000);
   }
   componentDidMount() {
     this.autoSlide();

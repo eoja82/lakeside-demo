@@ -27,7 +27,7 @@ export default () => {
                   <li>Root Grapple Bucket</li>
                 </ul>
               </div>
-              <img className={styles.productImg} src="/img/rental/skidsteer.jpg" alt="skid steer" />
+              <img className={styles.productImg} src="/img/rental/skidSteerBucket.jpg" alt="skid steer" />
           </div>
           <div className={styles.flex}>
             <div className={styles.listDiv}>
@@ -52,7 +52,7 @@ export default () => {
                 <li>Levelers</li>
               </ul>
             </div>
-            <img className={styles.productImg} src="/img/rental/scaffolding.jpg" alt="scaffolding" />
+            <img className={styles.productImg} src="/img/rental/scaffold.jpeg" alt="scaffolding" />
           </div>
           <div className={styles.flex}>
             <div className={styles.listDiv}>

@@ -1,6 +1,6 @@
 {
-  "description": "Lakeside Lumber can deliver windows made from aluminum, Ultrex, vinyl, or wood to meet your design expectations.",
-  "descriptionLogos": "ALUMINUM, ULTREX, or WOOD CLAD: Marvin.*VINYL CLAD: Thermo-Tech and Simonton.*ROOF WINDOWS: Sun-tek.",
+  "description": "Lakeside Lumber can deliver windows made from aluminum, Ultrex®, vinyl, or wood to meet your design expectations.",
+  "descriptionLogos": "ALUMINUM, ULTREX®, or WOOD CLAD: Marvin.*VINYL CLAD: Thermo-Tech and Simonton.*ROOF WINDOWS: Sun-tek.",
   "slug": "/products/windows/",
   "product": [
     {"manufacturer": "Marvin", "type": "windows", "logo": "/img/products/marvin-logo-600.png", "link": "https://www.marvin.com"},

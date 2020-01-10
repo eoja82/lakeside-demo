@@ -47,7 +47,7 @@ class Index extends React.Component {
       <div id={styles.moreInfo}>
         <div className={styles.flex + " " + styles.reverse}>
           <div>
-            <img className={styles.moreInfoImg} src="/img/storeFront.jpg" alt="store front" />
+            <img className={styles.moreInfoImg} src="/img/warehouseLogo.jpg" alt="store front" />
           </div>
           <div>
             <p>Family owned and operated, Lakeside Lumber offers everything a builder or homeowner will need.</p>

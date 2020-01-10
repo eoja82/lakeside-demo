@@ -29,6 +29,7 @@
   flex-direction: column;
   text-align: center;
   box-shadow: 5px 5px 8px rgb(121, 85, 61);
+  margin-bottom: 15px;
 }
 .employeeImg {
   margin: 5px;

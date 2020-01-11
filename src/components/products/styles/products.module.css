@@ -54,6 +54,18 @@
   max-width: 80%;
   padding-bottom: 2%;
 }
+.img {
+  border-radius: 5px;
+  background-color: rgb(252, 252, 252, .7);
+  padding: 5px;
+}
+.h3 {
+  color: black;
+  font-weight: bolder;
+  background-color: rgb(252, 252, 252, .7);
+  padding: 5px;
+  border-radius: 5px;
+}
 #logoDiv {
   margin: 5px;
 }

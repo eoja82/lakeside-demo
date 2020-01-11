@@ -10,7 +10,10 @@
     {"manufacturer": "Malarkey", "type": "roofing", "logo": "/img/products/malarkey-logo.png", "link": "https://malarkeyroofing.com/products"},
     {"manufacturer": "Certainteed", "type": "roofing", "logo": "/img/products/certainteed-logo.png", "link": "https://www.certainteed.com/residential-roofing/"},
     {"manufacturer": "Tamko", "type": "roofing", "logo": "/img/products/tamko-logo.png", "link": "https://www.tamko.com/"},
-    {"manufacturer": "GAF", "type": "roofing", "logo": "/img/products/gaf-logo.png", "link": "https://www.gaf.com/en-us/roofing-products/residential-roofing-products/shingles?Action=GetGrid&ZipCode=56484"}],
-  "images": [{"type": "roofing", "image": "/img/products/metalRoof.jpg"}, 
-    {"type": "roofing", "image": "/img/products/asphaltRoof.jpg"}]  
+    {"manufacturer": "GAF", "type": "roofing", "logo": "/img/products/gaf-logo.jpg", "link": "https://www.gaf.com/en-us/roofing-products/residential-roofing-products/shingles?Action=GetGrid&ZipCode=56484"}
+  ],
+  "images": [
+    {"type": "roofing", "image": "/img/products/roof1.jpg"}, 
+    {"type": "roofing", "image": "/img/products/roof2.jpg"}
+  ]  
 }

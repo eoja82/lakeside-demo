@@ -15,11 +15,11 @@
     {"manufacturer": "Stallion", "type": "doors", "logo": "/img/products/stallion-logo.jpg", "link": "http://manionswholesale.com/wordpress/wp-content/uploads/2018/12/Stallion-Doors-Lit.pdf"},
     {"manufacturer": "Stone Harbor", "type": "doors", "logo": "/img/products/stoneHarbor-logo.png", "link": "https://www.stoneharborhardware.com/"},
     {"manufacturer": "North Central Door", "type": "doors", "logo": "/img/products/northCentralDoor-logo.png", "link": "https://www.northcentraldoor.com/"},
-    {"manufacturer": "Holmes", "type": "doors", "logo": "/img/products/holmes-logo.png", "link": "https://www.holmesgaragedoor.com/"},
+    {"manufacturer": "Holmes", "type": "doors", "logo": "/img/products/holmes-logo.jpg", "link": "https://www.holmesgaragedoor.com/"},
     {"manufacturer": "Chamberlain", "type": "doors", "logo": "/img/products/chamberlain-logo.jpg", "link": "https://www.chamberlain.com/"}
   ],
   "images": [
-    {"type": "doors", "image": "/img/products/RusticHomeBty2.jpg"},
-    {"type": "doors", "image": "/img/products/garageDoor.jpg"}
+    {"type": "doors", "image": "/img/products/door1.jpg"},
+    {"type": "doors", "image": "/img/products/door2.jpg"}
   ]
 }

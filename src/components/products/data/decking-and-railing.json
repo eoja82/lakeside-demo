@@ -4,8 +4,8 @@
   "slug": "/products/decking-and-railing/",
   "product": [
     {"manufacturer": "BlueLinx", "type": "decking-railing", "logo":"/img/products/blueLinx-logo.png", "link": "https://northcentral.bluelinxco.com/"},
-    {"manufacturer": "Azek", "type": "decking-railing", "logo": "/img/products/azek-logo.png", "link": "https://www.azek.com/"},
-    {"manufacturer": "TimberTech", "type": "decking-railing", "logo": "/img/products/timberTech-logo.png", "link": "https://www.timbertech.com/products"},
+    {"manufacturer": "Azek", "type": "decking-railing", "logo": "/img/products/azek-logo.jpg", "link": "https://www.azek.com/"},
+    {"manufacturer": "TimberTech", "type": "decking-railing", "logo": "/img/products/timberTech-logo.jpg", "link": "https://www.timbertech.com/products"},
     {"manufacturer": "Trex", "type": "decking-railing", "logo": "/img/products/trex-logo.png", "link": "https://www.trex.com/"},
     {"manufacturer": "Armadillo", "type": "decking-railing", "logo": "/img/products/armadillo-logo.jpg", "link": "https://armadillodeck.com/"},
     {"manufacturer": "DecKorators", "type": "decking-railing", "logo": "/img/products/deckorators-logo.png", "link": "https://www.deckorators.com/"},

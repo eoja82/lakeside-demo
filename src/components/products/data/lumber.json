@@ -3,9 +3,9 @@
   "descriptionLogos": "",
   "slug": "/products/lumber/",
   "product": [
-    {"manufacturer": "spf", "type": "lumber", "logo": "/lumber/spf.png", "link": "/lumber/spf.pdf"},
-    {"manufacturer": "treated and cedar", "type": "lumber", "logo": "/lumber/trtCedar.png", "link": "/lumber/trtCedar.pdf"},
-    {"manufacturer": "sheet goods", "type": "lumber", "logo": "/lumber/sheetGoods.png", "link": "/lumber/sheetGoods.pdf"}
+    {"manufacturer": "Pine and Dimensional Lumber", "type": "lumber", "logo": "", "link": "/lumber/spf.pdf"},
+    {"manufacturer": "Treated and Cedar Lumber", "type": "lumber", "logo": "", "link": "/lumber/trtCedar.pdf"},
+    {"manufacturer": "Sheet Goods", "type": "lumber", "logo": "", "link": "/lumber/sheetGoods.pdf"}
   ],
   "images": [
     {"type": "lumber", "image": "/lumber/lumberRack.jpg"}, 

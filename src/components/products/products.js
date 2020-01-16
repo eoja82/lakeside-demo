@@ -24,7 +24,9 @@ class Display extends React.Component {
         </div>
         <div id={styles.logoDescription}>
           <p className={styles.p}>Click on a link below for more information.</p>
-          {descLogoSplit.map( (x, i) => <p className={styles.p} key={i}>{x}</p>)}
+          <div>
+          {descLogoSplit.map( (x, i) => <p className={styles.pDiscription + " " + styles.p} key={i}>{x}</p>)}
+          </div>
         </div>
         <div id={styles.products}>
           {this.props.product.product.map( (x, i) => 

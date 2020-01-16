@@ -12,12 +12,14 @@ class Quote extends React.Component {
     document.getElementById("modal").style.display = "block";
   }
   closeModal(e) {
-    console.log(e.target);
-    let modalContent = document.getElementById("modalContent");
-    if (e.target !== modalContent) {
-      console.log(e.target)
-      document.getElementById("modal").style.display = "none";
+    let modal = document.getElementById("modal");
+    let xClose = document.getElementById("xClose");
+    if (e.target === modal || e.target === xClose) {
+      modal.style.display = "none";
     }
+  }
+  componentDidMount() {
+    window.addEventListener("click", this.closeModal);
   }
   render() {
     return (
@@ -29,15 +31,14 @@ class Quote extends React.Component {
         <button className="w3-button w3-round w3-blue w3-border w3-border-white w3-hover-green" onClick={this.openModal}>Get A Quote</button>
         {/* the modal */}
         <div id="modal" onClick={this.closeModal} className="w3-modal w3-animate-zoom">
-          <div className="w3-modal-content">
-            <div id="modalContent" className="w3-container">
-              <span onClick={this.closeModal} className="w3-button w3-display-topright">&times;</span>
-              <p>
-                Please call or email us for a quote
-              </p>
-              <a href="tel:1-218-832-3300"><i className="fa fa-phone"></i> 1-218-832-3300</a>
-              <br />
-              <a href="mailto:eric@lakesidemarcell.com"><i className="fa fa-envelope-square"></i> eric@lakesidemarcell.com</a>
+          <div className="w3-modal-content w3-card-4">
+            <header className="w3-container w3-blue">
+              <span id="xClose" onClick={this.closeModal} className="w3-button w3-display-topright">&times;</span>
+              <p><h2>Please call or email us for a quote:</h2></p>
+            </header>
+            <div className="w3-container">
+              <p><a href="tel:1-218-832-3300"><i className="fa fa-phone"></i> 1-218-832-3300</a></p>
+              <p><a href="mailto:eric@lakesidemarcell.com"><i className="fa fa-envelope-square"></i> eric@lakesidemarcell.com</a></p>
             </div>
           </div>
         </div>

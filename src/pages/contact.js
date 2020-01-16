@@ -16,9 +16,7 @@ export default () => {
           <title>Contact Lakeside Lumber - call, email or on Facebook</title>
         </Helmet>
       <div id={styles.container}>
-        <p className={styles.about}>No project is too big or to small.  <a className={styles.textLink} href="tel:1-218-832-3300">Call</a>, <a className={styles.textLink}href="mailto:eric@lakesidemarcell.com"> email</a>, or contact us on <a className={styles.textLink} href="https://www.facebook.com/pg/LakesideMarcell/photos/?ref=page_internal" target="_blank" rel="noopener noreferrer"> Facebook</a>.  
-        </p>
-        <p className={styles.about}>We are here to help you with all your building and project needs!</p>
+        <p className={styles.about}>No project is too big or to small.  <a className={styles.textLink} href="tel:1-218-832-3300">Call</a>, <a className={styles.textLink}href="mailto:eric@lakesidemarcell.com"> email</a>, or contact us on <a className={styles.textLink} href="https://www.facebook.com/pg/LakesideMarcell/photos/?ref=page_internal" target="_blank" rel="noopener noreferrer"> Facebook</a>.<br />  We are here to help you with all your building and project needs!</p>
         <div id={styles.employees}>
           {employees.map( x => 
             <div className={styles.employee} k={x.key}>

@@ -1,66 +1,52 @@
 #container {
-  background-image: url("/img/cedarPanel.jpg");
-  background-size: cover;
-  color: white;
-  padding-top: 2%;
+  background-image: url("/img/graySiding.jpg"); 
+  background-size: cover; 
+  /* padding-top: 2%; */
 }
 #h4 {
   text-align: center;
+  /* background-color: rgba(5, 5, 5, 0.5); */
+  /* color: rgb(241, 241, 241); */
+  /* color: rgb(83, 83, 83);
+  background-color: rgb(255, 255, 255, .5); */
+  color: white;
+  margin: 0;
+  padding: 10px;
 }
 #allEquipment {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: white;
+  /* color: white; */
   max-width: 80%;
   padding-bottom: 2%;
-  padding-left: 8%;
   margin: 0 auto 0 auto;
-}
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  max-width: 100%;
-  margin: 2% 0 1% 0;
-}
-.listDiv {
-  width: 400px;
-}
-.equipHeader {
-  font-size: 1.5rem;
-  text-align: left;
+  justify-content: center;
 }
 .equipment {
-  margin: 10px;
+  max-width: 300px;
+  margin: 15px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 5px 5px 8px rgb(71, 71, 71);
+  /* box-shadow: 5px 5px 8px rgb(121, 85, 61); */
 }
-li {
-  text-decoration: none;
+.p {
+  margin: 0;
+}
+.ul {
+  margin: 5px;
+  height: auto;
+}
+.p, .li {
+  color: rgb(83, 83, 83);
 }
 .productImg {
-  border-radius: 5px;
-  box-shadow: 5px 5px 8px rgb(121, 85, 61);
+  padding: 5px;
+  width: 100%;
 }
-@media only screen and (max-width: 450px) {
-  #allEquipment {
-    justify-content: left;
-  }
-  .flex {
-    flex-wrap: wrap-reverse;
-  }
-  .padding {
-    width: 95%;
-  }
-  .productImg {
-    max-height: 100px;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .productImg {
-    max-height: 200px;
-  }
-  #allEquipment {
-    padding-left: 0;
+@media only screen and (max-width: 780px) {
+  #container {
+    background-size: unset;
+    background-repeat: repeat;
   }
 }

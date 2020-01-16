@@ -1,6 +1,7 @@
 #sidebar {
-  background-image: url("/img/stoneBG.jpg");
-  background-size: cover;
+  background-image: url("/img/brickBG.jpeg");
+  background-size: 220%;
+ background-repeat: repeat;
   max-width: 400px;
   display: flex;
   flex-direction: column;
@@ -13,6 +14,9 @@
   padding: 3px;
   border-radius: 5px;
   color: white;
+}
+#link:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 500px) {
   #sidebar {

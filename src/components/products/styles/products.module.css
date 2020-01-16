@@ -1,5 +1,5 @@
 #container {
-  background-image: url("/img/cedarPanel.jpg");
+  background-image: url("/img/graySiding.jpg");
   background-size: cover;
   width: 100%;
 }
@@ -27,22 +27,26 @@
 }
 .productImg {
   border-radius: 5px;
-  box-shadow: 5px 5px 8px rgb(121, 85, 61);
+  box-shadow: 5px 5px 8px rgb(71, 71, 71);
   max-height: 375px;
 }
 #logoDescription {
-  display: flex;
-  flex-direction: column;
-  padding: 2% 0;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 15px 0;
   max-width: 80%;
   margin: 0 auto;
 }
 .p {
-  text-align: center;
+  /* text-align: center; */
   color: white;
   font-size: 1rem;
   margin: 0;
   padding: 0;
+}
+.pDiscription {
+  text-align: left;
+  margin-left: 15%;;
 }
 #products {
   display: flex;
@@ -83,5 +87,8 @@ img {
     max-width: 300px;
     max-height: 200px;
     padding: 3px 0 3px 0;
+  }
+  .pDiscription {
+    margin-left: 2%;
   }
 }

@@ -1,12 +1,16 @@
 #container {
-  background-image: url("/img/cedarPanel.jpg");
+  background-image: url("/img/graySiding.jpg");
   background-size: cover;
   color: white;
 }
 .about {
   text-align: center;
-  padding-top: 1%;
+  padding: 10px 0;
   margin: 0;
+  color: white;
+  /* background-color: rgba(5, 5, 5, 0.4); */
+  /* color: rgb(83, 83, 83);
+  background-color: rgb(255, 255, 255, .5); */
 }
 .textLink {
   color: white;
@@ -20,7 +24,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   max-width: 80%;
-  margin: 0 auto;
+  margin: 15px auto 0 auto;
   padding: 1% 0 2% 0;
 }
 .employee {
@@ -28,7 +32,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  box-shadow: 5px 5px 8px rgb(121, 85, 61);
+  box-shadow: 5px 5px 8px rgb(71, 71, 71);
   margin-bottom: 15px;
 }
 .employeeImg {

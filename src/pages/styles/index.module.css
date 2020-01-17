@@ -1,9 +1,6 @@
 #intro {
   width: 100%;
   height: auto;
-  background-image: url("/img/lake.jpg");
-  background-size: cover;
-  margin: 83px auto 0 auto;
 }
 #list {
   display: flex;
@@ -12,93 +9,113 @@
   justify-content: space-evenly;
 }
 .listItem {
-  margin: 0;
-  padding: 0 10px 10px 10px;
-  color: black;
+  width: 150px;
+  margin: 0 10px 20px 10px;
+  padding: 2px;
+  color: rgb(117, 164, 226);
   font-size: 1.1rem;
   text-transform: capitalize;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 4px 4px 8px rgb(71, 71, 71);
 }
-.listItem:hover {
+.listImg {
+  width: 100%;
+  height: auto;
+}
+.listP {
+  background-color: rgb(4, 83, 4);
+  color: rgb(210, 180, 140);
+  padding: 0;
+  width: 150px;
+  height: 60px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.listP:hover {
   color: white;
 }
-.noLink {
-  cursor: default;
-}
-.noLink:hover {
-  text-decoration: none;
-  color: black;
-}
 #about {
-  margin-top: 1%;
+  padding: 5px;
   width: 100%;
-  background-color: rgb(255, 255, 255, .7);
+  background-image: url("/img/graySiding.jpg");
+  background-size: cover;
   text-align: center;
-  z-index: 3;
 }
-#h3 {
-  margin: 0;
+.h3 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  color: rgb(210, 180, 140);
+  text-shadow: -1px -1px 0 rgb(4, 83, 4),
+               1px -1px 0 rgb(4, 83, 4),
+               -1px 1px 0 rgb(4, 83, 4),
+               1px 1px 0 rgb(4, 83, 4);
 }
-#aboutList {
+.moreInfo {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  background-color: rgb(245, 245, 245);
+  padding: 30px 0;
+  justify-content: center;
 }
-#about ul {
-  padding: 0;
-}
-#about ul li {
-  list-style-type: none;
-  text-align: left;
-}
-#moreInfo {
+.moreInfoIntro {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: center;
-  background-image: url("/img/cedarPanel.jpg");
-  background-size: cover;
-  color: white;
-  padding-bottom: 2%;
-}
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   align-items: center;
   max-width: 80%;
-  margin: 2% auto 1% auto;
 }
-p {
-  font-size: 1.5rem;
-  margin: 2%;
+.moreInfoIntroH2 {
+  color: rgb(22, 87, 29);
+  font-family: 'Alegreya Sans', sans-serif;
+  padding: 0 5px;
+  max-width: 50%;
+  font-size: 2rem;
 }
 .moreInfoImg {
-  max-height: 250px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 8px rgb(121, 85, 61);
+  max-width: 50%;
+  padding: 0 20px;
+}
+.containerProd {
+  background-image: url("/img/graySiding.jpg");
+  background-size: cover;
+}
+.productDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px 0;
+  justify-content: center;
+}
+.products {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 80%;
+  margin: 10px auto;
+}
+.quote {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 840px) {
-  #intro {
-    flex-direction: column;
+  .h3 {
+    font-size: 2.2rem;
   }
-  #about {
-    max-width: 100%;
-    margin: 1% auto 0 auto; 
-  }
-  .moreInfoImg {
-    max-height: 200px;
-    max-width: 300px;
+  .moreInfoIntroH2 {
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 440px) {
-  .moreInfoImg {
-    max-height: auto;
-    max-width: 95%;
+  .products {
+    max-width: 100%;
+  }
+  .moreInfoIntroH2, .moreInfoImg {
+    max-width: 100%;
+    padding: 5px;
   }
   .reverse {
     flex-wrap: wrap-reverse;
-  }
-  .wrap {
-    flex-wrap: wrap;
   }
 }

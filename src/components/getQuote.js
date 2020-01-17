@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-//import styles from "./styles/getQuote.module.css";
+import styles from "./styles/getQuote.module.css";
 
 class Quote extends React.Component {
   constructor(props) {
@@ -21,6 +21,9 @@ class Quote extends React.Component {
   componentDidMount() {
     window.addEventListener("click", this.closeModal);
   }
+  componentWillUnmount() {
+    window.removeEventListener("click", this.closeModal);
+  }
   render() {
     return (
       <div>
@@ -31,10 +34,10 @@ class Quote extends React.Component {
         <button className="w3-button w3-round w3-blue w3-border w3-border-white w3-hover-green" onClick={this.openModal}>Get A Quote</button>
         {/* the modal */}
         <div id="modal" onClick={this.closeModal} className="w3-modal w3-animate-zoom">
-          <div className="w3-modal-content w3-card-4">
+          <div id={styles.modalContent} className="w3-modal-content w3-card-4">
             <header className="w3-container w3-blue">
               <span id="xClose" onClick={this.closeModal} className="w3-button w3-display-topright">&times;</span>
-              <p><h2>Please call or email us for a quote:</h2></p>
+              <p><h2 id={styles.h2}>Please call or email us for a quote:</h2></p>
             </header>
             <div className="w3-container">
               <p><a href="tel:1-218-832-3300"><i className="fa fa-phone"></i> 1-218-832-3300</a></p>

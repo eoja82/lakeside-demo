@@ -24,7 +24,7 @@ export default () => {
   });
   
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"> 
       <Link className="navbar-brand" to="/"><img src="/img/logo.png" alt="logo" width="100px" height="57px" /></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@ export default () => {
             <li className="nav-item">
               <Link className="nav-link" to="/contact/" activeStyle={activeStyles}>Contact</Link>
             </li>
-          </ul> */
+          </ul> 
           {/* <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2" type="search" placeholder="Search" />
               <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

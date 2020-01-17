@@ -1,15 +1,16 @@
 #container {
   background-image: url("/img/graySiding.jpg"); 
   background-size: cover; 
-  /* padding-top: 2%; */
 }
-#h4 {
+.h4 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2rem;
   text-align: center;
-  /* background-color: rgba(5, 5, 5, 0.5); */
-  /* color: rgb(241, 241, 241); */
-  /* color: rgb(83, 83, 83);
-  background-color: rgb(255, 255, 255, .5); */
-  color: white;
+  color: rgb(210, 180, 140);
+  text-shadow: -1px -1px 0 rgb(4, 83, 4),
+               1px -1px 0 rgb(4, 83, 4),
+               -1px 1px 0 rgb(4, 83, 4),
+               1px 1px 0 rgb(4, 83, 4);
   margin: 0;
   padding: 10px;
 }
@@ -17,7 +18,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* color: white; */
   max-width: 80%;
   padding-bottom: 2%;
   margin: 0 auto 0 auto;
@@ -26,27 +26,32 @@
 .equipment {
   max-width: 300px;
   margin: 15px;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(4, 83, 4);
   box-shadow: 5px 5px 8px rgb(71, 71, 71);
-  /* box-shadow: 5px 5px 8px rgb(121, 85, 61); */
+  border: 3px solid rgb(240, 240, 240);
 }
 .p {
   margin: 0;
 }
 .ul {
   margin: 5px;
-  height: auto;
+  height: 100%;
 }
 .p, .li {
-  color: rgb(83, 83, 83);
+  color: rgb(210, 180, 140);
 }
 .productImg {
-  padding: 5px;
   width: 100%;
 }
+.quoteDiv {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
 @media only screen and (max-width: 780px) {
-  #container {
-    background-size: unset;
-    background-repeat: repeat;
+  #allEquipment {
+    min-width: 90%;
   }
 }

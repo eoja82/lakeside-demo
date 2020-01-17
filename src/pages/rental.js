@@ -1,7 +1,8 @@
-import React from "react"
-import Layout from "../components/layout"
-import { Helmet } from "react-helmet"
-import styles from "./styles/rental.module.css"
+import React from "react";
+import Layout from "../components/layout";
+import { Helmet } from "react-helmet";
+import styles from "./styles/rental.module.css";
+import Quote from "../components/getQuote";
 
 const equipment = [
   {type: "Skid Steer Attachments", list: ['Forks', 'Auger - 6", 9", and 15"', 'Brusher', 'Bucket', 'Root Grapple Bucket'], src: "/img/rental/skidSteerBucket.jpg", alt: "skid steer", key: 1},
@@ -20,19 +21,24 @@ export default () => {
         <meta name="keywords" content="rent, rental, tools, drywall, lift, skidsteer, nailer, scaffold, insulation, blower" />
       </Helmet>
       <div id={styles.container}>
-        <h4 id={styles.h4}>
+        <h4 className={styles.h4}>
           Our selection of rental equipment will provide you with the right tool for the job.
         </h4>
         <div id={styles.allEquipment}>
           {equipment.map( x => 
             <div className={styles.equipment} key={x.key}>
               <img className={styles.productImg} src={x.src} alt={x.alt} />
-              <p className={styles.p}>{x.type}</p>
-              <ul className={styles.ul}>
-                {x.list.map( (y, i) => <li className={styles.li} key={i}>{y}</li>)}
-              </ul>
+              <div className={styles.equipList}>
+                <p className={styles.p}>{x.type}</p>
+                <ul className={styles.ul}>
+                  {x.list.map( (y, i) => <li className={styles.li} key={i}>{y}</li>)}
+                </ul>
+              </div>
             </div>
           )}
+        </div>
+        <div className={styles.quoteDiv}>
+          <Quote />
         </div>
       </div>
     </Layout>

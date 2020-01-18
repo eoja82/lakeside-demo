@@ -30,6 +30,7 @@
   height: 60px;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
 .listP:hover {
   color: white;

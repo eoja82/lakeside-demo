@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import Helmet from "react-helmet"
 import styles from "./styles/index.module.css";
 import Slideshow from "../components/slideshow";
 import Quote from "../components/getQuote";
@@ -84,4 +83,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index
+export default Index;

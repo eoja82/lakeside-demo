@@ -3,20 +3,23 @@
   background-size: cover;
   color: white;
 }
+.about, .textLink {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2rem;
+  color: rgb(210, 180, 140);
+  text-shadow: -1px -1px 0 rgb(4, 83, 4),
+               1px -1px 0 rgb(4, 83, 4),
+               -1px 1px 0 rgb(4, 83, 4),
+               1px 1px 0 rgb(4, 83, 4);
+}
 .about {
   text-align: center;
   padding: 10px 0;
   margin: 0;
-  color: white;
-  /* background-color: rgba(5, 5, 5, 0.4); */
-  /* color: rgb(83, 83, 83);
-  background-color: rgb(255, 255, 255, .5); */
-}
-.textLink {
-  color: white;
 }
 .textLink:hover {
-  color: rgb(194, 194, 194);
+  color: rgb(4, 83, 4);
+  text-shadow: none;
 }
 #employees {
   display: flex;
@@ -33,35 +36,43 @@
   flex-direction: column;
   text-align: center;
   box-shadow: 5px 5px 8px rgb(71, 71, 71);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  border: 3px solid rgb(240, 240, 240);
 }
-.employeeImg {
-  margin: 5px;
+.aboutEmployee {
+  background-color: rgb(4, 83, 4);
 }
-.p {
+.name {
+  padding-top: 5px;
+  font-size: 1.4rem;
+}
+.name, .position {
   margin: 0;
-  color: rgb(83, 83, 83);
+  color: rgb(210, 180, 140);
 }
-.contactIcons {
+.contact {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  background-color: rgb(221, 221, 221);
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  height: 50px;
   margin: 5px;
 }
-.icon {
+.contactButton {
+  color: forestgreen;
   font-size: 2.2rem;
 }
-.link {
-  color: rgb(83, 83, 83);
-}
-.link:hover {
-  color: rgb(83, 83, 83, .7);
+.contactButton:hover {
+  color: royalblue;
 }
 @media only screen and (max-width: 440px) {
   .about {
     padding: 0 8px 0 8px;
     font-size: 1.2rem;
+  }
+  .textLink {
+    font-size: 1.4rem;
   }
 } 

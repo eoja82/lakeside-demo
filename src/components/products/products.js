@@ -1,6 +1,7 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import styles from "./styles/products.module.css"
+import React from "react";
+import { Helmet } from "react-helmet";
+import styles from "./styles/products.module.css";
+import Quote from "../getQuote";
 
 class Display extends React.Component {
   render() {
@@ -27,6 +28,9 @@ class Display extends React.Component {
           <div>
           {descLogoSplit.map( (x, i) => <p className={styles.pDiscription + " " + styles.p} key={i}>{x}</p>)}
           </div>
+        </div>
+        <div className={styles.getQuote}>
+          <Quote />
         </div>
         <div id={styles.products}>
           {this.props.product.product.map( (x, i) => 

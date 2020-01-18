@@ -33,15 +33,15 @@ class Quote extends React.Component {
         {/* open modal */}
         <button className="w3-button w3-round w3-blue w3-border w3-border-white w3-hover-green" onClick={this.openModal}>Get A Quote</button>
         {/* the modal */}
-        <div id="modal" onClick={this.closeModal} className="w3-modal w3-animate-zoom">
-          <div id={styles.modalContent} className="w3-modal-content w3-card-4">
+        <div id="modal" onClick={this.closeModal} className="w3-modal w3-animate-zoom" role="presentation">
+          <div className={"w3-modal-content w3-card-4 " + styles.modalContent}>
             <header className="w3-container w3-blue">
-              <span id="xClose" onClick={this.closeModal} className="w3-button w3-display-topright">&times;</span>
+              <span id="xClose" onClick={this.closeModal} className="w3-button w3-display-topright" role="presentation">&times;</span>
               <p><h2 id={styles.h2}>Please call or email us for a quote:</h2></p>
             </header>
-            <div className="w3-container">
-              <p><a href={`tel:${this.props.phone}`}><i className="fa fa-phone"></i> {this.props.phone}</a></p>
-              <p><a href={`mailto:${this.props.email}`}><i className="fa fa-envelope-square"></i> {this.props.email}</a></p>
+            <div id={styles.contactInfo}className="w3-container">
+              <p><a href="tel:1-218-832-3300"><i className="fa fa-phone"></i> 1-218-832-3300</a></p>
+              <p><a href="mailto:eric@lakesidemarcell.com"><i className="fa fa-envelope-square"></i> eric@lakesidemarcell.com</a></p>
             </div>
           </div>
         </div>

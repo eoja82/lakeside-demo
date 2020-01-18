@@ -40,8 +40,8 @@ class Quote extends React.Component {
               <p><h2 id={styles.h2}>Please call or email us for a quote:</h2></p>
             </header>
             <div className="w3-container">
-              <p><a href="tel:1-218-832-3300"><i className="fa fa-phone"></i> 1-218-832-3300</a></p>
-              <p><a href="mailto:eric@lakesidemarcell.com"><i className="fa fa-envelope-square"></i> eric@lakesidemarcell.com</a></p>
+              <p><a href={`tel:${this.props.phone}`}><i className="fa fa-phone"></i> {this.props.phone}</a></p>
+              <p><a href={`mailto:${this.props.email}`}><i className="fa fa-envelope-square"></i> {this.props.email}</a></p>
             </div>
           </div>
         </div>

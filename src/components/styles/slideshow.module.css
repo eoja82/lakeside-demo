@@ -1,15 +1,6 @@
 #slideshow {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
-  width: 100%;
-  height: 50%;
   margin: 0;
-}
-#slideshow img {
-  width: 100%;
-  height: 100%;
 }
 #introSlides {
   max-width: 100%;

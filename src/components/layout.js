@@ -2,11 +2,11 @@ import React from "react"
 import Navigation from "./nav"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
-import layoutStyles from "./styles/layout.module.css"
+import styles from "./styles/layout.module.css"
 
 export default ({ children }) => {
   return (
-    <div id={layoutStyles.body}>
+    <div id={styles.body}>
       <Helmet>
         <html lang="en" />
         <meta charset="UTF-8" />
@@ -27,7 +27,7 @@ export default ({ children }) => {
         <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:900&display=swap" rel="stylesheet" /> 
       </Helmet>
       <Navigation />
-      <div id={layoutStyles.main}>{children}</div>
+      <div id={styles.main}>{children}</div>
       <Footer />
     </div>
   )

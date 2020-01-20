@@ -4,7 +4,8 @@
   "slug": "/products/stone/",
   "product": [
     {"manufacturer": "Boulder Creek", "type": "stone", "logo": "/img/products/boulderCreek-logo.png", "link": "https://www.bouldercreekstone.com/"},
-    {"manufacturer": "GenStone", "type": "stone", "logo": "/img/products/genStone-logo.png", "link": "https://genstone.com/"}
+    {"manufacturer": "GenStone", "type": "stone", "logo": "/img/products/genStone-logo.png", "link": "https://genstone.com/"},
+    {"manufacturer": "Nova Brik", "type": "stone", "logo": "/img/products/novaBrik-logo.jpg", "link": "https://novabrik.com/en-us/"}
   ],
   "images": [
     {"type": "stone", "image": "/img/products/stone1.jpg"}, 

@@ -1,7 +1,7 @@
 {
   "description": "Whether you want a metal or asphalt roof, we can supply your roofing needs.",
   "descriptionLogos": "METAL: Metal Sales and Whirlwind.*ASPHALT: Malarkey, Certainteed, Tamko, and GAF.",
-  "slug": "/products/roofing/",
+  "slug": "/products/roofing-and-steel/",
   "product": [
     {"manufacturer": "Metal Sales", "type": "roofing",
     "logo": "/img/products/metalsales-logo.png", "link": "https://www.metalsales.us.com/"},

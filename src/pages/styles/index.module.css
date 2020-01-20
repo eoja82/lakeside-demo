@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .listItem {
   width: 150px;
@@ -84,16 +84,11 @@
   background-size: cover;
 }
 .productDiv {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   padding: 20px 0;
   justify-content: center;
 }
 .products {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   max-width: 80%;
   margin: 10px auto;
 }

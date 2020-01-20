@@ -2,6 +2,7 @@
   background-image: url("/img/graySiding.jpg");
   background-size: cover;
   width: 100%;
+  padding-top: 104px;
 }
 #header {
   max-width: 80%;

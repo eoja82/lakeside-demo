@@ -1,6 +1,7 @@
 #container {
   background-image: url("/img/graySiding.jpg"); 
   background-size: cover; 
+  padding-top: 104px;
 }
 .h4 {
   font-family: 'Alegreya Sans', sans-serif;

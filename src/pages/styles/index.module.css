@@ -1,6 +1,9 @@
 #intro {
   width: 100%;
   height: auto;
+  /* bgc same as nav so no whitespace when scrolling fast */
+  padding-top: 104px;
+  background-color: #343a40;
 }
 #list {
   display: flex;

@@ -5,3 +5,9 @@
   background-color: transparent;
   border: none;
 }
+.logo {
+  transition: .2s;
+}
+.nav-link {
+  transition: .2s;
+}

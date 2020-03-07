@@ -20,6 +20,9 @@
   background-color: rgb(240, 240, 240);
   box-shadow: 4px 4px 8px rgb(71, 71, 71);
 }
+.listItem:hover {
+  text-decoration: none;
+}
 .listImg {
   width: 100%;
   height: auto;
@@ -35,7 +38,8 @@
   text-align: center;
 }
 .listP:hover {
-  color: white;
+  background-color: rgb(210, 180, 140);
+  color: rgb(4, 83, 4);
 }
 #about {
   padding: 5px;

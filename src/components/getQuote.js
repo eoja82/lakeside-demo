@@ -31,7 +31,7 @@ class Quote extends React.Component {
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> 
         </Helmet>
         {/* open modal */}
-        <button className="w3-button w3-round w3-blue w3-border w3-border-white w3-hover-green" onClick={this.openModal}>Get A Quote</button>
+        <button id={styles.button} className="w3-button w3-round" onClick={this.openModal}>Get A Quote</button>
         {/* the modal */}
         <div id="modal" onClick={this.closeModal} className="w3-modal w3-animate-zoom" role="presentation">
           <div className={"w3-modal-content w3-card-4 " + styles.modalContent}>

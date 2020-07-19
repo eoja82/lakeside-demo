@@ -72,8 +72,8 @@ class Slideshow extends React.Component {
        <div id={styles.slideshow} onMouseEnter={this.displayButton} onMouseLeave={this.hideButton} role="presentation">
         <img src={this.state.src} alt={this.state.alt} id={styles.introSlides} />
         {/* mouse enter/leave, hide play/pause when hover over arrows */} 
-        <button id={styles.prev} onClick={this.prevSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton}><i className="fa fa-angle-left"></i></button>
-        <button id={styles.next} onClick={this.nextSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton}><i className="fa fa-angle-right"></i></button>
+        <button id={styles.prev} onClick={this.prevSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton} aria-label="previous slide"><i className="fa fa-angle-left"></i></button>
+        <button id={styles.next} onClick={this.nextSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton} aria-label="next slide"><i className="fa fa-angle-right"></i></button>
         <div id={styles.playPause} ref={this.playPauseRef} style={{display: "none"}} role="presentation">
           <button onClick={this.play} style={{display: "none"}} id={styles.play} ref={this.playRef}>
             <i className="fa fa-play"></i>

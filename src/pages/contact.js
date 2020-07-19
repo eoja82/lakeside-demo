@@ -27,8 +27,8 @@ class Contact extends React.Component {
                 <p className={styles.name}>{x.name}</p>
                 <p className={styles.position}>{x.position}</p>
                 <div className={styles.contact}>
-                  <a className={styles.contactButton} href={`tel:${x.phone}`}><i className="fa fa-phone" /></a>
-                  <a className={styles.contactButton} href={`mailto:${x.email}`}><i className="fa fa-envelope-square" /></a>
+                  <a className={styles.contactButton} href={`tel:${x.phone}`} aria-label="phone number"><i className="fa fa-phone" /></a>
+                  <a className={styles.contactButton} href={`mailto:${x.email}`} aria-label="email"><i className="fa fa-envelope-square" /></a>
                 </div>
               </div>
             </div>)}

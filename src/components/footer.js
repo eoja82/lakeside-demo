@@ -21,8 +21,8 @@ export default () => {
         <p><i className="fa fa-phone"></i> Phone: <br /><a id={styles.phone} href="tel:1-218-832-3300">218-832-3300</a></p>
         <p><i className="fa fa-fax"></i> Fax: <br />218-832-2302</p>
         <div>
-          <a id={styles.facebook} href="https://www.facebook.com/LakesideMarcell/" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook-square"></i></a>
-          <a id={styles.email} href="/contact/"><i className="fa fa-envelope-square"></i></a>
+          <a id={styles.facebook} href="https://www.facebook.com/LakesideMarcell/" target="_blank" aria-label="Facebook" rel="noopener noreferrer"><i className="fa fa-facebook-square"></i></a>
+          <a id={styles.email} href="/contact/" aria-label="Email"><i className="fa fa-envelope-square"></i></a>
         </div>
       </div>
       <div id={styles.map}><iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21526.37271773723!2d-93.7065875618642!3d47.591198397035534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52ba6c4ac74ae3ab%3A0x3c5a3e65b53e6902!2sLakeside%20Lumber%20%26%20Hardware%20LLC!5e0!3m2!1sen!2sus!4v1574892894472!5m2!1sen!2su" style={{ border: "0px", width: "300px", height: "200px", frameborder: "0px" }} allowFullScreen=""></iframe>

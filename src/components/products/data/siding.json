@@ -10,9 +10,9 @@
     {"manufacturer": "Edco", "type": "siding", "logo": "/img/products/edco-logo.png", "link": "https://www.edcoproducts.com/products/steel-siding.html"},
     {"manufacturer": "James Hardie", "type": "siding", "logo": "/img/products/jamesHardie-logo.png", "link": "https://www.jameshardie.com/"},
     {"manufacturer": "Certainteed", "type": "siding", "logo": "/img/products/certainteed-logo.png", "link": "https://www.certainteed.com/siding/vinyl/"},
-    {"manufacturer": "GENTEK", "type": "siding", "logo": "/img/products/gentek-logo.jpg", "link": "https://www.gentekinc.com/default/Siding/VinylSiding.aspx"},
+    {"manufacturer": "Gentek", "type": "siding", "logo": "/img/products/gentek-logo.jpg", "link": "https://www.gentekinc.com/default/Siding/VinylSiding.aspx"},
     {"manufacturer": "Timbermill", "type": "siding", "logo": "/img/products/timberMill-logo.jpg", "link": "https://timbermillsiding.com/"},
-    {"manufacturer": "MID AMERICA", "type": "siding", "logo": "/img/products/midAmerica-logo.jpg", "link": "https://www.midamericacomponents.com/"}
+    {"manufacturer": "Mid America", "type": "siding", "logo": "/img/products/midAmerica-logo.jpg", "link": "https://www.midamericacomponents.com/"}
   ],
   "images": [
     {"type": "siding", "image": "/img/products/siding1.jpg"},

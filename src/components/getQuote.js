@@ -31,13 +31,13 @@ class Quote extends React.Component {
           <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> 
         </Helmet>
         {/* open modal */}
-        <button id={styles.button} className="w3-button w3-round" onClick={this.openModal}>Get A Quote</button>
+        <button id={styles.button} onClick={this.openModal}>Get A Quote</button>
         {/* the modal */}
         <div id="modal" onClick={this.closeModal} className="w3-modal w3-animate-zoom" role="presentation">
           <div className={"w3-modal-content w3-card-4 " + styles.modalContent}>
             <header className="w3-container w3-blue">
               <span id="xClose" onClick={this.closeModal} className="w3-button w3-display-topright" role="presentation">&times;</span>
-              <p><h2 id={styles.h2}>Please call or email us for a quote:</h2></p>
+              <h2 id={styles.h2}>Please call or email us for a quote:</h2>
             </header>
             <div id={styles.contactInfo}className="w3-container">
               <p><a href="tel:1-218-832-3300"><i className="fa fa-phone"></i> 1-218-832-3300</a></p>

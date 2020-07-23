@@ -8,16 +8,13 @@ class Nav extends React.Component {
     this.scrollFunc = this.scrollFunc.bind(this); 
   }
   scrollFunc() {
+    let logo = document.getElementById("logo");
+    let links = document.querySelectorAll(".nav-link");
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      let logo = document.getElementById("logo");
-      let links = document.querySelectorAll(".nav-link");
-      console.log(links);
       logo.style.width = "87.5px";
       logo.style.height = "50px";
-      links.forEach( x => x.style.fontSize = "1rem");
+      links.forEach( x => x.style.fontSize = "1.25rem");
     } else {
-      let logo = document.getElementById("logo");
-      let links = document.querySelectorAll(".nav-link");
       logo.style.width = "140px";
       logo.style.height = "80px";
       links.forEach( x => x.style.fontSize = "1.5rem");

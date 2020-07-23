@@ -13,8 +13,7 @@ export default () => {
       <div className={styles.section}>
         <h5><strong>Store Hours</strong></h5>
         <p>Mon-Fri 7:30 am - 5:00 pm</p>
-        <p>Sat 8:00 am - 3:00 pm</p>
-        <p>Sat Nov - Apr 8:00 am - 12:00 pm</p>
+        <p>Sat 8:00 am - Noon</p>
       </div>
       <div className={styles.section}>
         <h5><strong>Contact Us</strong></h5>

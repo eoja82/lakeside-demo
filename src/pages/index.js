@@ -54,7 +54,7 @@ class Index extends React.Component {
           <h2 className={styles.moreInfoIntroH2}>
             We are proud to serve contractors and homeowners as your local source for quality building materials.
           </h2>
-          <img className={styles.moreInfoImg} src="/img/warehouseLogo.jpg" alt="store front" />
+          <img className={styles.moreInfoImg} src="/img/wharehouseFront.jpeg" alt="store front" />
         </div>
       </div>
       <div className={styles.containerProd}>

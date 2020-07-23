@@ -4,7 +4,7 @@ import styles from "./styles/slideshow.module.css"
 let slides = [
   {src: "img/slideshow/twoTrucks.jpg", alt: "two delivery trucks"},
   {src: "img/slideshow/truckTRT.jpg", alt: "truck with treated lumber"},
-  {src: "img/slideshow/catUnloading.jpg", alt: "cat unloading lumber"}
+  {src: "img/slideshow/catUnloading.jpg", alt: "bobcat unloading lumber"}
 ];
 
 let slideIndex = 0;

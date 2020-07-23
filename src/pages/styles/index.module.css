@@ -1,3 +1,6 @@
+body, html {
+  box-sizing: border-box;
+}
 #intro {
   width: 100%;
   height: auto;
@@ -13,8 +16,7 @@
 .listItem {
   width: 150px;
   margin: 0 10px 20px 10px;
-  padding: 2px;
-  color: rgb(117, 164, 226);
+  border: 2px solid rgb(240, 240, 240);
   font-size: 1.1rem;
   text-transform: capitalize;
   background-color: rgb(240, 240, 240);
@@ -37,7 +39,7 @@
   vertical-align: middle;
   text-align: center;
 }
-.listP:hover {
+.listItem:hover .listP {
   background-color: rgb(210, 180, 140);
   color: rgb(4, 83, 4);
 }
@@ -108,12 +110,15 @@
   }
 }
 @media only screen and (max-width: 440px) {
+  .h3 {
+    font-size: 1.75rem;
+  }
   .products {
     max-width: 100%;
   }
   .moreInfoIntroH2, .moreInfoImg {
     max-width: 100%;
-    padding: 5px;
+   /*  padding: 5px; */
   }
   .reverse {
     flex-wrap: wrap-reverse;

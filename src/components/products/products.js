@@ -24,7 +24,7 @@ class Display extends React.Component {
           )}
         </div>
         <div id={styles.logoDescription}>
-          <p className={styles.p}>Click on a link below for more information.</p>
+          <p className={styles.p}>Click on a logo below for more information.</p>
           <div>
           {descLogoSplit.map( (x, i) => <p className={styles.pDiscription + " " + styles.p} key={i}>{x}</p>)}
           </div>
@@ -36,7 +36,7 @@ class Display extends React.Component {
           {this.props.product.product.map( (x, i) => 
             <div key={i} id={styles.logoDiv}>
               <a href={x.link} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
-          { x.logo ? <img src={x.logo} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
+                { x.logo ? <img src={x.logo} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
               </a>
             </div>
           )}

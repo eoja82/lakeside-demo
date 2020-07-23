@@ -2,11 +2,11 @@
   position: relative;
   margin: 0;
   /* added height */
-  height: 65vh;
+  height: auto;
 }
 #introSlides {
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 #prev, #next {
   background-color: transparent;
@@ -37,7 +37,7 @@
   font-size: 2rem;
   transition: 0.6s ease;
   border-radius: 3px;
-  margin-top: -12px;
+  margin: -12px auto 0;
   padding: 10px;
   width: 60px;
   height: auto;
@@ -73,11 +73,11 @@
   background-color: white;
 }
 /* added */
-@media only screen and (max-width: 840px) {
+/* @media only screen and (max-width: 840px) {
   #slideshow {
     height: unset;
   }
-}
+} */
 @media only screen and (max-width: 440px) {
   #prev, #next {
     margin-top: -35px;
@@ -86,6 +86,9 @@
   #playPause {
     margin-top: -25px;
     font-size: 1.5rem;
+  }
+  #play, #pause {
+    margin-left: -10px;
   }
   .slideDot {
     width: 8px;

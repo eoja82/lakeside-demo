@@ -101,6 +101,40 @@ body, html {
   width: auto;
   margin: 0 auto;
 }
+#disclaimerContainer {
+  display: flex;
+  position: fixed;
+  bottom: .75rem;
+  width: 100%;
+  justify-content: center;
+  background-color: transparent;
+}
+#disclaimer {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  background-color: rgb(71, 71, 71, .8);
+  border-radius: 5px;
+}
+#disclaimer p {
+  color: rgb(240, 240, 240);
+  padding: 1rem 32px 0;
+}
+#closeDisclaimer {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.3rem;
+  padding: 0 8px;
+  border: none;
+  border-radius: 0 5px 0 0;
+  background-color: transparent;
+  color: rgb(240, 240, 240);
+}
+#closeDisclaimer:hover, #closeDisclaimer:focus {
+  background-color: black;
+}
 @media only screen and (max-width: 840px) {
   .h3 {
     font-size: 2.2rem;

@@ -40,6 +40,18 @@ let List = () => {
 }
 
 class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.disclaimer = React.createRef();
+    this.closeDisclaimer = this.closeDisclaimer.bind(this);
+  }
+  closeDisclaimer() {
+    this.disclaimer.current.style.display = "none";
+    clearTimeout(this.timer);
+  } 
+  componentDidMount() {
+    this.timer = setTimeout(this.closeDisclaimer, 15000);
+  }
   render() {
     return (
       <Layout>
@@ -78,6 +90,14 @@ class Index extends React.Component {
           </h2>
         </div>
       </div>
+      {/* Disclaimer */}
+      <div id={styles.disclaimerContainer} ref={this.disclaimer} style={{display: "flex"}}>
+        <div id={styles.disclaimer}>
+          <button id={styles.closeDisclaimer} onClick={this.closeDisclaimer}>&times;</button>
+          <p>Disclaimer: This website is NOT the business website for the company pictured herein.  The images and logos are used with permission for demonstration and educational purposes only.</p>
+        </div>
+      </div>
+      {/* <Disclaimer /> */}
     </Layout>
     )
   }

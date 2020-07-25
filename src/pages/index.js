@@ -52,6 +52,9 @@ class Index extends React.Component {
   componentDidMount() {
     this.timer = setTimeout(this.closeDisclaimer, 15000);
   }
+  componentWillUnmount() {
+    clearTimeout(this.timer);
+  }
   render() {
     return (
       <Layout>

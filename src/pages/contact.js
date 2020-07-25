@@ -4,9 +4,9 @@ import { Helmet } from "react-helmet";
 import styles from "./styles/contacts.module.css";
 
 let employees = [
-  {name: "Eric Elhardt", position: "Owner", src: "/img/employees/eric.jpg", email: "eric@lakesidemarcell.com", phone: "1-218-832-3300", key: 1},
-  {name: "Kim Elhardt", position: "Owner", src: "/img/employees/kim.jpg", email: "kim@lakesidemarcell.com", phone: "1-218-832-3300", key: 2},
-  {name: "Matt Elhardt", position: "Sales Associate", src: "/img/employees/matt.jpg", email: "matt@lakesidemarcell.com", phone: "1-218-832-3300", key: 3}
+  {name: "John Doe", position: "Owner", src: "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
+  {name: "Jane Doe", position: "Owner", src: "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
+  {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
 ];
 
 class Contact extends React.Component {
@@ -21,7 +21,7 @@ class Contact extends React.Component {
         <p className={styles.about}>No project is too big or to small.  <a className={styles.textLink} href="tel:1-218-832-3300">  Call</a>, <a className={styles.textLink}href="mailto:eric@lakesidemarcell.com"> email</a>, or contact us on <a className={styles.textLink} href="https://www.facebook.com/pg/LakesideMarcell/photos/?ref=page_internal" target="_blank" rel="noopener noreferrer"> Facebook</a>.<br />  We are here to help you with all your building and project needs!</p>
         <div id={styles.employees}>
           {employees.map( x => 
-            <div className={styles.employee} k={x.key}>
+            <div className={styles.employee} key={x.key}>
               <img className={styles.employeeImg} src={x.src} alt={x.name} />
               <div className={styles.aboutEmployee}>
                 <p className={styles.name}>{x.name}</p>

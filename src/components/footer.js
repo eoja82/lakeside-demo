@@ -6,8 +6,8 @@ export default () => {
     <footer id={styles.footer}>
       <div className={styles.section}>
         <h5><strong>Lakeside Lumber & Hardware</strong></h5>
-        <p>49208 State Highway 38</p>
-        <p>P.O. Box 295</p>
+        <p>XXXXX State Highway XX</p>
+        <p>P.O. Box XXX</p>
         <p>Marcell, MN 56657</p>
       </div>
       <div className={styles.section}>
@@ -17,8 +17,8 @@ export default () => {
       </div>
       <div className={styles.section}>
         <h5><strong>Contact Us</strong></h5>
-        <p><i className="fa fa-phone"></i> Phone: <br /><a id={styles.phone} href="tel:1-218-832-3300">218-832-3300</a></p>
-        <p><i className="fa fa-fax"></i> Fax: <br />218-832-2302</p>
+        <p><i className="fa fa-phone"></i> Phone: <br /><a id={styles.phone} href="tel:1-555-555-5555">555-555-5555</a></p>
+        <p><i className="fa fa-fax"></i> Fax: <br />444-444-4444</p>
         <div>
           <a id={styles.facebook} href="https://www.facebook.com/LakesideMarcell/" target="_blank" aria-label="Facebook" rel="noopener noreferrer"><i className="fa fa-facebook-square"></i></a>
           <a id={styles.email} href="/contact/" aria-label="Email"><i className="fa fa-envelope-square"></i></a>

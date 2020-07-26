@@ -3,14 +3,23 @@ import Layout from "../components/layout";
 import { Helmet } from "react-helmet";
 import styles from "./styles/contacts.module.css";
 
-let employees = [
+/* let employees = [
   {name: "John Doe", position: "Owner", src: "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
   {name: "Jane Doe", position: "Owner", src: "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
   {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
-];
+]; */
 
 class Contact extends React.Component {
   render() {
+    const pathRegex = /lakeside-demo/;
+    console.log(pathRegex.test(window.location.pathname));
+    const prod = pathRegex.test(window.location.pathname);
+    let employees = [
+      {name: "John Doe", position: "Owner", src: prod ? "lakeside-demo/img/employees/john.jpg" : "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
+      {name: "Jane Doe", position: "Owner", src: prod ? "lakeside-demo/img/employees/jane.jpg" : "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
+      {name: "Jake Doe", position: "Sales Associate", src: prod ? "lakeside-demo/img/employees/jake.jpg" : "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
+    ];
+    console.log(employees[0].src);
     return (
       <Layout>
       <Helmet>

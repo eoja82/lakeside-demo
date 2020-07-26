@@ -2,28 +2,16 @@ import React from "react";
 import Layout from "../components/layout";
 import { Helmet } from "react-helmet";
 import styles from "./styles/contacts.module.css";
+import { withPrefix } from "gatsby";
 
-/* let employees = [
+let employees = [
   {name: "John Doe", position: "Owner", src: "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
   {name: "Jane Doe", position: "Owner", src: "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
   {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
-]; */
+];
 
 class Contact extends React.Component {
-  componentDidMount() {
-    this.pathRegex = /lakeside-demo/;
-    this.prod = this.pathRegex.test(window.location.pathname);
-  }
   render() {
-    /* const pathRegex = /lakeside-demo/;
-    console.log(pathRegex.test(window.location.pathname));
-    const prod = pathRegex.test(window.location.pathname); */
-    let employees = [
-      {name: "John Doe", position: "Owner", src: this.prod ? "lakeside-demo/img/employees/john.jpg" : "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
-      {name: "Jane Doe", position: "Owner", src: this.prod ? "lakeside-demo/img/employees/jane.jpg" : "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
-      {name: "Jake Doe", position: "Sales Associate", src: this.prod ? "lakeside-demo/img/employees/jake.jpg" : "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
-    ];
-    console.log(employees[0].src);
     return (
       <Layout>
       <Helmet>
@@ -35,7 +23,7 @@ class Contact extends React.Component {
         <div id={styles.employees}>
           {employees.map( x => 
             <div className={styles.employee} key={x.key}>
-              <img className={styles.employeeImg} src={x.src} alt={x.name} />
+              <img className={styles.employeeImg} src={withPrefix(x.src)} alt={x.name} />
               <div className={styles.aboutEmployee}>
                 <p className={styles.name}>{x.name}</p>
                 <p className={styles.position}>{x.position}</p>

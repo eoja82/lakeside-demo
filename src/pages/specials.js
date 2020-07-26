@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import styles from "./styles/specials.module.css"
+import { withPrefix } from "gatsby"
 
 class Specials extends React.Component {
   render() {
@@ -11,7 +12,7 @@ class Specials extends React.Component {
           <title>Lakeside Lumber - current specials</title>
           <meta name="description" content="Current specials at Lakeside Lumber" />
         </Helmet>
-        <div id={styles.container}>
+        <div id={styles.container} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
           <h4 className={styles.h4}>Scroll through the Facebook feed to see our specials.</h4>
           <p id={styles.p}>
             If you don't see the specials click <a id={styles.link} href="https://www.facebook.com/pg/LakesideMarcell/posts/?ref=page_internal" target="_blank" rel="noopener noreferrer">here</a> to view the specials on Facebook.

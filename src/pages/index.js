@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import styles from "./styles/index.module.css";
 import Slideshow from "../components/slideshow";
 import Quote from "../components/getQuote";
+import { withPrefix } from "gatsby";
 
 let List = () => {
   const data = useStaticQuery(graphql`
@@ -30,7 +31,7 @@ let List = () => {
       {list.map( x => (
         <Link to={x.path} key={x.key} className={styles.listItem}>
           <div>
-            <img className={styles.listImg} src={x.src} alt={x.alt} />
+            <img className={styles.listImg} src={withPrefix(x.src)} alt={x.alt} />
             <p className={styles.listP}>{x.name} <i className="fa fa-angle-right"></i></p>
           </div>
         </Link>
@@ -60,7 +61,7 @@ class Index extends React.Component {
       <Layout>
       <div id={styles.intro}> 
         <Slideshow />
-        <div id={styles.about}>
+        <div id={styles.about} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
           <h3 className={styles.h3}>Family owned and operated for over 30 years!</h3>
         </div>
       </div>
@@ -69,10 +70,10 @@ class Index extends React.Component {
           <h2 className={styles.moreInfoIntroH2}>
             We are proud to serve contractors and homeowners as your local source for quality building materials.
           </h2>
-          <img className={styles.moreInfoImg} src="/img/wharehouseFront.jpeg" alt="store front" />
+          <img className={styles.moreInfoImg} src={withPrefix("/img/wharehouseFront.jpeg")} alt="store front" />
         </div>
       </div>
-      <div className={styles.containerProd}>
+      <div className={styles.containerProd} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
         <div className={styles.productDiv}>
           <h3 className={styles.h3}>
             PRODUCTS
@@ -87,7 +88,7 @@ class Index extends React.Component {
       </div>
       <div className={styles.moreInfo}>
         <div className={styles.moreInfoIntro}>
-          <img className={styles.moreInfoImg} src="/img/loadedTruck.jpg" alt="delivery truck" />
+          <img className={styles.moreInfoImg} src={withPrefix("/img/loadedTruck.jpg")} alt="delivery truck" />
           <h2 className={styles.moreInfoIntroH2}>
             WE DELIVER! - Serving the Edge of the Wilderness area - Marcell, Bigfork, Effie, as well as Deer River, Balsom, Talmoon, and Grand Rapids areas.
           </h2>

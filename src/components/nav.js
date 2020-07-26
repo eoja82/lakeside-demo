@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticQuery, graphql, Link } from "gatsby";
 import styles from "./styles/nav.module.css";
+import { withPrefix } from "gatsby";
 
 class Nav extends React.Component {
   constructor(props) {
@@ -44,7 +45,7 @@ class Nav extends React.Component {
       `}
       render={ data => (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
-        <Link className={"navbar-brand " + styles.logo} to="/"><img id="logo" className={styles.logo} src="/img/logo.png" alt="logo" width="140px" height="80px" /></Link>
+        <Link className={"navbar-brand " + styles.logo} to="/"><img id="logo" className={styles.logo} src={withPrefix("/img/logo.png")} alt="logo" width="140px" height="80px" /></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

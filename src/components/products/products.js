@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import styles from "./styles/products.module.css";
 import Quote from "../getQuote";
+import { withPrefix } from "gatsby";
 
 class Display extends React.Component {
   render() {
@@ -9,7 +10,7 @@ class Display extends React.Component {
     let titleInfo = split[2].replace(/-/g, " ");
     let descLogoSplit = this.props.product.descriptionLogos.split(/\*/g);
     return (
-      <div id={styles.container}>
+      <div id={styles.container} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
         <Helmet>
           <title>{`Lakeside Lumber is your source for ${titleInfo}`}</title>
           <meta name="description" content={this.props.product.description + this.props.product.descriptionLogos} />
@@ -20,7 +21,7 @@ class Display extends React.Component {
         </div>
         <div id={styles.productImg}>
           {this.props.product.images.map( (x, i) =>
-            <img src={x.image} alt={x.type} key={i} className={styles.productImg} />
+            <img src={withPrefix(x.image)} alt={x.type} key={i} className={styles.productImg} />
           )}
         </div>
         <div id={styles.logoDescription}>
@@ -36,7 +37,7 @@ class Display extends React.Component {
           {this.props.product.product.map( (x, i) => 
             <div key={i} id={styles.logoDiv}>
               <a href={x.link} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
-                { x.logo ? <img src={x.logo} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
+                { x.logo ? <img src={withPrefix(x.logo)} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
               </a>
             </div>
           )}

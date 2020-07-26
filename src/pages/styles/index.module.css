@@ -46,7 +46,6 @@ body, html {
 #about {
   padding: 5px;
   width: 100%;
-  background-image: url("/img/graySiding.jpg");
   background-size: cover;
   text-align: center;
 }
@@ -83,7 +82,6 @@ body, html {
   max-width: 50%;
 }
 .containerProd {
-  background-image: url("/img/graySiding.jpg");
   background-size: cover;
 }
 .productDiv {

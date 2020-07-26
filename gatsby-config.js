@@ -6,7 +6,6 @@
 
 module.exports = {
   pathPrefix: "/lakeside-demo",
-  assetPrefix: "https://eoja82.github.io/lakeside-demo",
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,

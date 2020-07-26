@@ -2,9 +2,12 @@ import React from "react";
 import Layout from "../components/layout";
 import { Helmet } from "react-helmet";
 import styles from "./styles/contacts.module.css";
+import { withPrefix } from "gatsby";
+
+const hosted = window.location.pathname === withPrefix("/lakeside-demo");
 
 let employees = [
-  {name: "John Doe", position: "Owner", src: "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
+  {name: "John Doe", position: "Owner", src: hosted ? "/lakeside-demo/img/employees/john.jpg" : "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
   {name: "Jane Doe", position: "Owner", src: "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
   {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
 ];

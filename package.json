@@ -9,7 +9,8 @@
     "start": "npx gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^2.24.4",
@@ -24,6 +25,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "ghpages": "0.0.10",
     "prettier": "^1.19.1"
   },
   "repository": {

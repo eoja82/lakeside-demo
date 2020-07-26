@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/lakeside-demo",
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

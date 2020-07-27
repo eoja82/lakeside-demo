@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "./styles/slideshow.module.css"
+import styles from "./styles/slideshow.module.css";
+import { withPrefix } from "gatsby";
 
 let slides = [
   {src: "img/slideshow/twoTrucks.jpg", alt: "two delivery trucks"},
@@ -70,7 +71,7 @@ class Slideshow extends React.Component {
   render() {
     return (
        <div id={styles.slideshow} onMouseEnter={this.displayButton} onMouseLeave={this.hideButton} role="presentation">
-        <img src={this.state.src} alt={this.state.alt} id={styles.introSlides} />
+        <img src={withPrefix(this.state.src)} alt={this.state.alt} id={styles.introSlides} />
         {/* mouse enter/leave, hide play/pause when hover over arrows */} 
         <button id={styles.prev} onClick={this.prevSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton} aria-label="previous slide"><i className="fa fa-angle-left"></i></button>
         <button id={styles.next} onClick={this.nextSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton} aria-label="next slide"><i className="fa fa-angle-right"></i></button>

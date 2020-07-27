@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby";
-import styles from "./styles/prodSidebar.module.css"
+import styles from "./styles/prodSidebar.module.css";
+import { withPrefix } from "gatsby";
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -24,7 +25,7 @@ export default () => {
     list.push({path: slug, key: i, name: listItem})
   });
   return (
-    <div id={styles.sidebar}>
+    <div id={styles.sidebar} style={{backgroundImage: `url(${withPrefix("/img/brickBG.jpeg")})`}}>
       {list.map( x => (
         <Link to={x.path} id={styles.link} activeStyle={activeStyles} key={x.key}>
           {x.name}

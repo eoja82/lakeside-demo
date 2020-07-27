@@ -3,9 +3,9 @@ import styles from "./styles/slideshow.module.css";
 import { withPrefix } from "gatsby";
 
 let slides = [
-  {src: "img/slideshow/twoTrucks.jpg", alt: "two delivery trucks"},
-  {src: "img/slideshow/truckTRT.jpg", alt: "truck with treated lumber"},
-  {src: "img/slideshow/catUnloading.jpg", alt: "bobcat unloading lumber"}
+  {src: "img/slideShow/twoTrucks.jpg", alt: "two delivery trucks"},
+  {src: "img/slideShow/truckTRT.jpg", alt: "truck with treated lumber"},
+  {src: "img/slideShow/catUnloading.jpg", alt: "bobcat unloading lumber"}
 ];
 
 let slideIndex = 0;

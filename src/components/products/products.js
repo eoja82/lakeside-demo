@@ -9,6 +9,7 @@ class Display extends React.Component {
     let split = this.props.product.slug.split("/")
     let titleInfo = split[2].replace(/-/g, " ");
     let descLogoSplit = this.props.product.descriptionLogos.split(/\*/g);
+    let linkRegex = /^http/i;
     return (
       <div id={styles.container} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
         <Helmet>
@@ -36,7 +37,7 @@ class Display extends React.Component {
         <div id={styles.products}>
           {this.props.product.product.map( (x, i) => 
             <div key={i} id={styles.logoDiv}>
-              <a href={x.link} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
+              <a href={linkRegex.test(x.link) ? x.link : withPrefix(x.link)} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
                 { x.logo ? <img src={withPrefix(x.logo)} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
               </a>
             </div>

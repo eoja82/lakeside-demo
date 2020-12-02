@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./styles/slideshow.module.css";
 import { withPrefix } from "gatsby";
 
-let slides = [
+let slideData = [
   {src: "img/slideShow/twoTrucks.jpg", alt: "two delivery trucks"},
   {src: "img/slideShow/truckTRT.jpg", alt: "truck with treated lumber"},
   {src: "img/slideShow/catUnloading.jpg", alt: "bobcat unloading lumber"}
 ];
 
-let slideIndex = 0;
+//let slideIndex = 0;
 
-class Slideshow extends React.Component {
+/* class Slideshow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {src: slides[slideIndex].src, alt: slides[slideIndex].alt, isActive: slides[slideIndex].isActive, index: slides[slideIndex].index};
@@ -24,62 +24,110 @@ class Slideshow extends React.Component {
     this.prevSlide = this.prevSlide.bind(this);
     this.nextSlide = this.nextSlide.bind(this);
     this.autoSlide = this.autoSlide.bind(this);
+  } */
+  
+  /* https://github.com/john-smilga/react-projects/blob/master/7-slider/final/src/Alternative.js */
+
+function Slideshow() {
+  const [slides, setSlides] = useState(slideData);
+  const [slideIndex, setSlideIndex] = useState(0);
+  const playPauseRef = useRef(null);
+  const playRef = useRef(null);
+  const pauseRef = useRef(null);
+  /* use useRef for autoSlide and paused */
+  /* https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables */
+  let autoSlide;
+  let paused = false;
+
+  const play = () => {
+    //autoSlide();
+    paused = false;
+    nextSlide();
+    pauseRef.current.style.display = "block";
+    playRef.current.style.display = "none";
   }
-  play() {
-    this.autoSlide();
-    this.pauseRef.current.style.display = "block";
-    this.playRef.current.style.display = "none";
+  const pause = () => {
+    clearInterval(autoSlide);
+    paused = true;
+    pauseRef.current.style.display = "none";
+    playRef.current.style.display = "block";
   }
-  pause() {
-    clearInterval(this.next);
-    this.pauseRef.current.style.display = "none";
-    this.playRef.current.style.display = "block";
+  const displayButton = () => {
+    playPauseRef.current.style.display = "block";
   }
-  displayButton() {
-    this.playPauseRef.current.style.display = "block";
+  const hideButton = () => {
+    playPauseRef.current.style.display = "none";
   }
-  hideButton() {
-    this.playPauseRef.current.style.display = "none";
-  }
-  prevSlide() {
+  const prevSlide = () => {
     if (slideIndex === 0) {
-      slideIndex = slides.length - 1;
-      this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+      setSlideIndex(slides.length - 1);
+      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
     } else {
-      slideIndex--;
-      this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+      setSlideIndex(prevSlideIndex => prevSlideIndex - 1);
+      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
     }
   }
-  nextSlide() {
+  const nextSlide = () => {
+    //console.log("next", slideIndex)
     if (slideIndex === slides.length - 1) {
-      slideIndex = 0;
-      this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+      //console.log("in if")
+      setSlideIndex(0); //  slideIndex = 0;
+      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
     } else {
-      slideIndex++;
-      this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+      //console.log("in else")
+      setSlideIndex(prevSlideIndex => prevSlideIndex + 1)   //slideIndex++;
+      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+    }
+    console.log(slideIndex)
+  }
+  /* const autoSlide = () => {
+    console.log("autoSlide")
+    return setInterval(nextSlide, 4000);
+  } */
+
+  useEffect(() => {
+    console.log(paused)
+    if (!paused) {
+    autoSlide = setInterval(nextSlide, 4000);
+    //autoSlide()
+    return () => {
+      clearInterval(autoSlide)
     }
   }
-  autoSlide() {
-    this.next = setInterval(this.nextSlide, 4000);
-  }
-  componentDidMount() {
+  }, [slideIndex]);
+
+  /* componentDidMount() {
     this.autoSlide();
   }
   componentWillUnmount() {
     clearInterval(this.next);
-  }
-  render() {
+  } */
+  //render() {
     return (
-       <div id={styles.slideshow} onMouseEnter={this.displayButton} onMouseLeave={this.hideButton} role="presentation">
-        <img src={withPrefix(this.state.src)} alt={this.state.alt} id={styles.introSlides} />
+       <div id={styles.slideshow} onMouseEnter={displayButton} onMouseLeave={hideButton} role="presentation">
+        {/* <img src={withPrefix(this.state.src)} alt={this.state.alt} id={styles.introSlides} /> */}
+        <div id={styles.introSlides}>
+          {slides.map( (slide, index) => {
+            //console.log(slide)
+            let position = styles.nextSlide;
+            if (slideIndex === index) position = styles.activeSlide;
+            if (index === slideIndex - 1 || 
+              (slideIndex === 0 && index === slides.length - 1)) position = styles.prevSlide
+            return (
+              <div className={styles.imgWrapper + " " + position} key={index}>
+                <img src={withPrefix(slide.src)} alt={slide.alt} className={styles.slide} />
+              </div>
+            )
+          })}
+        </div>
         {/* mouse enter/leave, hide play/pause when hover over arrows */} 
-        <button id={styles.prev} onClick={this.prevSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton} aria-label="previous slide"><i className="fa fa-angle-left"></i></button>
-        <button id={styles.next} onClick={this.nextSlide} onMouseEnter={this.hideButton} onMouseLeave={this.displayButton} aria-label="next slide"><i className="fa fa-angle-right"></i></button>
-        <div id={styles.playPause} ref={this.playPauseRef} style={{display: "none"}} role="presentation">
-          <button onClick={this.play} style={{display: "none"}} id={styles.play} ref={this.playRef}>
+        <button id={styles.prev} onClick={prevSlide} onMouseEnter={hideButton} onMouseLeave={displayButton} aria-label="previous slide"><i className="fa fa-angle-left"></i></button>
+        <button id={styles.next} onClick={nextSlide} onMouseEnter={hideButton} onMouseLeave={displayButton} aria-label="next slide"><i className="fa fa-angle-right"></i></button>
+        <div id={styles.playPause} ref={playPauseRef} style={{display: "none"}} role="presentation">
+          <button onClick={play} style={{display: "none"}} id={styles.play} ref={playRef}>
             <i className="fa fa-play"></i>
           </button>
-          <button onClick={this.pause} style={{display: "block"}} id={styles.pause} ref={this.pauseRef}>
+          <button onClick={pause} style={{display: "block"}} id={styles.pause} ref={pauseRef}>
             <i className="fa fa-pause"></i>
           </button>
         </div>
@@ -93,6 +141,6 @@ class Slideshow extends React.Component {
         </div>
       </div>
     )
-  }
+  //}
 }
 export default Slideshow;

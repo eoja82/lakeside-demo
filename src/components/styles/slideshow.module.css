@@ -5,14 +5,8 @@
   height: auto;
 }
 #introSlides {
-  /* max-width: 100%;
-  height: auto; */
   margin: 0 auto;
-  /* margin-top: 4rem; */
   width: 100%;
-  /* max-width: 100%; */
-  /* height: calc(max-width * .33); */
- /*  text-align: center; */
   position: relative;
   display: flex;
   overflow: hidden;
@@ -105,12 +99,6 @@
 .activeDot {
   background-color: white;
 }
-/* added */
-/* @media only screen and (max-width: 840px) {
-  #slideshow {
-    height: unset;
-  }
-} */
 @media only screen and (max-width: 440px) {
   #prev, #next {
     margin-top: -35px;

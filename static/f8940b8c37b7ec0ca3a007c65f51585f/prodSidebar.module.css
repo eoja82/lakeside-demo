@@ -1,0 +1,23 @@
+#sidebar {
+  background-size: 220%;
+ background-repeat: repeat;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 130px 10px 10px 10px;
+  border-right: 2px solid black;
+}
+#link {
+  text-transform: capitalize;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+}
+#link:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 500px) {
+  #sidebar {
+    display: none;
+  }
+}

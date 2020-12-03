@@ -1,0 +1,19 @@
+{
+  "description": "Whether you prefer a natural wood deck material or composite deck material, we have your decking and railing needs covered.",
+  "descriptionLogos": "CEDAR, IPE, GREEN TREATED, and BROWN TREATED DECKING: BlueLinx.*COMPOSITE DECKING and RAILING: Azek, TimberTech, Trex, Armadillo, and DecKorators.*ALUMINUM RAILING: Westbury Railing and Regal ideas",
+  "slug": "/products/decking-and-railing/",
+  "product": [
+    {"manufacturer": "BlueLinx", "type": "decking-railing", "logo":"/img/products/blueLinx-logo.png", "link": "https://northcentral.bluelinxco.com/"},
+    {"manufacturer": "Azek", "type": "decking-railing", "logo": "/img/products/azek-logo.jpg", "link": "https://www.azek.com/"},
+    {"manufacturer": "TimberTech", "type": "decking-railing", "logo": "/img/products/timberTech-logo.jpg", "link": "https://www.timbertech.com/products"},
+    {"manufacturer": "Trex", "type": "decking-railing", "logo": "/img/products/trex-logo.png", "link": "https://www.trex.com/"},
+    {"manufacturer": "Armadillo", "type": "decking-railing", "logo": "/img/products/armadillo-logo.jpg", "link": "https://armadillodeck.com/"},
+    {"manufacturer": "DecKorators", "type": "decking-railing", "logo": "/img/products/deckorators-logo.png", "link": "https://www.deckorators.com/"},
+    {"manufacturer": "Westbury Railing", "type": "decking-railing", "logo": "/img/products/westbury-logo.png", "link": "https://www.diggerspecialties.com/products/railing/"},
+    {"manufacturer": "Regal ideas", "type": "decking-railing", "logo": "/img/products/regalIdeas-logo.png", "link": "https://regalideas.com/"}
+  ],
+  "images": [
+    {"type": "decking-railing", "image": "/img/products/decking1.jpg"},
+    {"type": "decking-railing", "image": "/img/products/decking2.jpg"}
+  ]
+}

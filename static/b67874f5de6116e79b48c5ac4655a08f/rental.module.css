@@ -1,0 +1,65 @@
+#container {
+  background-size: cover; 
+  padding-top: 104px;
+}
+.h4 {
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2.2rem;
+  text-align: center;
+  color: rgb(210, 180, 140);
+  text-shadow: -1px -1px 0 rgb(4, 83, 4),
+               1px -1px 0 rgb(4, 83, 4),
+               -1px 1px 0 rgb(4, 83, 4),
+               1px 1px 0 rgb(4, 83, 4);
+  margin: 0;
+  padding: 10px;
+}
+#allEquipment {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 80%;
+  padding-bottom: 2%;
+  margin: 0 auto 0 auto;
+  justify-content: center;
+}
+.equipment {
+  max-width: 300px;
+  margin: 15px;
+  background-color: rgb(4, 83, 4);
+  box-shadow: 5px 5px 8px rgb(71, 71, 71);
+  border: 3px solid rgb(240, 240, 240);
+}
+.p {
+  font-size: 1.3rem;
+  margin: 0;
+  text-align: center;
+  padding-top: 5px;
+}
+.ul {
+  margin: 5px;
+  height: 100%;
+}
+.p, .li {
+  color: rgb(210, 180, 140);
+}
+.productImg {
+  width: 100%;
+}
+.quoteDiv {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+@media only screen and (max-width: 780px) {
+  #allEquipment {
+    min-width: 90%;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .h4 {
+    font-size: 1.75rem;
+  }
+}

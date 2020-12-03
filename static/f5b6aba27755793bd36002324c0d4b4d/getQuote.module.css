@@ -1,0 +1,37 @@
+#button {
+  background-color: rgb(52, 122, 183);
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: .4rem .75rem;
+  color: white;
+  box-shadow: 4px 4px 8px rgb(71, 71, 71);
+  font-size: 1.25rem;
+  transition: .3s;
+}
+#button:hover, #button:focus {
+  /* border: 1px solid rgb(52, 122, 183); */
+  background-color: #2196F3;
+}
+.modalContent {
+  text-align: center;
+}
+#contactInfo {
+  padding-top: 10px;
+}
+@media only screen and (max-width: 800px) {
+  #modal {
+    position: relative;
+  }
+  .modalContent {
+    position: absolute;
+    top: 20%;
+  }
+  #h2 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  #h2 {
+    font-size: .9rem;
+  }
+}

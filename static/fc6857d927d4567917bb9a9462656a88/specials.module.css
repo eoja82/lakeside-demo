@@ -1,0 +1,47 @@
+#container {
+  background-size: cover;
+  font-family: 'Alegreya Sans', sans-serif;
+  padding-top: 104px;
+}
+#facebook {
+  padding: 10px 0 2% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 500px;
+  height: 550px;
+  margin: auto;
+}
+.h4, #p, #link {
+  color: rgb(210, 180, 140);
+  text-shadow: -1px -1px 0 rgb(4, 83, 4),
+               1px -1px 0 rgb(4, 83, 4),
+               -1px 1px 0 rgb(4, 83, 4),
+               1px 1px 0 rgb(4, 83, 4);
+}
+.h4 {
+  font-size: 2.2rem;
+  text-align: center;
+  padding-top: 1%;
+  text-align: center;
+}
+#p {
+  font-size: 1.3rem;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#link {
+  font-size: 1.6rem;
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+}
+@media only screen and (max-width: 440px) {
+  #facebook {
+    max-width: 95%;
+    max-height: 70%
+  }
+  .h4 {
+    font-size: 1.75rem;
+  }
+} 

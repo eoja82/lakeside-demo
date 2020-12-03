@@ -36,19 +36,21 @@ function Slideshow() {
   const pauseRef = useRef(null);
   /* use useRef for autoSlide and paused */
   /* https://reactjs.org/docs/hooks-faq.html#is-there-something-like-instance-variables */
-  let autoSlide;
-  let paused = false;
+  let autoSlide = useRef();
+  let paused = useRef(false);
+  let playDelay = useRef();
 
   const play = () => {
     //autoSlide();
-    paused = false;
-    nextSlide();
+    paused.current = false;
+    playDelay.current = setTimeout(nextSlide, 2000);
+    //autoSlide.current = setInterval(nextSlide, 2000);
     pauseRef.current.style.display = "block";
     playRef.current.style.display = "none";
   }
   const pause = () => {
-    clearInterval(autoSlide);
-    paused = true;
+    clearInterval(autoSlide.current);
+    paused.current = true;
     pauseRef.current.style.display = "none";
     playRef.current.style.display = "block";
   }
@@ -61,47 +63,37 @@ function Slideshow() {
   const prevSlide = () => {
     if (slideIndex === 0) {
       setSlideIndex(slides.length - 1);
-      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
     } else {
       setSlideIndex(prevSlideIndex => prevSlideIndex - 1);
-      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
     }
   }
   const nextSlide = () => {
-    //console.log("next", slideIndex)
+    if (playDelay.current) clearTimeout(playDelay);
     if (slideIndex === slides.length - 1) {
-      //console.log("in if")
-      setSlideIndex(0); //  slideIndex = 0;
-      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+      setSlideIndex(0);
     } else {
-      //console.log("in else")
-      setSlideIndex(prevSlideIndex => prevSlideIndex + 1)   //slideIndex++;
-      //this.setState({src: slides[slideIndex].src, alt: slides[slideIndex].alt});
+      setSlideIndex(prevSlideIndex => prevSlideIndex + 1);
     }
-    console.log(slideIndex)
   }
-  /* const autoSlide = () => {
-    console.log("autoSlide")
-    return setInterval(nextSlide, 4000);
-  } */
-
-  useEffect(() => {
-    console.log(paused)
-    if (!paused) {
-    autoSlide = setInterval(nextSlide, 4000);
-    //autoSlide()
+  /* useEffect(() => {
+    if (paused.current) {
+      playDelay.current = setTimeout(nextSlide(), 2000);
+    }
     return () => {
-      clearInterval(autoSlide)
+      clearTimeout(playDelay.current)
     }
-  }
-  }, [slideIndex]);
+  },[]); */
+  useEffect(() => {
+    //console.log(paused)
+    if (!paused.current) {
+      autoSlide.current = setInterval(nextSlide, 4000);
+      //autoSlide()
+      return () => {
+        clearInterval(autoSlide.current)
+      }
+    }
+  });
 
-  /* componentDidMount() {
-    this.autoSlide();
-  }
-  componentWillUnmount() {
-    clearInterval(this.next);
-  } */
   //render() {
     return (
        <div id={styles.slideshow} onMouseEnter={displayButton} onMouseLeave={hideButton} role="presentation">

@@ -1,0 +1,24 @@
+.notFound {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 90px;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  background-size: cover;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 2rem;
+  color: rgb(210, 180, 140);
+  text-shadow: -1px -1px 0 rgb(4, 83, 4),
+               1px -1px 0 rgb(4, 83, 4),
+               -1px 1px 0 rgb(4, 83, 4),
+               1px 1px 0 rgb(4, 83, 4);
+}
+.notFound h2 {
+  max-width: 90%;
+}
+.fourZeroFour {
+  font-size: 4rem;
+}

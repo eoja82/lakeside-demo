@@ -14,9 +14,10 @@ body, html {
   justify-content: center;
 }
 .listItem {
-  width: 150px;
-  margin: 0 10px 20px 10px;
-  border: 2px solid rgb(240, 240, 240);
+  width: 300px;
+  height: 100%;
+  margin: 10px;
+  border: 5px solid rgb(240, 240, 240);
   font-size: 1.1rem;
   text-transform: capitalize;
   background-color: rgb(240, 240, 240);
@@ -24,7 +25,7 @@ body, html {
 }
 .listItem:hover {
   text-decoration: none;
-}
+} 
 .listImg {
   width: 100%;
   height: auto;
@@ -32,16 +33,20 @@ body, html {
 .listP {
   background-color: rgb(4, 83, 4);
   color: rgb(210, 180, 140);
+  margin: 0;
   padding: 0;
-  width: 150px;
+  width: 100%;
   height: 60px;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .listItem:hover .listP {
   background-color: rgb(210, 180, 140);
   color: rgb(4, 83, 4);
+}
+.rightArrow {
+  padding-left: 5px;
 }
 #about {
   padding: 5px;
@@ -90,7 +95,7 @@ body, html {
   justify-content: center;
 }
 .products {
-  max-width: 80%;
+  max-width: 95%;
   margin: 10px auto;
 }
 .quote {

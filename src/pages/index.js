@@ -32,7 +32,7 @@ let List = () => {
         <Link to={x.path} key={x.key} className={styles.listItem}>
           <div>
             <img className={styles.listImg} src={withPrefix(x.src)} alt={x.alt} />
-            <p className={styles.listP}>{x.name} <i className="fa fa-angle-right"></i></p>
+            <p className={styles.listP}>{x.name} <i className={`fa fa-angle-right ${styles.rightArrow}`}></i></p>
           </div>
         </Link>
       ))}

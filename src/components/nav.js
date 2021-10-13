@@ -46,10 +46,10 @@ class Nav extends React.Component {
       render={ data => (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
         <Link className={"navbar-brand " + styles.logo} to="/"><img id="logo" className={styles.logo} src={withPrefix("/img/logo.png")} alt="logo" width="140px" height="80px" /></Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div className="collapse navbar-collapse" id="navbarToggler">
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item dropdown">
               <button className={"nav-link dropdown-toggle " + styles.navItem} id={styles.dropButton} data-toggle="dropdown" href="#" style={{fontSize: "1.4rem"}} aria-haspopup="true" aria-expanded="false">Products</button>

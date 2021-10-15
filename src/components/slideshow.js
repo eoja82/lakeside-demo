@@ -2,13 +2,19 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./styles/slideshow.module.css";
 import { withPrefix } from "gatsby";
 
-let slideData = [
+/* let slideData = [
   {src: "img/slideShow/twoTrucks.jpg", alt: "two delivery trucks"},
   {src: "img/slideShow/truckTRT.jpg", alt: "truck with treated lumber"},
   {src: "img/slideShow/catUnloading.jpg", alt: "bobcat unloading lumber"}
+]; */
+
+let slideData = [
+  {src: "img/slideShow/pic1.jpg", alt: "two delivery trucks"},
+  {src: "img/slideShow/pic2.jpg", alt: "truck with treated lumber"},
+  {src: "img/slideShow/pic3.jpg", alt: "bobcat unloading lumber"}
 ];
 
-function Slideshow() {
+/* function Slide() {
   const [slides] = useState(slideData);
   const [slideIndex, setSlideIndex] = useState(0);
   const playPauseRef = useRef(null);
@@ -75,9 +81,9 @@ function Slideshow() {
             </div>
           )
         })}
-      </div>
+      </div> */
       {/* mouse enter/leave, hide play/pause when hover over arrows */} 
-      <button id={styles.prev} onClick={prevSlide} onMouseEnter={hideButton} onMouseLeave={displayButton} aria-label="previous slide"><i className="fa fa-angle-left"></i></button>
+      {/* <button id={styles.prev} onClick={prevSlide} onMouseEnter={hideButton} onMouseLeave={displayButton} aria-label="previous slide"><i className="fa fa-angle-left"></i></button>
       <button id={styles.next} onClick={nextSlide} onMouseEnter={hideButton} onMouseLeave={displayButton} aria-label="next slide"><i className="fa fa-angle-right"></i></button>
       <div id={styles.playPause} ref={playPauseRef} style={{display: "none"}} role="presentation">
         <button onClick={play} style={{display: "none"}} id={styles.play} ref={playRef}>
@@ -94,6 +100,54 @@ function Slideshow() {
             <div className={styles.slideDot + " " + (isActive ? styles.activeDot : "")} key={`${x.alt}${i}`}></div>
           )
         })}
+      </div>
+    </div>
+  )
+} */}
+
+function Slideshow() {
+  return (
+    <div className="slideshow">
+      <div id="carouselCaptions" className="carousel slide carousel-fade" data-ride="carousel">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselCaptions" data-slide-to="2"></li>
+        </ol>
+        <div className="carousel-inner" id={styles.carousel}>
+          <div className="carousel-item active " data-interval="4000">
+            <div style={{backgroundImage: `url(${withPrefix("/img/slideShow/pic1.jpg")})`}} className={"d-block w-100 " + styles.bgimg}></div>
+            {/* <img src="img/slideShow/pic1.jpg" className="d-block w-100" alt="Delivery Truck" /> */}
+            <div className="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div className="carousel-item" data-interval="4000">
+            <div style={{backgroundImage: `url(${withPrefix("/img/slideShow/pic2.jpg")})`}} class={"d-block w-100 " + styles.bgimg}></div>
+            {/* <img src="img/slideShow/pic2.jpg" class="d-block w-100" alt="Delivery Truck" /> */}
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div className="carousel-item" data-interval="4000" >
+            <div style={{backgroundImage: `url(${withPrefix("/img/slideShow/pic3.jpg")})`}} className={"d-block w-100 " + styles.bgimg}></div>
+            {/* <img src="img/slideShow/pic3.jpg" className="d-block w-100" alt="Delivery Truck" /> */}
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </div>
+        </div>
+        <a className="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselCaptions" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
       </div>
     </div>
   )

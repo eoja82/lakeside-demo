@@ -4,7 +4,6 @@ body, html {
 #intro {
   width: 100%;
   height: auto;
-  padding-top: 104px;
   background-color: #343a40;
 }
 #list {
@@ -119,6 +118,7 @@ body, html {
   width: 100%;
   justify-content: center;
   background-color: transparent;
+  z-index: 10;
 }
 #disclaimer {
   position: relative;
@@ -163,7 +163,6 @@ body, html {
   }
   .moreInfoIntroH2, .moreInfoImg {
     max-width: 100%;
-   /*  padding: 5px; */
   }
   .reverse {
     flex-wrap: wrap-reverse;

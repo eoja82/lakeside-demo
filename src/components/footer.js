@@ -5,7 +5,7 @@ import { withPrefix } from "gatsby";
 export default () => {
   return (
     <footer id={styles.footer} style={{backgroundImage: `url(${withPrefix("/img/lake.jpg")})`}}>
-      <div id={styles.container} >
+      <div id={styles.container} className="bg-dark" style={{"--bs-bg-opacity": ".85"}}>
         <div className={styles.section}>
           <h5><strong>Lakeside Lumber & Hardware</strong></h5>
           <p>XXXXX State Highway XX</p>

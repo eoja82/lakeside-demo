@@ -53,12 +53,6 @@ body, html {
 .listItem:hover .rightArrow {
   animation: moveArrow .6s;
 }
-#about {
-  padding: 5px;
-  width: 100%;
-  background-size: cover;
-  text-align: center;
-}
 .h3 {
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 2.8rem;

@@ -61,9 +61,6 @@ class Index extends React.Component {
       <Layout>
       <div id={styles.intro}> 
         <Slideshow />
-        <div id={styles.about} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
-          <h3 className={styles.h3}>Family owned and operated for over 30 years!</h3>
-        </div>
       </div>
       <div className={styles.moreInfo}>
         <div className={`${styles.moreInfoIntro} ${styles.reverse}`}>

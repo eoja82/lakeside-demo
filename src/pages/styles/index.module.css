@@ -2,8 +2,8 @@ body, html {
   box-sizing: border-box;
 }
 #intro {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   background-color: #343a40;
 }
 #list {
@@ -19,12 +19,10 @@ body, html {
   border: 5px solid rgb(240, 240, 240);
   font-size: 1.1rem;
   text-transform: capitalize;
+  text-decoration: none;
   background-color: rgb(240, 240, 240);
   box-shadow: 4px 4px 8px rgb(71, 71, 71);
 }
-.listItem:hover {
-  text-decoration: none;
-} 
 .listImg {
   width: 100%;
   height: auto;

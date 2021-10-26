@@ -1,51 +1,33 @@
-import React from "react";
-import styles from "./styles/slideshow.module.css";
-import { withPrefix } from "gatsby";
+import React from "react"
+import styles from "./styles/slideshow.module.css"
+import { withPrefix } from "gatsby"
+import Carousel from "react-bootstrap/Carousel"
 
 
 function Slideshow() {
   return (
-    <div className="slideshow">
-      <div id="carouselCaptions" className="carousel slide carousel-fade" /* data-bs-ride="carousel" */>
-        <div className="carousel-indicators">
-          <button data-bs-target="#carouselCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div className="carousel-inner" id={styles.carousel}>
-          <div className="carousel-item active" data-bs-interval="4000">
-            <div style={{backgroundImage: `url(${withPrefix("/img/slideShow/storeFront.jpeg")})`}} className={"d-block w-100 " + styles.bgimg}></div>
-            <div className={styles.caption1}>
-              <h1 className={styles.captionh1}>FAMILY OWNED AND OPERATED</h1>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval="4000">
-            <div style={{backgroundImage: `url(${withPrefix("/img/slideShow/boomTruck1.jpg")})`}} className={"d-block w-100 " + styles.bgimg}></div>
-            <div className={styles.caption2}>
-              <div>
-                <h1 className={styles.captionh1}>WE DELIVER</h1>
-                <p className={styles.captionp}>BOOM TRUCK AVAILABLE</p>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval="4000" >
-            <div style={{backgroundImage: `url(${withPrefix("/img/slideShow/house.jpeg")})`}} className={"d-block w-100 " + styles.bgimg}></div>
-            <div className={styles.caption3}>
-              <h1 className={styles.captionh1}>NO JOB TOO BIG OR TOO SMALL</h1>
-            </div>
-          </div>
-        </div>
-        <button className="carousel-control-prev" data-bs-target="#carouselCaptions" type="button" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" data-bs-target="#carouselCaptions" type="button" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
+    <Carousel fade pause="false">
+      <Carousel.Item>
+        <img src={withPrefix("/img/slideShow/storeFront.jpeg")} className={"d-block w-100 " + styles.img} alt="Front of Store" />
+        <Carousel.Caption bsPrefix={styles.caption1}>
+          <h3 className={styles.h3}>FAMILY OWNED AND OPERATED</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={withPrefix("/img/slideShow/boomTruck1.jpg")} className={"d-block w-100 " + styles.img} alt="Delivery Truck" />
+        <Carousel.Caption bsPrefix={styles.caption2}>
+          <h3 className={styles.h3}>WE DELIVER</h3>
+          <p className={styles.p}>BOOM TRUCK AVAILABLE</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img src={withPrefix("/img/slideShow/house.jpeg")} className={"d-block w-100 " + styles.img} alt="House Under Construction" />
+        <Carousel.Caption bsPrefix={styles.caption3}>
+          <h3 className={styles.h3}>NO JOB TOO BIG OR TOO SMALL</h3>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   )
 }
 
-export default Slideshow;
+export default Slideshow

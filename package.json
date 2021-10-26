@@ -13,12 +13,13 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^2.24.4",
-    "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-source-filesystem": "^2.3.20",
-    "gatsby-transformer-json": "^2.4.11",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "gatsby": "^2.32.13",
+    "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-source-filesystem": "^2.11.1",
+    "gatsby-transformer-json": "^2.11.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^2.0.0",
+    "react-dom": "^16.14.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {

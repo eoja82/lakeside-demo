@@ -1,32 +1,31 @@
-import React from "react";
-import styles from "./styles/getQuote.module.css";
+import React, { useState } from "react"
+import styles from "./styles/getQuote.module.css"
+import Button from "react-bootstrap/Button"
+import Modal from "react-bootstrap/Modal"
 
 function Quote() {
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+
   return (
     <div>
-      {/* Button triggers modal */}
-      <button type="button" className="btn btn-primary" id={styles.button} data-bs-toggle="modal" data-bs-target="#quoteModal">Get A Quote</button>
+      {/* trigger modal */}
+      <Button variant="primary" onClick={handleShow} size="lg">Get A Quote</Button>
 
       {/* modal */}
-      <div className="modal fade" id="quoteModal" tabIndex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-        <div className="modal-dialog" role="document">
-          <div className="modal-content" id={styles.modalContent}>
-            <div className="modal-header" id={styles.modalHeader}>
-              <h4 className="modal-title" id="modalTitle">Please call or email us for a quote:</h4>
-              <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span id={styles.close} aria-hidden="true"></span>
-              </button>
-            </div>
-            <div className="modal-body">
-              <p><a href="tel:1-555-555-5555" style={{color: "#3e3e3e", fontSize: "larger"}}><i className="fa fa-phone"></i> 1-555-555-5555</a></p>
-              <p><a href="mailto:john@fakeemail.com" style={{color: "#3e3e3e", fontSize: "larger"}}><i className="fa fa-envelope-square"></i> john@fakeemail.com</a></p>
-            </div>
-            <div className="modal-footer">
-            <button type="button" className="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-          </div>
-        </div>
-      </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton closeVariant="white" className="light" id={styles.modalHeader}>
+          <Modal.Title>Please call or email us for a quote:</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p><a href="tel:1-555-555-5555" className={styles.contactLink}><i className="fa fa-phone"></i> 1-555-555-5555</a></p>
+          <p><a href="mailto:john@fakeemail.com" className={styles.contactLink}><i className="fa fa-envelope-square"></i> john@fakeemail.com</a></p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="outline-secondary" onClick={handleClose}>Close</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }

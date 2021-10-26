@@ -26,12 +26,14 @@ function Navigation() {
       render={data => (
         <Navbar expand="sm" variant="dark" bg="dark" fixed="top" style={{"--bs-bg-opacity": ".9"}}>
           <Container fluid>
-            <Navbar.Brand href="/">
-              <img 
-                src={withPrefix("/img/logo.png")} 
-                alt="logo" 
-                width="87.5px" height="50px">
-              </img>
+            <Navbar.Brand>
+              <Link to="/">
+                <img 
+                  src={withPrefix("/img/logo.png")} 
+                  alt="logo" 
+                  width="87.5px" height="50px">
+                </img>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav" />
             <Navbar.Collapse id="navbar-nav">

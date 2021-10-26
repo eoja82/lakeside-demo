@@ -26,16 +26,14 @@ function Navigation() {
       render={data => (
         <Navbar expand="sm" variant="dark" bg="dark" fixed="top" style={{"--bs-bg-opacity": ".9"}}>
           <Container fluid>
-            <Navbar.Brand>
-              <Link to="/">
-                <img 
-                  src={withPrefix("/img/logo.png")} 
-                  alt="logo" 
-                  width="87.5px" height="50px">
-                </img>
-              </Link>
+            <Navbar.Brand href={withPrefix("/")}>
+              <img 
+                src={withPrefix("/img/logo.png")} 
+                alt="logo" 
+                width="87.5px" height="50px">
+              </img>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="navbar-nav" />
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
               <Nav className="me-auto">
                 <NavDropdown 
@@ -47,7 +45,7 @@ function Navigation() {
                       let split = slug.split("/")
                       let listItem = split[2].replace(/-/g, " ")
                       return (
-                        <NavDropdown.Item href={slug} key={i} className={styles.dropdownItem}>{listItem}</NavDropdown.Item>
+                        <NavDropdown.Item href={withPrefix(slug)} key={i} className={styles.dropdownItem}>{listItem}</NavDropdown.Item>
                       )
                     })}
                 </NavDropdown>

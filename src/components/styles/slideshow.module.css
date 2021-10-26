@@ -1,20 +1,17 @@
-.bgimg {
+.img {
   width: 100vw;
   height: 100vh;
-  background-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
-.captionh1,
-.captionp {
+.h3, .p {
   font-family: "Open Sans", Arial, sans-serif;
-  font-weight: bold;
   text-align: center;
   color: rgb(240, 240, 240);
 }
-.captionh1 {
+.h3 {
   font-size: 3.5rem;
 }
-.captionp {
+.p {
   font-size: 2rem;
 }
 .caption1,
@@ -34,10 +31,10 @@
   bottom: 53%;
 }
 @media only screen and (max-width: 440px) {
-  .captionh1 {
+  .h3 {
     font-size: 2.5rem;
   }
-  .captionp {
+  .p {
     font-size: 1.5rem;
   }
   .caption1 {

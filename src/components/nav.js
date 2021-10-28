@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import styles from "./styles/nav.module.css"
 import { withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
@@ -9,9 +9,9 @@ import NavDropdown from "react-bootstrap/NavDropdown"
 
 
 function Navigation() {
-  const activeStyles = {
+  /* const activeStyles = {
     color: "rgb(255, 255, 255, .75)"
-  }
+  } */
   return (
     <StaticQuery id={styles.container}
       query={graphql`
@@ -24,7 +24,7 @@ function Navigation() {
         }
       `}
       render={data => (
-        <Navbar expand="sm" variant="dark" bg="dark" fixed="top" style={{"--bs-bg-opacity": ".9"}}>
+        <Navbar collapseOnSelect expand="sm" variant="dark" bg="dark" fixed="top" style={{"--bs-bg-opacity": ".9"}}>
           <Container fluid>
             <Navbar.Brand href={withPrefix("/")}>
               <img 
@@ -34,12 +34,9 @@ function Navigation() {
               </img>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="navbar-nav">
+            <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <NavDropdown 
-                  title="Products"
-                  id="nav-dropdown" 
-                  className={styles.navLink}
+                <NavDropdown title="Products" id="collapsible-nav-dropdown"
                 >
                   {data.allDataJson.nodes.map(({slug}, i) => {
                       let split = slug.split("/")
@@ -49,15 +46,9 @@ function Navigation() {
                       )
                     })}
                 </NavDropdown>
-                <Nav.Link>
-                  <Link to="/rental" activeStyle={activeStyles} className={styles.navLink}>Rental</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/specials" activeStyle={activeStyles} className={styles.navLink}>Specials</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/contact" activeStyle={activeStyles} className={styles.navLink}>Contact</Link>
-                </Nav.Link>
+                <Nav.Link href={withPrefix("/rental")}>Rental</Nav.Link>
+                <Nav.Link href={withPrefix("/specials")}>Specials</Nav.Link>
+                <Nav.Link href={withPrefix("/contact")}>Contact</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

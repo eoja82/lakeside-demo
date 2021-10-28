@@ -5,9 +5,9 @@ import styles from "./styles/contacts.module.css";
 import { withPrefix } from "gatsby";
 
 let employees = [
-  {name: "John Doe", position: "Owner", src: "/img/employees/john.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
-  {name: "Jane Doe", position: "Owner", src: "/img/employees/jane.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
-  {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jake.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
+  {name: "John Doe", position: "Owner", src: "/img/employees/johnDoe.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
+  {name: "Jane Doe", position: "Owner", src: "/img/employees/janeDoe.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
+  {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jakeDoe.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
 ];
 
 class Contact extends React.Component {

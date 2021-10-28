@@ -36,8 +36,7 @@ function Navigation() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <NavDropdown title="Products" id="collapsible-nav-dropdown"
-                >
+                <NavDropdown title="Products" id="collapsible-nav-dropdown">
                   {data.allDataJson.nodes.map(({slug}, i) => {
                       let split = slug.split("/")
                       let listItem = split[2].replace(/-/g, " ")

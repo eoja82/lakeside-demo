@@ -1,10 +1,13 @@
-import React from "react";
-import Layout from "../components/layout";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import styles from "./styles/index.module.css";
-import Slideshow from "../components/slideshow";
-import Quote from "../components/getQuote";
-import { withPrefix } from "gatsby";
+import React from "react"
+import Layout from "../components/layout"
+import { useStaticQuery, graphql, Link } from "gatsby"
+import styles from "./styles/index.module.css"
+import Slideshow from "../components/slideshow"
+import Quote from "../components/getQuote"
+import { withPrefix } from "gatsby"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 
 let List = () => {
   const data = useStaticQuery(graphql`
@@ -62,14 +65,36 @@ class Index extends React.Component {
       <div id={styles.intro}> 
         <Slideshow />
       </div>
-      <div className={styles.moreInfo}>
-        <div className={`${styles.moreInfoIntro} ${styles.reverse}`}>
-          <h2 className={styles.moreInfoIntroH2}>
-            We are proud to serve contractors and homeowners as your local source for quality building materials.
-          </h2>
-          <img className={styles.moreInfoImg} src={withPrefix("/img/wharehouseFront.jpeg")} alt="store front" />
-        </div>
-      </div>
+      <Container fluid>
+        <Row className="bg-dark">
+          <Col md={12} lg={6} className={styles.col}>
+            <div>
+              <h3 className={styles.moreInfoHeader}>QUALITY MATERIALS</h3>
+              <div className={styles.headerUnderline}></div>
+              <p className={styles.moreInfoP}>
+                We are proud to serve contractors and homeowners as your local source for quality building materials.
+              </p>
+            </div>
+          </Col>
+          <Col md={12} lg={6} as="img" src={withPrefix("/img/wharehouseFront.jpeg")} alt="store front" style={{padding: "0"}}>
+          </Col>
+        </Row>
+      </Container>
+      <Container fluid>
+        <Row className="bg-dark">
+        <Col md={12} lg={6} as="img" src={withPrefix("/img/loadedTruck.jpg")} alt="Delivery truck" style={{padding: "0"}}>
+          </Col>
+          <Col md={12} lg={6} className={styles.col}>
+            <div>
+              <h3 className={styles.moreInfoHeader}>WE DELIVER</h3>
+              <div className={styles.headerUnderline}></div>
+              <p className={styles.moreInfoP}>
+                Serving the Edge of the Wilderness area - Marcell, Bigfork, Effie, as well as Deer River, Balsom, Talmoon, and Grand Rapids areas.
+              </p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
       <div className={styles.containerProd} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
         <div className={styles.productDiv}>
           <h3 className={styles.h3}>
@@ -83,15 +108,6 @@ class Index extends React.Component {
           </div>
         </div>
       </div>
-      <div className={styles.moreInfo}>
-        <div className={styles.moreInfoIntro}>
-          <img className={styles.moreInfoImg} src={withPrefix("/img/loadedTruck.jpg")} alt="delivery truck" />
-          <h2 className={styles.moreInfoIntroH2}>
-            WE DELIVER! - Serving the Edge of the Wilderness area - Marcell, Bigfork, Effie, as well as Deer River, Balsom, Talmoon, and Grand Rapids areas.
-          </h2>
-        </div>
-      </div>
-      {/* Disclaimer */}
       <div id={styles.disclaimerContainer} ref={this.disclaimer} style={{display: "flex"}}>
         <div id={styles.disclaimer}>
           <button id={styles.closeDisclaimer} onClick={this.closeDisclaimer}>&times;</button>

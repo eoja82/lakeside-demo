@@ -1,48 +1,48 @@
+:root {
+  --font-family: "Open Sans", Arial, sans-serif;
+  --text-color: rgb(240, 240, 240);
+}
 #footer {
   background-position: center;
   background-size: cover;
 }
-#container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem 0 2rem 0;
-  color: rgb(221, 221, 221);
+.row {
+  padding: 2rem;
 }
-.section p {
-  margin-bottom: 0;
-  text-align: left;
-  font-size: 1rem;
+#logo {
+  margin-bottom: .75rem;
 }
-.section h5 {
-  margin-top: 2%;
+.h5 {
+  font-family: var(--font-family);
+  color: var(--text-color);
 }
-#phone {
-  color: rgb(221, 221, 221);
+.underline {
+  height: 2px;
+  background-color: rgb(219, 190, 157);
+}
+.p {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  font-weight: lighter;
+  font-size: .8rem;
+  margin-bottom: .75rem;
+}
+.p a {
+  text-decoration: none;
+}
+#phone, #facebook, #email {
+  color:var(--text-color);
 }
 #facebook, #email {
   margin: 0 3px;
-  color: rgb(221, 221, 221);
   font-size: 3rem;
 }
 #facebook:hover, #email:hover, #phone:hover {
   color: white;
 }
 @media only screen and (max-width: 440px) {
-  #container {
-    margin: 0 auto;
-    justify-content: left;
-    flex-direction: column;
-  }
-  .section {
-    padding-left: 1.25rem;
-  }
-  #footer h5 {
-    margin-bottom: 0;
-  }
-  #footer p {
-    font-size: .85rem;
+  .row {
+    padding: 1.5rem 0;
   }
   #map {
     width: auto;

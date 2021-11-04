@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col"
 export default () => {
   return (
     <Container fluid as="footer" id={styles.footer} style={{backgroundImage: `url(${withPrefix("/img/lake.jpg")})`}}>
-      <Row xs={1} sm={1} md={1} lg={4} className={"bg-dark " + styles.row} style={{"--bs-bg-opacity": ".85"}}>
+      <Row xs={1} sm={1} md={1} lg={3} xl={4} className={"bg-dark " + styles.row} style={{"--bs-bg-opacity": ".85"}}>
         <Col> 
           <img src={withPrefix("/img/logo.png")} id={styles.logo} alt="logo" width="190px" height="109px" />
           <p className={styles.p}>Lakeside Lumber is your family owned local source for quality hardware, lumber, and building materials.</p>

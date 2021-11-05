@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link, graphql, useStaticQuery, withPrefix } from "gatsby"
 import styles from "./styles/index.module.css"
 import Slideshow from "../components/slideshow"
 import Quote from "../components/getQuote"
-import { withPrefix } from "gatsby"
+import Card from "react-bootstrap/Card"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
@@ -30,16 +30,24 @@ let List = () => {
     list.push({path: slug, key: i, name: listItem, src: images[0].image, alt: images[0].type})
   });
   return (
-    <div id={styles.list}>
-      {list.map( x => (
-        <Link to={x.path} key={x.key} className={styles.listItem}>
-          <div>
-            <img className={styles.listImg} src={withPrefix(x.src)} alt={x.alt} />
-            <p className={styles.listP}>{x.name} <i className={`fa fa-angle-right ${styles.rightArrow}`}></i></p>
-          </div>
-        </Link>
-      ))}
-    </div>
+    <Container>
+      <Row xs={1} sm={1} md={2} lg={3}>
+        {list.map( x => (
+          <Col style={{padding: "12px"}}>
+            <Card className="text-center" key={x.key} style={{border: "none"}}>
+              <Link to={x.path}>
+                <Card.Img varient="top" src={withPrefix(x.src)} style={{borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}} alt={x.alt} />
+              </Link>
+              <Link to={x.path} className={styles.listP}>
+                <Card.Body className="bg-dark" style={{borderBottomLeftRadius: "calc(.25rem - 1px)", borderBottomRightRadius: "calc(.25rem - 1px)"}}>
+                  {x.name} <i className={`fa fa-angle-right ${styles.rightArrow}`}></i>
+                </Card.Body>
+              </Link>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   )
 }
 
@@ -95,11 +103,10 @@ class Index extends React.Component {
           </Col>
         </Row>
       </Container>
-      <div className={styles.containerProd} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
+      <div className={styles.containerProd}>
         <div className={styles.productDiv}>
-          <h3 className={styles.h3}>
-            PRODUCTS
-          </h3>
+          <h3 className={styles.h3}>PRODUCTS</h3>
+          <div className={styles.headerUnderline}></div>
           <div className={styles.products}>
             <List />
           </div>
@@ -108,13 +115,13 @@ class Index extends React.Component {
           </div>
         </div>
       </div>
+      {/* Disclaimer */}
       <div id={styles.disclaimerContainer} ref={this.disclaimer} style={{display: "flex"}}>
         <div id={styles.disclaimer}>
           <button id={styles.closeDisclaimer} onClick={this.closeDisclaimer}>&times;</button>
           <p>Disclaimer: This website is NOT the business website for the company pictured herein.  The images and logos are used with permission for demonstration and educational purposes only.</p>
         </div>
       </div>
-      {/* <Disclaimer /> */}
     </Layout>
     )
   }

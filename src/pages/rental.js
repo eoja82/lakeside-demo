@@ -1,9 +1,13 @@
-import React from "react";
-import Layout from "../components/layout";
-import { Helmet } from "react-helmet";
-import styles from "./styles/rental.module.css";
-import Quote from "../components/getQuote";
-import { withPrefix } from "gatsby";
+import React from "react"
+import Layout from "../components/layout"
+import { Helmet } from "react-helmet"
+import styles from "./styles/rental.module.css"
+import Quote from "../components/getQuote"
+import { withPrefix } from "gatsby"
+import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import { Card } from "react-bootstrap"
 
 const equipment = [
   {type: "Skid Steer Attachments", list: ['Forks', 'Auger - 6", 9", and 15"', 'Brusher', 'Bucket', 'Root Grapple Bucket'], src: "/img/rental/skidSteerBucket.jpg", alt: "skid steer", key: 1},
@@ -21,27 +25,33 @@ export default () => {
         <meta name="description" content="Our selection of rental equipment will provide you with the right tool for the job." />
         <meta name="keywords" content="rent, rental, tools, drywall, lift, skidsteer, nailer, scaffold, insulation, blower" />
       </Helmet>
-      <div id={styles.container} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
-        <h4 className={styles.h4}>
-          Our selection of rental equipment will provide you with the right tool for the job.
-        </h4>
-        <div id={styles.allEquipment}>
-          {equipment.map( x => 
-            <div className={styles.equipment} key={x.key}>
-              <img className={styles.productImg} src={withPrefix(x.src)} alt={x.alt} />
-              <div className={styles.equipList}>
-                <p className={styles.p}>{x.type}</p>
-                <ul className={styles.ul}>
-                  {x.list.map( (y, i) => <li className={styles.li} key={i}>{y}</li>)}
-                </ul>
-              </div>
-            </div>
-          )}
-        </div>
-        <div className={styles.quoteDiv}>
-          <Quote />
-        </div>
-      </div>
+      <Container as="header" fluid id={styles.bgImg} style={{backgroundImage: `url(${withPrefix("/img/storePano.jpg")})`}}>
+        <h1 className="bg-dark" id={styles.headerText} style={{"--bs-bg-opacity": ".5"}}>RENTAL EQUIPMENT</h1>
+      </Container>
+      <h3 className={styles.h3}>THE RIGHT TOOLS FOR THE JOB</h3>
+      <div className={styles.headerUnderline}></div>
+      <Container>
+        <Row xs={1} sm={1} md={2} lg={3}>
+          {equipment.map( x => (
+            <Col className="d-flex" style={{padding: "12px"}}>
+              <Card>
+                <Card.Img varient="top" src={withPrefix(x.src)} src={withPrefix(x.src)} style={{borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}} alt={x.alt} />
+                <Card.Body className="bg-dark" style={{borderBottomLeftRadius: "calc(.25rem - 1px)", borderBottomRightRadius: "calc(.25rem - 1px)"}}>
+                  <Card.Title as="h4" className={styles.cardTitle}>{x.type}</Card.Title>
+                  <Card.Text as="ul">
+                    {x.list.map( (y, i) => (
+                      <Card.Text as="li" className={styles.cardText} key={i}>{y}</Card.Text>
+                    ))}
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+      <div className={styles.quoteDiv}>
+        <Quote />
+      </div>   
     </Layout>
   )
 }

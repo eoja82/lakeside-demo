@@ -1,65 +1,71 @@
-#container {
-  background-size: cover; 
-  padding-top: 104px;
+:root {
+  --img-background-position: center;
+  --font-family: "Open Sans", Arial, sans-serif;
+  --header-font-size: 4rem;
+  --card-title-color: rgb(219, 190, 157);
+  --light-text-color: rgb(240, 240, 240);
+  --h3-font-size: 2rem;
 }
-.h4 {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 2.2rem;
-  text-align: center;
-  color: rgb(210, 180, 140);
-  text-shadow: -1px -1px 0 rgb(4, 83, 4),
-               1px -1px 0 rgb(4, 83, 4),
-               -1px 1px 0 rgb(4, 83, 4),
-               1px 1px 0 rgb(4, 83, 4);
-  margin: 0;
-  padding: 10px;
+@media only screen and (max-width: 768px) {
+  :root {
+    --img-background-position: 0%;
+    --header-font-size: 3.5rem;
+    --h3-font-size: 1.75rem;
+  }
 }
-#allEquipment {
+@media only screen and (max-width: 440px) {
+  :root {
+    --img-background-position: 15%;
+    --header-font-size: 2.75rem;
+    --h3-font-size: 1.5rem;
+  }
+}
+#bgImg {
+  background-position: var(--img-background-position);
+  background-size: cover;
+  height: 400px;
+  padding: 0;
+}
+#headerText {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 80%;
-  padding-bottom: 2%;
-  margin: 0 auto 0 auto;
   justify-content: center;
-}
-.equipment {
-  max-width: 300px;
-  margin: 15px;
-  background-color: rgb(4, 83, 4);
-  box-shadow: 5px 5px 8px rgb(71, 71, 71);
-  border: 3px solid rgb(240, 240, 240);
-}
-.p {
-  font-size: 1.3rem;
-  margin: 0;
+  align-items: center;
+  color: var(--light-text-color);
+  font-family: var(--font-family);
+  font-size: var(--header-font-size);
   text-align: center;
-  padding-top: 5px;
+  height: 400px;
+  width: 100vw;
+  padding-top: 60px;
 }
-.ul {
-  margin: 5px;
-  height: 100%;
+.h3 {
+  font-family: var(--font-family);
+  font-size: var(--h3-font-size);
+  text-align: center;
+  color: rgb(33, 37, 41);
+  margin-top: 2rem;
 }
-.p, .li {
-  color: rgb(210, 180, 140);
+.headerUnderline {
+  width: 100px;
+  height: 4px;
+  background-color: var(--card-title-color);
+  margin: 0 auto;
+  border-radius: 2px;
+  margin-bottom: 2rem;
 }
-.productImg {
-  width: 100%;
+.cardTitle {
+  font-family: var(--font-family);
+  text-align: center;
+  color: var(--card-title-color);
+}
+.cardText {
+  font-family: var(--font-family);
+  color: var(--light-text-color);
 }
 .quoteDiv {
   display: flex;
   justify-content: center;
   width: auto;
   margin: 0 auto;
-  padding-bottom: 2rem;
-}
-@media only screen and (max-width: 780px) {
-  #allEquipment {
-    min-width: 90%;
-  }
-}
-@media only screen and (max-width: 440px) {
-  .h4 {
-    font-size: 1.75rem;
-  }
+  padding: 2rem 0;
 }

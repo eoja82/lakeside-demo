@@ -6,12 +6,13 @@ import Container from "react-bootstrap/Container"
 export default function Subheader(props) {
   return (
     <Container>
-      <h3 className={styles.h3}>{props.text}</h3>
+      <h3 className={styles.h3 + ` ${props.lightText ? styles.lightText : styles.darkText}`}>{props.text}</h3>
       <div className={styles.headerUnderline}></div>
     </Container>
   )
 }
 
 Subheader.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
+  lightText: PropTypes.bool
 }

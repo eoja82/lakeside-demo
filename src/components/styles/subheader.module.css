@@ -16,8 +16,13 @@
   font-family: var(--font-family);
   font-size: var(--h3-font-size);
   text-align: center;
-  color: rgb(33, 37, 41);
   margin-top: 2rem;
+}
+.lightText {
+  color: rgb(219, 190, 157);
+}
+.darkText {
+  color: rgb(33, 37, 41);
 }
 .headerUnderline {
   width: 100px;

@@ -78,8 +78,7 @@ class Index extends React.Component {
         <Row className="bg-dark">
           <Col md={12} lg={6} className={styles.col}>
             <div>
-              <h3 className={styles.moreInfoHeader}>QUALITY MATERIALS</h3>
-              <div className={styles.headerUnderline}></div>
+              <Subheader text="QUALITY MATERIALS" lightText />
               <p className={styles.moreInfoP}>
                 We are proud to serve contractors and homeowners as your local source for quality building materials.
               </p>
@@ -95,8 +94,7 @@ class Index extends React.Component {
           </Col>
           <Col md={12} lg={6} className={styles.col}>
             <div>
-              <h3 className={styles.moreInfoHeader}>WE DELIVER</h3>
-              <div className={styles.headerUnderline}></div>
+              <Subheader text="WE DELIVER" lightText />
               <p className={styles.moreInfoP}>
                 Serving the Edge of the Wilderness area - Marcell, Bigfork, Effie, as well as Deer River, Balsom, Talmoon, and Grand Rapids areas.
               </p>

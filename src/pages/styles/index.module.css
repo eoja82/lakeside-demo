@@ -4,14 +4,12 @@
   --moreInfoHeader-font-size: 2rem;
   --moreInfoP-font-size: 1.25rem;
   --moreInfoP-color: rgb(240, 240, 240);
-  --h3-font-size: 3.5rem;
   --col-height: auto;
   --col-min-height: 395px;
   --col-padding: inherit;
 }
 @media only screen and (max-width: 768px) {
   :root {
-    --h3-font-size: 3rem;
     --col-height: calc(100vw / 2);
     --col-min-height: unset;
   }
@@ -20,7 +18,6 @@
   :root {
     --moreInfoHeader-font-size: 1.75rem;
     --moreInfoP-font-size: 1rem;
-    --h3-font-size: 1.75rem;
     --col-height: auto;
     --col-padding: 1.5rem 0 .75rem;
   }
@@ -54,20 +51,6 @@ body, html {
 }
 .listP:hover .rightArrow {
   animation: moveArrow .6s;
-}
-.h3 {
-  font-family: var(--font-family);
-  font-size: var(--h3-font-size);
-  text-align: center;
-  color: rgb(33, 37, 41);
-  /* text-shadow: -1px -1px 0 rgb(4, 83, 4),
-               1px -1px 0 rgb(4, 83, 4),
-               -1px 1px 0 rgb(4, 83, 4),
-               1px 1px 0 rgb(4, 83, 4); */
-  /* text-shadow: -1px -1px 0 rgb(33, 37, 41),
-               1px -1px 0 rgb(33, 37, 41),
-               -1px 1px 0 rgb(33, 37, 41),
-               1px 1px 0 rgb(33, 37, 41); */
 }
 .col {
   display: flex;
@@ -104,7 +87,8 @@ body, html {
   max-width: 50%;
 }
 .productDiv {
-  padding: 3rem 0;
+  /* padding: 3rem 0; */
+  padding-bottom: 3rem;
 }
 .products {
   margin: 25px auto;

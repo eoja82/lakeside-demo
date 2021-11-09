@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link, graphql, useStaticQuery, withPrefix } from "gatsby"
-import styles from "./styles/index.module.css"
+import Subheader from "../components/subheader"
 import Slideshow from "../components/slideshow"
 import Quote from "../components/getQuote"
+import { Link, graphql, useStaticQuery, withPrefix } from "gatsby"
+import styles from "./styles/index.module.css"
 import Card from "react-bootstrap/Card"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -105,8 +106,7 @@ class Index extends React.Component {
       </Container>
       <div className={styles.containerProd}>
         <div className={styles.productDiv}>
-          <h3 className={styles.h3}>PRODUCTS</h3>
-          <div className={styles.headerUnderline}></div>
+          <Subheader text="PRODUCTS" />
           <div className={styles.products}>
             <List />
           </div>

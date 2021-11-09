@@ -1,0 +1,36 @@
+
+:root {
+  --img-background-position: center;
+  --font-family: "Open Sans", Arial, sans-serif;
+  --header-font-size: 4rem;
+  --light-text-color: rgb(240, 240, 240);
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    --img-background-position: 0%;
+    --header-font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 440px) {
+  :root {
+    --img-background-position: 15%;
+    --header-font-size: 2.75rem;
+  }
+}#bgImg {
+  background-position: var(--img-background-position);
+  background-size: cover;
+  height: 400px;
+  padding: 0;
+}
+#headerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-text-color);
+  font-family: var(--font-family);
+  font-size: var(--header-font-size);
+  text-align: center;
+  height: 400px;
+  width: 100vw;
+  padding-top: 60px;
+}

@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
+import Header from "../components/header"
+import Quote from "../components/getQuote"
 import { Helmet } from "react-helmet"
 import styles from "./styles/rental.module.css"
-import Quote from "../components/getQuote"
 import { withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -25,9 +26,7 @@ export default () => {
         <meta name="description" content="Our selection of rental equipment will provide you with the right tool for the job." />
         <meta name="keywords" content="rent, rental, tools, drywall, lift, skidsteer, nailer, scaffold, insulation, blower" />
       </Helmet>
-      <Container as="header" fluid id={styles.bgImg} style={{backgroundImage: `url(${withPrefix("/img/storePano.jpg")})`}}>
-        <h1 className="bg-dark" id={styles.headerText} style={{"--bs-bg-opacity": ".5"}}>RENTAL EQUIPMENT</h1>
-      </Container>
+      <Header text="RENTAL EQUIPMENT" />
       <h3 className={styles.h3}>THE RIGHT TOOLS FOR THE JOB</h3>
       <div className={styles.headerUnderline}></div>
       <Container>

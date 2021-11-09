@@ -1,7 +1,5 @@
 :root {
   --font-family: "Open Sans", Arial, sans-serif;
-  /* --card-title-color: rgb(219, 190, 157); */
-  /* --light-text-color: rgb(240, 240, 240); */
   --h3-font-size: 2rem;
 }
 @media only screen and (max-width: 768px) {

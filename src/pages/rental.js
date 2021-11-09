@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import Header from "../components/header"
+import Subheader from "../components/subheader"
 import Quote from "../components/getQuote"
 import { Helmet } from "react-helmet"
 import styles from "./styles/rental.module.css"
@@ -27,8 +28,7 @@ export default () => {
         <meta name="keywords" content="rent, rental, tools, drywall, lift, skidsteer, nailer, scaffold, insulation, blower" />
       </Helmet>
       <Header text="RENTAL EQUIPMENT" />
-      <h3 className={styles.h3}>THE RIGHT TOOLS FOR THE JOB</h3>
-      <div className={styles.headerUnderline}></div>
+      <Subheader text="THE RIGHT TOOLS FOR THE JOB" />
       <Container>
         <Row xs={1} sm={1} md={2} lg={3}>
           {equipment.map( x => (

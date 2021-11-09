@@ -1,3 +1,6 @@
+:root {
+  --font-family: "Open Sans", Arial, sans-serif;
+}
 #facebook {
   padding: 10px 0 2% 0;
   display: flex;
@@ -10,6 +13,7 @@
 #p {
   padding: 0;
   margin: 0;
+  font-family: var(--font-family);
   text-align: center;
 }
 #link {

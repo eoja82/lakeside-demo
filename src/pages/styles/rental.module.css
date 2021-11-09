@@ -2,32 +2,6 @@
   --font-family: "Open Sans", Arial, sans-serif;
   --card-title-color: rgb(219, 190, 157);
   --light-text-color: rgb(240, 240, 240);
-  --h3-font-size: 2rem;
-}
-@media only screen and (max-width: 768px) {
-  :root {
-    --h3-font-size: 1.75rem;
-  }
-}
-@media only screen and (max-width: 440px) {
-  :root {
-    --h3-font-size: 1.5rem;
-  }
-}
-.h3 {
-  font-family: var(--font-family);
-  font-size: var(--h3-font-size);
-  text-align: center;
-  color: rgb(33, 37, 41);
-  margin-top: 2rem;
-}
-.headerUnderline {
-  width: 100px;
-  height: 4px;
-  background-color: var(--card-title-color);
-  margin: 0 auto;
-  border-radius: 2px;
-  margin-bottom: 2rem;
 }
 .cardTitle {
   font-family: var(--font-family);

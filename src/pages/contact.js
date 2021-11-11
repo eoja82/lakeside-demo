@@ -1,41 +1,52 @@
-import React from "react";
-import Layout from "../components/layout";
-import { Helmet } from "react-helmet";
-import styles from "./styles/contacts.module.css";
-import { withPrefix } from "gatsby";
+import React from "react"
+import { Helmet } from "react-helmet"
+import Header from "../components/header"
+import Layout from "../components/layout"
+import Subheader from "../components/subheader"
+import styles from "./styles/contacts.module.css"
+import { withPrefix } from "gatsby"
+import Card from "react-bootstrap/Card"
+import Container from "react-bootstrap/Container"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 
-let employees = [
+const employees = [
   {name: "John Doe", position: "Owner", src: "/img/employees/johnDoe.jpg", email: "john@fakeemail.com", phone: "1-555-555-5555", key: 1},
   {name: "Jane Doe", position: "Owner", src: "/img/employees/janeDoe.jpg", email: "jane@fakeemail.com", phone: "1-555-555-5555", key: 2},
   {name: "Jake Doe", position: "Sales Associate", src: "/img/employees/jakeDoe.jpg", email: "jake@fakeemail.com", phone: "1-555-555-5555", key: 3}
-];
+]
 
 class Contact extends React.Component {
   render() {
     return (
       <Layout>
       <Helmet>
-          <title>Contact Lakeside Lumber - call, email or on Facebook</title>
-        </Helmet>
-      <div id={styles.container} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
-        <p className={styles.about}>No project is too big or to small.  <a className={styles.textLink} href="tel:1-218-832-3300">  Call</a>, <a className={styles.textLink}href="mailto:eric@lakesidemarcell.com"> email</a>, or contact us on <a className={styles.textLink} href="https://www.facebook.com/pg/LakesideMarcell/photos/?ref=page_internal" target="_blank" rel="noopener noreferrer"> Facebook</a>.<br />  We are here to help you with all your building and project needs!</p>
-        <div id={styles.employees}>
-          {employees.map( x => 
-            <div className={styles.employee} key={x.key}>
-              <img className={styles.employeeImg} src={withPrefix(x.src)} alt={x.name} />
-              <div className={styles.aboutEmployee}>
-                <p className={styles.name}>{x.name}</p>
-                <p className={styles.position}>{x.position}</p>
-                <div className={styles.contact}>
-                  <a className={styles.contactButton} href={`tel:${x.phone}`} aria-label="phone number"><i className="fa fa-phone" /></a>
-                  <a className={styles.contactButton} href={`mailto:${x.email}`} aria-label="email"><i className="fa fa-envelope-square" /></a>
-                </div>
-              </div>
-            </div>)}
-        </div>
-      </div>
+        <title>Contact Lakeside Lumber - call, email or on Facebook</title>
+      </Helmet>
+      <Header text="CONTACT US" />
+      <Subheader text="OUR TEAM" />
+      <p className={styles.about}>No project is too big or to small.<br />We are here to help you with all your building and project needs!</p>
+      <Container style={{marginBottom: "2rem"}}>
+        <Row xs={1} sm={1} md={2} lg={3}>
+          {employees.map( x => (
+            <Col key={x.key} style={{padding: "12px"}}>
+              <Card className="bg-dark text-center" style={{border: "none"}}>
+                <Card.Img variant="top" src={withPrefix(x.src)} />
+                <Card.Body>
+                  <Card.Title as="h5" className={styles.cardTitle}>{x.name}</Card.Title>
+                  <Card.Subtitle className={styles.cardSubtitle}>{x.position}</Card.Subtitle>
+                  <div className={styles.links}>
+                    <Card.Link href={`tel:${x.phone}`} aria-label="phone number" className={styles.cardLink}><i className={"fa fa-phone " + styles.icon} /></Card.Link>
+                    <Card.Link href={`mailto:${x.email}`} aria-label="email" className={styles.cardLink}><i className={"fa fa-envelope-square " + styles.icon} /></Card.Link>
+                   </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </Layout>
     )
   }
 }
-export default Contact;
+export default Contact

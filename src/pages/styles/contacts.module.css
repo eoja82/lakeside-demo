@@ -1,83 +1,50 @@
-#container {
-  background-size: cover;
-  padding-top: 104px;
-}
-.about, .textLink {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 2rem;
-  color: rgb(210, 180, 140);
-  text-shadow: -1px -1px 0 rgb(4, 83, 4),
-               1px -1px 0 rgb(4, 83, 4),
-               -1px 1px 0 rgb(4, 83, 4),
-               1px 1px 0 rgb(4, 83, 4);
+:root {
+  --font-family: "Open Sans", Arial, sans-serif;
+  --lightText: rgb(219, 190, 157);
+  --darkText: rgb(33, 37, 41);
 }
 .about {
+  font-family: var(--font-family);
   text-align: center;
-  padding: 10px 0;
-  margin: 0;
+  color: var(--darkText);
 }
-.textLink:hover {
-  color: rgb(4, 83, 4);
-  text-shadow: none;
+.cardTitle, .cardSubtitle {
+  color: var(--lightText);
+  font-family: var(--font-family);
 }
-#employees {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  max-width: 80%;
-  margin: 15px auto 0 auto;
-  padding: 1% 0 2% 0;
+.cardTitle {
+  font-size: 2rem;
 }
-.employee {
-  width: 300px;
-  background-color: rgb(240, 240, 240);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  box-shadow: 5px 5px 8px rgb(71, 71, 71);
-  margin-bottom: 20px;
-  border: 3px solid rgb(240, 240, 240);
+.cardSubtitle {
+  font-weight: lighter;
 }
-.aboutEmployee {
-  background-color: rgb(4, 83, 4);
-}
-.name {
-  padding-top: 5px;
-  font-size: 1.4rem;
-}
-.name, .position {
-  margin: 0;
-  color: rgb(210, 180, 140);
-}
-.contact {
+.links {
+  padding: 16px 0 8px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+}
+.cardLink {
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: rgb(4, 83, 4);
-  margin: 15px 0;
-}
-.contactButton {
-  background-color: rgb(210, 180, 140);
-  border: 2px solid rgb(210, 180, 140);
+  width: 3.25rem;
+  height: 3.25rem;
+  border: 2px solid var(--lightText);
   border-radius: 50%;
-  width: 54px;
-  color: rgb(4, 83, 4);
-  font-size: 2.2rem;
-  transition: .3s;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .2s;
 }
-.contactButton:hover, .contactButton:focus {
-  background-color: rgb(4, 83, 4);
-  color: rgb(210, 180, 140);
+.cardLink:hover {
+  background-color: var(--lightText);
 }
-@media only screen and (max-width: 440px) {
-  .about {
-    padding: 0 8px 0 8px;
-    font-size: 1.5rem;
-  }
-  .textLink {
-    font-size: 1.6rem;
-  }
-} 
+.icon {
+  color: var(--lightText);
+  transition: .2s;
+}
+.cardLink:hover .icon {
+  color: var(--darkText);
+}

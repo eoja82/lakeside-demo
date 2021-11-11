@@ -4,7 +4,7 @@ import styles from "./styles/products.module.css";
 import Quote from "../getQuote";
 import { withPrefix } from "gatsby";
 
-class Display extends React.Component {
+class Product extends React.Component {
   render() {
     let split = this.props.product.slug.split("/")
     let titleInfo = split[2].replace(/-/g, " ");
@@ -47,5 +47,5 @@ class Display extends React.Component {
     )
   }
 }
-export default Display
+export default Product
 

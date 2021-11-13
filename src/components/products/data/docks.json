@@ -1,8 +1,20 @@
 {
-  "description": "Order a pre-built Tommy Dock from Lakeside Lumber.  Or we can help you design and build your own custom dock from our stock of treated and cedar lumber with Tommy Dock dock accesories.",
-  "descriptionLogos": "",
+  "subheader": "WOOD - COMPOSITE - ALUMINUM",
+  "description": "Order a pre-built, maintenance free Tommy Dock.  Or let us help you design a custom dock you can build from our stock of treated or cedar lumber and Tommy Dock dock accesories.",
   "slug": "/products/docks/",
-  "product": [{"manufacturer": "Tommy Dock", "type": "docks", "logo": "/img/products/tommyDock-logo.png", "link": "https://tommydocks.com/"}],
-  "images": [{"type": "docks", "image": "/img/products/dock1.png"},
-    {"type": "docks", "image": "/img/products/dock2.png"}]
+  "products": [
+    {
+      "header": "Docks",
+      "image": {
+        "src": "/img/products/dock1.png",
+        "alt": "A Dock"
+      },
+      "suppliers": [
+        {
+          "supplier": "Tommy Dock",
+          "href": "https://tommydocks.com/"
+        }
+      ]
+    }
+  ]
 }

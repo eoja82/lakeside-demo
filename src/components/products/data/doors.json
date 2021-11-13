@@ -1,25 +1,108 @@
 {
-  "description": "We are your local source for exterior doors, interior doors, and garage doors!",
+  "subheader": "EXTERIOR - INTERIOR - STORM - GARAGE - LOCKSETS",
+  "description": "We are your local source for exterior doors, interior doors, storm doors, garage doors, garage door openers and locksets!",
   "slug": "/products/doors/",
-  "descriptionLogos": "EXTERIOR DOORS: Manion's, Tru Tech, Therma Tru and Waudena Millwork.*STORM DOORS:  Pella and Larson.*INTERIOR DOORS: Manion's, Masonite, Koch Doors, and Stallion Collection.*LOCKSETS: Stone Harbor.*GARAGE DOORS: North Central Door and Holmes Garage Door.*GARAGE DOOR OPENERS: Chamberlain.",
-  "product": [
-    {"manufacturer": "Manion's", "type": "doors", "logo": "/img/products/manionDoor-logo.jpg", "link": "http://manionswholesale.com/manions-door-catalog/"},
-    {"manufacturer": "Tru Tech", "type": "doors", "logo": "/img/products/truTech-logo.jpg", "link": "https://trutechdoors.com/"},
-    {"manufacturer": "Therma Tru", "type": "doors", "logo": "/img/products/thermaTru-logo.png", "link": "https://www.thermatru.com/"},
-    {"manufacturer": "Waudena Millwork", "type": "doors", "logo": "/img/products/waudenaMillwork-logo.png", "link": "https://www.waudenamillwork.com/"},
-    {"manufacturer": "Pella", "type": "doors", "logo": "/img/products/pella-logo.png", "link": "https://www.pellastormdoors.com/"},
-    {"manufacturer": "Larson", "type": "doors", "logo": "/img/products/larson-logo.png", "link": "https://www.larsondoors.com/"},
-    {"manufacturer": "Manion's", "type": "doors", "logo": "/img/products/manionDoorInt-logo.jpg", "link": "http://manionswholesale.com/wordpress/wp-content/uploads/2018/12/Manions-Interior-Doors-Millwork-Catalog.pdf"},
-    {"manufacturer": "Masonite", "type": "doors", "logo": "/img/products/masonite-logo.jpg", "link": "http://fliphtml5.com/ihdm/qbed"},
-    {"manufacturer": "Koch", "type": "doors", "logo": "/img/products/koch-logo.jpg", "link": "https://kochandco.com/wp-content/uploads/2017/08/DoorBrochure4web.pdf"},
-    {"manufacturer": "Stallion Collection", "type": "doors", "logo": "/img/products/stallion-logo.jpg", "link": "http://manionswholesale.com/wordpress/wp-content/uploads/2018/12/Stallion-Doors-Lit.pdf"},
-    {"manufacturer": "Stone Harbor", "type": "doors", "logo": "/img/products/stoneHarbor-logo.png", "link": "https://www.stoneharborhardware.com/"},
-    {"manufacturer": "North Central Door", "type": "doors", "logo": "/img/products/northCentralDoor-logo.png", "link": "https://www.northcentraldoor.com/"},
-    {"manufacturer": "Holmes Garage Door", "type": "doors", "logo": "/img/products/holmes-logo.jpg", "link": "https://www.holmesgaragedoor.com/"},
-    {"manufacturer": "Chamberlain", "type": "doors", "logo": "/img/products/chamberlain-logo.jpg", "link": "https://www.chamberlain.com/"}
-  ],
-  "images": [
-    {"type": "doors", "image": "/img/products/door1.jpg"},
-    {"type": "doors", "image": "/img/products/door2.jpg"}
+  "products": [
+    {
+      "header": "Exterior Doors",
+      "image": {
+        "src": "/img/products/door1.jpg",
+        "alt": "Exterior Door"
+      },
+      "suppliers": [
+        {
+          "supplier": "Manion's",
+          "href": "http://manionswholesale.com/manions-door-catalog/"
+        },
+        {
+          "supplier": "Tru Tech",
+          "href": "https://trutechdoors.com"
+        },
+        {
+          "supplier": "Therma Tru",
+          "href": "https://www.thermatru.com"
+        },
+        {
+          "supplier": "Waudena Millwork",
+          "href": "https://www.waudenamillwork.com"
+        }
+      ]
+    },
+    {
+      "header": "Interior Doors",
+      "image": {
+        "src": "/img/products/door2.jpg",
+        "alt": "Interior Door"
+      },
+      "suppliers": [
+        {
+          "supplier": "Manion's",
+          "href": "http://manionswholesale.com/wordpress/wp-content/uploads/2018/12/Manions-Interior-Doors-Millwork-Catalog.pdf"
+        },
+        {
+          "supplier": "Masonite",
+          "href": "https://residential.masonite.com/products/interior-doors"
+        },
+        {
+          "supplier": "Koch Doors",
+          "href": "https://kochandco.com/doors/"
+        },
+        {
+          "supplier": "Stallion Collection",
+          "href": "http://manionswholesale.com/wordpress/wp-content/uploads/2018/12/Stallion-Doors-Lit.pdf"
+        }
+      ]
+    },
+    {
+      "header": "Storm Doors",
+      "image": {
+        "src": "/img/products/door3.jpg",
+        "alt": "Storm Door"
+      },
+      "suppliers": [
+        {
+          "supplier": "Pella",
+          "href": "https://www.pellastormdoors.com"
+        },
+        {
+          "supplier": "Larson",
+          "href": "https://www.larsondoors.com"
+        }
+      ]
+    },
+    {
+      "header": "Garage Doors",
+      "image": {
+        "src": "/img/products/door4.jpg",
+        "alt": "Garage Door"
+      },
+      "suppliers": [
+        {
+          "supplier": "North Central Door",
+          "href": "https://www.northcentraldoor.com"
+        },
+        {
+          "supplier": "Holmes Garage Door",
+          "href": "https://www.holmesgaragedoor.com"
+        }
+      ]
+    },
+    {
+      "header": "Door Accessories",
+      "image": {
+        "src": "/img/products/door5.jpg",
+        "alt": "Door Handle"
+      },
+      "suppliers": [
+        {
+          "supplier": "Stone Harbor Locksets",
+          "href": "https://www.stoneharborhardware.com"
+        },
+        {
+          "supplier": "Chamberlain Openers",
+          "href": "https://www.chamberlain.com"
+        }
+      ]
+    }
   ]
 }

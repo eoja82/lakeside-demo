@@ -1,51 +1,67 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import styles from "./styles/products.module.css";
-import Quote from "../getQuote";
-import { withPrefix } from "gatsby";
+import React from "react"
+import { Helmet } from "react-helmet"
+import styles from "./styles/products.module.css"
+import Header from "../header"
+import Subheader from "../subheader"
+import Quote from "../getQuote"
+import { withPrefix } from "gatsby"
+import Card from "react-bootstrap/Card"
+import Container from "react-bootstrap/Container"
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 
-class Product extends React.Component {
-  render() {
-    let split = this.props.product.slug.split("/")
-    let titleInfo = split[2].replace(/-/g, " ");
-    let descLogoSplit = this.props.product.descriptionLogos.split(/\*/g);
-    let linkRegex = /^http/i;
-    return (
-      <div id={styles.container} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
-        <Helmet>
+
+export default function Product(props) {
+  let split = props.product.slug.split("/")
+  let titleInfo = split[2].replace(/-/g, " ")
+  let linkRegex = /^http/i
+  console.log(props.product.subheader)
+  return (
+    <div>
+      <Helmet>
           <title>{`Lakeside Lumber is your source for ${titleInfo}`}</title>
-          <meta name="description" content={this.props.product.description + this.props.product.descriptionLogos} />
+          <meta name="description" content={props.product.description + props.product.descriptionLogos} />
           <meta name="keywords" content={`marcell, bigfok, effie, deer river, talmoon, grand rapids, ${titleInfo}`} />
         </Helmet>
-        <div id={styles.header}>
-          <h1 id={styles.h1}>{this.props.product.description}</h1>
-        </div>
-        <div id={styles.productImg}>
-          {this.props.product.images.map( (x, i) =>
-            <img src={withPrefix(x.image)} alt={x.type} key={i} className={styles.productImg} />
-          )}
-        </div>
-        <div id={styles.logoDescription}>
-          <p className={styles.p}>Click on a logo below for more information.</p>
-          <div>
-          {descLogoSplit.map( (x, i) => <p className={styles.pDiscription + " " + styles.p} key={i}>{x}</p>)}
-          </div>
-        </div>
-        <div className={styles.getQuote}>
+      <Header text={titleInfo.toUpperCase()} />
+      <Subheader text={props.product.subheader} />
+      <p id={styles.description}>{props.product.description}</p>
+      <Container>
+        <Row xs={1} sm={1} md={2} style={{marginBottom: "2rem"}}>
+          {props.product.products.map( (x, i) => (
+            <Col style={{padding: "12px"}} key={i}>
+              <Card>
+                <Card.Img src={withPrefix(x.image.src)} alt={x.image.alt} />
+                <Card.ImgOverlay style={{padding: "0"}}>
+                  <Card.Title className={"bg-dark " + styles.cardTitle}>{x.header}</Card.Title>
+                  <Card.Body classname={styles.cardBody} style={{padding: "1rem 2rem"}}>
+                    <Row xs={1} sm={1} md={1} lg={2} className={"bg-dark " + styles.cardRow} style={{"--bs-bg-opacity": ".5"}}>
+                      {x.suppliers.map( (x, i) => (
+                        <Col key={i}>
+                          <Card.Link href={linkRegex.test(x.href) ? x.href : withPrefix(x.href)} className={styles.cardLink} target="_blank" rel="noopener noreferrer">{x.supplier} <i className={"fa fa-angle-right " + styles.rightArrow} style={{fontWeight: "bold"}}></i></Card.Link>
+                        </Col>
+                      ))}
+                    </Row>
+                  </Card.Body>
+                </Card.ImgOverlay>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <Container className={styles.getQuote}>
           <Quote />
-        </div>
-        <div id={styles.products}>
-          {this.props.product.product.map( (x, i) => 
-            <div key={i} id={styles.logoDiv}>
-              <a href={linkRegex.test(x.link) ? x.link : withPrefix(x.link)} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
-                { x.logo ? <img src={withPrefix(x.logo)} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
-              </a>
-            </div>
-          )}
-        </div>
-      </div>
-    )
-  }
+        </Container>
+      </Container>
+    </div>
+  )
 }
-export default Product
 
+{/* <div id={styles.products}>
+  {this.props.product.product.map( (x, i) => 
+    <div key={i} id={styles.logoDiv}>
+      <a href={linkRegex.test(x.link) ? x.link : withPrefix(x.link)} target="_blank" rel="noopener noreferrer" style={{textDecoration: "none"}}>
+        { x.logo ? <img src={withPrefix(x.logo)} alt={x.manufacturer} className={styles.img} /> : <h3 className={styles.h3}>{x.manufacturer}</h3>}
+      </a>
+    </div>
+  )}
+</div> */}

@@ -1,122 +1,42 @@
-#container {
-  background-size: cover;
-  width: 100%;
-  padding-top: 104px;
+:root {
+  --font-family: "Open Sans", Arial, sans-serif;
+  --lightText: rgb(219, 190, 157);
+  --darkText: rgb(33, 37, 41);
 }
-#header {
-  max-width: 80%;
-  margin: 0 auto 0 auto;
-  padding-top: 2%;
-  color: white;
+#description {
   text-align: center;
+  font-family: var(--font-family);
+  color: var(--darkText);
 }
-#h1 {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 2rem;
-  color: rgb(210, 180, 140);
-  text-shadow: -1px -1px 0 rgb(4, 83, 4),
-               1px -1px 0 rgb(4, 83, 4),
-               -1px 1px 0 rgb(4, 83, 4),
-               1px 1px 0 rgb(4, 83, 4);
-}
-.productHeader {
-  margin: 0;
+.cardTitle {
+  font-family: var(--font-family);
+  color: var(--lightText);
   text-align: center;
+  padding: 8px 4px;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
 }
-#productImg {
+.cardRow {
+  padding: 8px;
+  border-radius: 5px;
+}
+.cardBody {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  max-width: 80%;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  margin: 2% auto;
 }
-.productImg {
-  border: 3px solid rgb(240, 240, 240);
-  box-shadow: 5px 5px 8px rgb(71, 71, 71);
-  max-width: 400px;
-  max-height: 375px;
-  margin-bottom: 20px;
+.cardLink {
+  font-family: var(--font-family);
+  color: white;
+  text-decoration: none;
+  word-wrap: normal;
 }
-#logoDescription {
-  padding: 15px 0;
-  max-width: 80%;
-  margin: 0 auto 20px;
-  background-color: rgb(4, 83, 4);
-  border: 3px solid rgb(240, 240, 240);
-  box-shadow: 5px 5px 8px rgb(71, 71, 71);
-}
-.p {
-  text-align: center;
-  color: rgb(210, 180, 140);
-  font-size: 1.2rem;
-  margin: 0;
-  padding: 0;
-}
-.pDiscription {
-  font-size: 1.3rem;
-  text-align: left;
-  margin-left: 5%;
+.cardLink:hover {
+  color: var(--lightText);
 }
 .getQuote {
   display: flex;
   justify-content: center;
   width: auto;
-  margin: 0 auto 10px auto;
-}
-#products {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 80%;
-  padding-bottom: 2%;
-}
-.img, .h3 {
-  border: 3px solid rgb(240, 240, 240);
-  border-radius: 4px;
-  box-shadow: 4px 4px 8px rgb(71, 71, 71);
-  background-color: rgb(240, 240, 240);
-}
-.h3 {
-  color: black;
-  font-weight: bolder;
-  background-color: rgb(252, 252, 252);
-  padding: 5px;
-}
-#logoDiv {
-  margin: 5px;
-}
-@media only screen and (max-width: 1200px) {
-  .productImg {
-    max-height: 230px;
-  }
-}
-@media only screen and (max-width: 840px) {
-  .productImg {
-    max-height: 170px;
-    padding: 3px 0 3px 0;
-  }
-  #logoDescription {
-    padding: 0 3px;
-  }
-  .p {
-    font-size: 1rem;
-  }
-  .pDiscription {
-    margin-left: 2%;
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (max-width: 440px) {
-  #h1 {
-    font-size: 1.75rem;
-  }
-  .productImg {
-    max-width: 95%;
-    padding: 2px 0 2px 0;
-  }
+  margin: 0 auto 2rem auto;
 }

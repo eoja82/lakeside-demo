@@ -1,19 +1,50 @@
 {
-  "description": "Whether you want a metal or asphalt roof, we can supply your roofing needs.",
+  "subheader": "ASPHALT - METAL",
+  "description": "Whether you prefer an asphalt or metal roof, we can supply your roofing needs.",
   "descriptionLogos": "METAL: Metal Sales and Whirlwind.*ASPHALT: Malarkey, Certainteed, Tamko, and GAF.",
   "slug": "/products/roofing-and-steel/",
-  "product": [
-    {"manufacturer": "Metal Sales", "type": "roofing",
-    "logo": "/img/products/metalsales-logo.png", "link": "https://www.metalsales.us.com/"},
-    {"manufacturer": "Whirlwind", "type": "roofing",
-      "logo": "/img/products/whirlwind-logo.png", "link": "https://www.whirlwindsteel.com/"},
-    {"manufacturer": "Malarkey", "type": "roofing", "logo": "/img/products/malarkey-logo.png", "link": "https://malarkeyroofing.com/products"},
-    {"manufacturer": "Certainteed", "type": "roofing", "logo": "/img/products/certainteed-logo.png", "link": "https://www.certainteed.com/residential-roofing/"},
-    {"manufacturer": "Tamko", "type": "roofing", "logo": "/img/products/tamko-logo.png", "link": "https://www.tamko.com/"},
-    {"manufacturer": "GAF", "type": "roofing", "logo": "/img/products/gaf-logo.jpg", "link": "https://www.gaf.com/en-us/roofing-products/residential-roofing-products/shingles?Action=GetGrid&ZipCode=56484"}
-  ],
-  "images": [
-    {"type": "roofing", "image": "/img/products/roof1.jpg"}, 
-    {"type": "roofing", "image": "/img/products/roof2.jpg"}
-  ]  
+  "products": [
+    {
+      "header": "Asphalt Shingles",
+      "image": {
+        "src": "/img/products/roofing1.jpg",
+        "alt": "House With Shingles"
+      },
+      "suppliers": [
+        {
+          "supplier": "Malarkey",
+          "href": "https://malarkeyroofing.com/products"
+        },
+        {
+          "supplier": "Certainteed",
+          "href": "https://www.certainteed.com/residential-roofing"
+        },
+        {
+          "supplier": "Tamko",
+          "href": "https://www.tamko.com"
+        },
+        {
+          "supplier": "GAF",
+          "href": "https://www.gaf.com/en-us/roofing-products/residential-roofing-products/shingles?Action=GetGrid&ZipCode=56484"
+        }
+      ]
+    },
+    {
+      "header": "Metal",
+      "image": {
+        "src": "/img/products/roof2.jpg",
+        "alt": "House With Metal Roof"
+      },
+      "suppliers": [
+        {
+          "supplier": "Metal Sales",
+          "href": "https://www.metalsales.us.com"
+        },
+        {
+          "supplier": "Whirlwind",
+          "href": "https://www.whirlwindsteel.com"
+        }
+      ]
+    }
+  ]
 }

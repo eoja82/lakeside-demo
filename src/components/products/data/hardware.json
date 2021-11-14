@@ -1,16 +1,37 @@
 {
-  "description": "We have what you need - fasteners, plumbing, electrical, automotive, household items and more!",
+  "subheader": "THE MATERIALS YOU NEED",
+  "description": "We have have what you need. Wether you are a contractor or a DIYer, we have the electrical, plumbing, fasteners, household items, automotive supplies and more to complete your project.",
   "slug": "/products/hardware/",
-  "descriptionLogos": "",
-  "product": [
-    {"manufacturer": "United Hardware", "type": "hardware", "logo": "/img/products/unitedHardware-logo.png", "link": "http://newsite.unitedhardware.com/"},
-    {"manufacturer": "Jeske", "type": "hardware", "logo": "/img/products/jeske-logo.png", "link": "https://www.jeskecompany.com/"}, 
-    {"manufacturer": "Manion's", "type": "hardware", "logo": "/img/products/manions-logo.png", "link": "http://manionswholesale.com/"},
-    {"manufacturer": " B & C Eagle", "type": "hardware", "logo": "/img/products/bcEagle-logo.png", "link": "http://bandceagle.com/"},
-    {"manufacturer": "Wood Pro", "type": "hardware", "logo": "/img/products/woodPro-logo.jpg", "link": "http://bandceagle.com/fasteners.php?type=packaged_screws"}
-  ],
-  "images": [
-    {"type": "hardware", "image": "/img/products/plumbing.jpg"},
-    {"type": "hardware", "image": "/img/products/screws.jpg"}
+  "products": [
+    {
+      "header": "General Hardware",
+      "image": {
+        "src": "/img/products/hardware1.jpg",
+        "alt": "Plumbing Products"
+      },
+      "suppliers": [
+        {
+          "supplier": "United Hardware",
+          "href": "http://newsite.unitedhardware.com"
+        },
+        {
+          "supplier": "Manion's",
+          "href": "http://manionswholesale.com"
+        }
+      ]
+    },
+    {
+      "header": "Fasteners",
+      "image": {
+        "src": "/img/products/hardware2.jpg",
+        "alt": "Nails And Screws"
+      },
+      "suppliers": [
+        {
+          "supplier": "B & C Eagle",
+          "href": "http://bandceagle.com"
+        }
+      ]
+    }
   ]
 }

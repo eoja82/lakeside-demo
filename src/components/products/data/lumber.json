@@ -1,14 +1,47 @@
 {
-  "description": "We have a large selection of lumber - SPF, treated, cedar, and sheet goods.  Click on the links below to get a list of the lumber we keep in stock.",
+  "subheader": "TREATED - CEDAR - SPF - SHEET GOODS",
+  "description": "We have a large selection of treated lumber, cedar lumber, dimensional lumber and sheet goods.  Click on the inventory links below to get a list of items we keep in stock.",
   "descriptionLogos": "",
   "slug": "/products/lumber/",
-  "product": [
-    {"manufacturer": "Pine and Dimensional Lumber", "type": "lumber", "logo": "", "link": "/lumber/spf.pdf"},
-    {"manufacturer": "Treated and Cedar Lumber", "type": "lumber", "logo": "", "link": "/lumber/trtCedar.pdf"},
-    {"manufacturer": "Sheet Goods", "type": "lumber", "logo": "", "link": "/lumber/sheetGoods.pdf"}
-  ],
-  "images": [
-    {"type": "lumber", "image": "/lumber/lumberRack.jpg"}, 
-    {"type": "lumber", "image": "/lumber/trtOnForklift.jpg"}
+  "products": [
+    {
+      "header": "Pine and Dimensional Lumber",
+      "image": {
+        "src": "/img/products/lumber1.jpg",
+        "alt": "Lumber"
+      },
+      "suppliers": [
+        {
+          "supplier": "Inventory",
+          "href": "/pdf/spf.pdf"
+        }
+      ]
+    },
+    {
+      "header": "Treated and Cedar Lumber",
+      "image": {
+        "src": "/img/products/lumber2.jpg",
+        "alt": "Treated Lumber"
+      },
+      "suppliers": [
+        {
+          "supplier": "Inventory",
+          "href": "/pdf/trtCedar.pdf"
+        }
+      ]
+    },
+    {
+      "header": "Sheet Goods",
+      "image": {
+        "src": "/img/products/lumber3.jpg",
+        "alt": "Plywood"
+      },
+      "suppliers": [
+        {
+          "supplier": "Inventory",
+          "href": "/pdf/sheetGoods.pdf"
+        }
+      ]
+    }
   ]
 }

@@ -1,14 +1,28 @@
 {
-  "description": "Inside or outside, stone is a practical and beautiful design option.",
-  "descriptionLogos": "",
-  "slug": "/products/stone/",
-  "product": [
-    {"manufacturer": "Boulder Creek", "type": "stone", "logo": "/img/products/boulderCreek-logo.png", "link": "https://www.bouldercreekstone.com/"},
-    {"manufacturer": "GenStone", "type": "stone", "logo": "/img/products/genStone-logo.png", "link": "https://genstone.com/"},
-    {"manufacturer": "Nova Brik", "type": "stone", "logo": "/img/products/novaBrik-logo.jpg", "link": "https://novabrik.com/en-us/"}
-  ],
-  "images": [
-    {"type": "stone", "image": "/img/products/stone1.jpg"}, 
-    {"type": "stone", "image": "/img/products/stone2.jpg"}
+  "subheader": "INTERIOR OR EXTERIOR",
+  "description": "Stone and brick are practical and beautiful design options for the inside and outside your home.",
+  "slug": "/products/stone-and-brick/",
+  "products": [
+    {
+      "header": "Stone And Brick",
+      "image": {
+        "src": "/img/products/stone1.jpg",
+        "alt": "Stone Siding"
+      },
+      "suppliers": [
+        {
+          "supplier": "Boulder Creek",
+          "href": "https://www.bouldercreekstone.com"
+        },
+        {
+          "supplier": "GenStone",
+          "href": "https://genstone.com"
+        },
+        {
+          "supplier": "Novabrik",
+          "href": "https://novabrik.com/en-us"
+        }
+      ]
+    }
   ]
 }

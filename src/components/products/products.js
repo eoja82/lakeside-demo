@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import styles from "./styles/products.module.css"
 import Header from "../header"
@@ -11,7 +12,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 
-export default function Product(props) {
+function Product(props) {
   let split = props.product.slug.split("/")
   let titleInfo = split[2].replace(/-/g, " ")
   let linkRegex = /^http/i
@@ -34,7 +35,7 @@ export default function Product(props) {
                 <Card.Img src={withPrefix(x.image.src)} alt={x.image.alt} />
                 <Card.ImgOverlay style={{padding: "0"}}>
                   <Card.Title className={"bg-dark " + styles.cardTitle}>{x.header}</Card.Title>
-                  <Card.Body classname={styles.cardBody} style={{padding: "1rem 2rem"}}>
+                  <Card.Body className={styles.cardBody} style={{padding: "1rem 2rem"}}>
                     <Row xs={1} sm={1} md={1} lg={2} className={"bg-dark " + styles.cardRow} style={{"--bs-bg-opacity": ".5"}}>
                       {x.suppliers.map( (x, i) => (
                         <Col key={i}>
@@ -55,3 +56,9 @@ export default function Product(props) {
     </div>
   )
 }
+
+Product.propTypes = {
+  product: PropTypes.object.isRequired
+}
+
+export default Product

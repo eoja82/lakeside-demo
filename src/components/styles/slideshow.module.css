@@ -21,15 +21,7 @@
   position: absolute;
   right: 5%;
   left: 5%;
-}
-.caption1 {
-  bottom: 35%;
-}
-.caption2 {
-  bottom: 20%;
-}
-.caption3 {
-  bottom: 53%;
+  bottom: 15%;
 }
 @media only screen and (max-width: 440px) {
   .h3 {
@@ -37,14 +29,5 @@
   }
   .p {
     font-size: 1.5rem;
-  }
-  .caption1 {
-    bottom: 33%;
-  }
-  .caption2 {
-    bottom: 25%;
-  }
-  .caption3 {
-    bottom: 55%;
   }
 }

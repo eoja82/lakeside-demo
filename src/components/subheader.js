@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styles from "./styles/subheader.module.css"
 import Container from "react-bootstrap/Container"
 
-export default function Subheader(props) {
+function Subheader(props) {
   return (
     <Container>
       <h3 className={styles.h3 + ` ${props.lightText ? styles.lightText : styles.darkText}`} style={props.style}>{props.text}</h3>
@@ -13,7 +13,9 @@ export default function Subheader(props) {
 }
 
 Subheader.propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   lightText: PropTypes.bool,
   style: PropTypes.object
 }
+
+export default Subheader

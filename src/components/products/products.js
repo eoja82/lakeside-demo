@@ -35,7 +35,7 @@ function Product(props) {
                 <Card.Img src={withPrefix(x.image.src)} alt={x.image.alt} />
                 <Card.ImgOverlay style={{padding: "0"}}>
                   <Card.Title className={"bg-dark " + styles.cardTitle}>{x.header}</Card.Title>
-                  <Card.Body className={styles.cardBody} style={{padding: "1rem 2rem"}}>
+                  <Card.Body style={{padding: "1rem 2rem"}}>
                     <Row xs={1} sm={1} md={1} lg={2} className={"bg-dark " + styles.cardRow} style={{"--bs-bg-opacity": ".5"}}>
                       {x.suppliers.map( (x, i) => (
                         <Col key={i}>

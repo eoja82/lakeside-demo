@@ -21,11 +21,6 @@
   padding: 8px;
   border-radius: 5px;
 }
-.cardBody {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .cardLink {
   font-family: var(--font-family);
   color: white;

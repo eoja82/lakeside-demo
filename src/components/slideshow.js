@@ -8,7 +8,7 @@ function Slideshow() {
   return (
     <Carousel fade pause="false">
       <Carousel.Item>
-        <img src={withPrefix("/img/slideShow/storeFront.jpeg")} className={"d-block w-100 " + styles.img} alt="Front of Store" />
+        <img src={withPrefix("/img/slideShow/storeEnterance.jpeg")} className={"d-block w-100 " + styles.img} alt="Front of Store" />
         <Carousel.Caption bsPrefix={styles.caption1}>
           <h3 className={styles.h3}>FAMILY OWNED AND OPERATED</h3>
         </Carousel.Caption>

@@ -10,26 +10,29 @@ import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
-let List = () => {
-  const data = useStaticQuery(graphql`
-  query SlugToQuery {
-    allDataJson {
-      nodes {
-        slug
-        images {
-          image
-          type
+
+  let List = () => {
+    const data = useStaticQuery(graphql`
+    query SlugToQuery {
+      allDataJson {
+        nodes {
+          slug
+          products {
+            image {
+              alt
+              src
+            }
+          }
         }
       }
     }
-  }
-  `)
-  let list = [];
-  data.allDataJson.nodes.forEach( ({slug, images}, i) => {
-    let split = slug.split("/")
-    let listItem = split[2].replace(/-/g, " ");
-    list.push({path: slug, key: i, name: listItem, src: images[0].image, alt: images[0].type})
-  });
+    `)
+    let list = []
+    data.allDataJson.nodes.forEach( ({slug, products}, i) => {
+      let split = slug.split("/")
+      let listItem = split[2].replace(/-/g, " ")
+      list.push({path: slug, key: i, name: listItem, src: products[0].image.src, alt: products[0].image.alt})
+    })
   return (
     <Container>
       <Row xs={1} sm={1} md={2} lg={3}>
@@ -54,19 +57,19 @@ let List = () => {
 
 class Index extends React.Component {
   constructor(props) {
-    super(props);
-    this.disclaimer = React.createRef();
-    this.closeDisclaimer = this.closeDisclaimer.bind(this);
+    super(props)
+    this.disclaimer = React.createRef()
+    this.closeDisclaimer = this.closeDisclaimer.bind(this)
   }
   closeDisclaimer() {
-    this.disclaimer.current.style.display = "none";
-    clearTimeout(this.timer);
+    this.disclaimer.current.style.display = "none"
+    clearTimeout(this.timer)
   } 
   componentDidMount() {
-    this.timer = setTimeout(this.closeDisclaimer, 15000);
+    this.timer = setTimeout(this.closeDisclaimer, 15000)
   }
   componentWillUnmount() {
-    clearTimeout(this.timer);
+    clearTimeout(this.timer)
   }
   render() {
     return (
@@ -125,4 +128,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Index

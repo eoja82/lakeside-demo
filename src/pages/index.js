@@ -87,13 +87,15 @@ class Index extends React.Component {
               </p>
             </div>
           </Col>
-          <Col md={12} lg={6} as="img" src={withPrefix("/img/wharehouseFront.jpeg")} alt="store front" style={{padding: "0"}}>
+          {/* <Col md={12} lg={6} as="img" src={withPrefix("/img/wharehouseFront.jpeg")} alt="store front" style={{padding: "0"}}>
+          </Col> */}
+          <Col md={12} lg={6} as="img" src={withPrefix("/img/deck.jpg")} alt="Deck" style={{padding: "0"}}>
           </Col>
         </Row>
       </Container>
       <Container fluid>
         <Row className="bg-dark">
-        <Col md={12} lg={6} as="img" src={withPrefix("/img/loadedTruck.jpg")} alt="Delivery truck" style={{padding: "0"}}>
+        <Col md={12} lg={6} as="img" src={withPrefix("/img/boomTruck2.jpg")} alt="Delivery truck" style={{padding: "0"}}>
           </Col>
           <Col md={12} lg={6} className={styles.col}>
             <div>

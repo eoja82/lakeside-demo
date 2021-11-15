@@ -8,23 +8,25 @@ exports.createPages = async ({ graphql, actions}) => {
         edges {
           node {
             description
+            subheader
             slug
-            images {
-              image
-              type
-            }
-            product {
-              link
-              logo
-              manufacturer
-              type
+            products {
+              header
+              image {
+                alt
+                src
+              }
+              suppliers {
+                href
+                supplier
+              }
             }
           }
         }
       }
     }
   `)
-  //console.log(JSON.stringify(result, null, 4))
+  
   result.data.allDataJson.edges.forEach( ({node}) => {
     createPage({
       path: node.slug,

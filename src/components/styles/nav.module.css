@@ -1,8 +1,15 @@
 .dropdownItem {
   text-transform: capitalize;
+  color: inherit;
+  text-decoration: inherit;
+  display: inherit;
+  width: 100%;
+}
+.dropdownItem:hover {
+  color: inherit;
 }
 .navLink {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: rgba(255, 255, 255, .55);
 }

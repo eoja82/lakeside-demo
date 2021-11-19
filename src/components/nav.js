@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styles from "./styles/nav.module.css"
-import { withPrefix } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
@@ -9,9 +9,9 @@ import NavDropdown from "react-bootstrap/NavDropdown"
 
 
 function Navigation() {
-  /* const activeStyles = {
+  const activeStyles = {
     color: "rgb(255, 255, 255, .75)"
-  } */
+  }
   return (
     <StaticQuery id={styles.container}
       query={graphql`
@@ -26,28 +26,38 @@ function Navigation() {
       render={data => (
         <Navbar collapseOnSelect expand="sm" variant="dark" bg="dark" fixed="top" style={{"--bs-bg-opacity": ".9"}}>
           <Container fluid>
-            <Navbar.Brand href={withPrefix("/")}>
-              <img 
-                src={withPrefix("/img/logo.png")} 
-                alt="logo" 
-                width="87.5px" height="50px">
-              </img>
+            <Navbar.Brand as="div">
+              <Link to={withPrefix("/")}>
+                <img 
+                  src={withPrefix("/img/logo.png")} 
+                  alt="logo" 
+                  width="87.5px" height="50px">
+                </img>
+              </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <NavDropdown title="Products" id="collapsible-nav-dropdown">
+                <NavDropdown title="Products" id="collapsible-nav-dropdown" className={styles.navLink}>
                   {data.allDataJson.nodes.map(({slug}, i) => {
                       let split = slug.split("/")
                       let listItem = split[2].replace(/-/g, " ")
                       return (
-                        <NavDropdown.Item href={withPrefix(slug)} key={i} className={styles.dropdownItem}>{listItem}</NavDropdown.Item>
+                        <NavDropdown.Item as="div" key={i}>
+                          <Link to={withPrefix(slug)} className={styles.dropdownItem}>{listItem}</Link>
+                        </NavDropdown.Item>
                       )
                     })}
                 </NavDropdown>
-                <Nav.Link href={withPrefix("/rental")}>Rental</Nav.Link>
-                <Nav.Link href={withPrefix("/specials")}>Specials</Nav.Link>
-                <Nav.Link href={withPrefix("/contact")}>Contact</Nav.Link>
+                <Nav.Link as="div">
+                  <Link to={withPrefix("/rental")} activeStyle={activeStyles} className={styles.navLink}>Rental</Link>
+                </Nav.Link>
+                <Nav.Link as="div">
+                  <Link to={withPrefix("/specials")} activeStyle={activeStyles} className={styles.navLink}>Specials</Link>
+                </Nav.Link>
+                <Nav.Link as="div">
+                  <Link to={withPrefix("/contact")} activeStyle={activeStyles} className={styles.navLink}>Contact</Link>
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

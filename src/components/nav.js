@@ -27,7 +27,7 @@ function Navigation() {
         <Navbar collapseOnSelect expand="sm" variant="dark" bg="dark" fixed="top" style={{"--bs-bg-opacity": ".9"}}>
           <Container fluid>
             <Navbar.Brand as="div">
-              <Link to={withPrefix("/")}>
+              <Link to="/">
                 <img 
                   src={withPrefix("/img/logo.png")} 
                   alt="logo" 
@@ -44,19 +44,19 @@ function Navigation() {
                       let listItem = split[2].replace(/-/g, " ")
                       return (
                         <NavDropdown.Item as="div" key={i}>
-                          <Link to={withPrefix(slug)} className={styles.dropdownItem}>{listItem}</Link>
+                          <Link to={slug} className={styles.dropdownItem}>{listItem}</Link>
                         </NavDropdown.Item>
                       )
                     })}
                 </NavDropdown>
                 <Nav.Link as="div">
-                  <Link to={withPrefix("/rental")} activeStyle={activeStyles} className={styles.navLink}>Rental</Link>
+                  <Link to="/rental" activeStyle={activeStyles} className={styles.navLink}>Rental</Link>
                 </Nav.Link>
                 <Nav.Link as="div">
-                  <Link to={withPrefix("/specials")} activeStyle={activeStyles} className={styles.navLink}>Specials</Link>
+                  <Link to="/specials" activeStyle={activeStyles} className={styles.navLink}>Specials</Link>
                 </Nav.Link>
                 <Nav.Link as="div">
-                  <Link to={withPrefix("/contact")} activeStyle={activeStyles} className={styles.navLink}>Contact</Link>
+                  <Link to="/contact" activeStyle={activeStyles} className={styles.navLink}>Contact</Link>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>

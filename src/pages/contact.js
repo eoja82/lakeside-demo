@@ -5,9 +5,11 @@ import Layout from "../components/layout"
 import Subheader from "../components/subheader"
 import styles from "./styles/contacts.module.css"
 import { withPrefix } from "gatsby"
+import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
+import Image from "react-bootstrap/Image"
 import Row from "react-bootstrap/Row"
 
 const employees = [
@@ -30,14 +32,18 @@ class Contact extends React.Component {
         <Row xs={1} sm={1} md={2} lg={3}>
           {employees.map( x => (
             <Col key={x.key} style={{padding: "12px"}}>
-              <Card className="bg-dark text-center" style={{border: "none"}}>
-                <Card.Img variant="top" src={withPrefix(x.src)} />
+              <Card className="text-center" style={{border: "none"}}>
+                <Image src={withPrefix(x.src)} roundedCircle />
                 <Card.Body>
                   <Card.Title as="h5" className={styles.cardTitle}>{x.name}</Card.Title>
                   <Card.Subtitle className={styles.cardSubtitle}>{x.position}</Card.Subtitle>
                   <div className={styles.links}>
-                    <Card.Link href={`tel:${x.phone}`} aria-label="phone number" className={styles.cardLink}><i className={"fa fa-phone " + styles.icon} /></Card.Link>
-                    <Card.Link href={`mailto:${x.email}`} aria-label="email" className={styles.cardLink}><i className={"fa fa-envelope-square " + styles.icon} /></Card.Link>
+                    <Button variant="outline-dark" className={styles.cardButton}>
+                      <Card.Link href={`tel:${x.phone}`} aria-label="phone number" className={styles.cardLink}>Call</Card.Link>
+                    </Button>
+                    <Button variant="outline-dark" className={styles.cardButton}>
+                      <Card.Link href={`mailto:${x.email}`} aria-label="email" className={styles.cardLink}>Email</Card.Link>
+                    </Button>
                    </div>
                 </Card.Body>
               </Card>
@@ -49,4 +55,5 @@ class Contact extends React.Component {
     )
   }
 }
+
 export default Contact

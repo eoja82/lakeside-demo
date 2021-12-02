@@ -11,7 +11,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
 
-  let List = () => {
+  const List = () => {
     const data = useStaticQuery(graphql`
     query SlugToQuery {
       allDataJson {
@@ -34,7 +34,7 @@ import Col from "react-bootstrap/Col"
       list.push({path: slug, key: i, name: listItem, src: products[0].image.src, alt: products[0].image.alt})
     })
   return (
-    <Container>
+    <Container id={styles.listContainer}>
       <Row xs={1} sm={1} md={2} lg={3}>
         {list.map( x => (
           <Col style={{padding: "12px"}}>
@@ -105,18 +105,11 @@ class Index extends React.Component {
           </Col>
         </Row>
       </Container>
-      <div className={styles.containerProd}>
-        <div className={styles.productDiv}>
-          <Subheader text="PRODUCTS" />
-          <div className={styles.products}>
-            <List />
-          </div>
-          <div className={styles.quote}>
-            <Quote />
-          </div>
-        </div>
-      </div>
-      {/* Disclaimer */}
+      <Container>
+        <Subheader text="PRODUCTS" />
+        <Quote />
+        <List />
+      </Container>
       <div id={styles.disclaimerContainer} ref={this.disclaimer} style={{display: "flex"}}>
         <div id={styles.disclaimer}>
           <button id={styles.closeDisclaimer} onClick={this.closeDisclaimer}>&times;</button>

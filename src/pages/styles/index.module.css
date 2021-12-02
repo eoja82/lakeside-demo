@@ -30,6 +30,9 @@ body, html {
   height: 100vh;
   background-color: #343a40;
 }
+#listContainer {
+  margin-bottom: 2.5rem;
+}
 .listP {
   font-family: var(--font-family);
   font-size: 1.1rem;
@@ -70,18 +73,6 @@ body, html {
 }
 .moreInfoImg {
   max-width: 50%;
-}
-.productDiv {
-  padding-bottom: 3rem;
-}
-.products {
-  margin: 25px auto;
-}
-.quote {
-  display: flex;
-  justify-content: center;
-  width: auto;
-  margin: 0 auto;
 }
 #disclaimerContainer {
   display: flex;

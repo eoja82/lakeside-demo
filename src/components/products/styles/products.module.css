@@ -30,9 +30,3 @@
 .cardLink:hover {
   color: var(--lightText);
 }
-.getQuote {
-  display: flex;
-  justify-content: center;
-  width: auto;
-  margin: 0 auto 2rem auto;
-}

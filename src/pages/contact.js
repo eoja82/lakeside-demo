@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Header from "../components/header"
 import Layout from "../components/layout"
+import Header from "../components/header"
 import Subheader from "../components/subheader"
 import styles from "./styles/contact.module.css"
 import { withPrefix } from "gatsby"

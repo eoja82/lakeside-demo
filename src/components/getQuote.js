@@ -16,12 +16,12 @@ function Quote() {
 
       {/* modal */}
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton closeVariant="white" className="light" id={styles.modalHeader}>
+        <Modal.Header closeButton closeVariant="dark" className="light" id={styles.modalHeader}>
           <Modal.Title>Please call or email us for a quote:</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <p><a href="tel:1-555-555-5555" className={styles.contactLink}><i className="fa fa-phone"></i> 1-555-555-5555</a></p>
-          <p><a href="mailto:john@fakeemail.com" className={styles.contactLink}><i className="fa fa-envelope-square"></i> john@fakeemail.com</a></p>
+        <Modal.Body id={styles.modalBody}>
+          <a href="tel:1-555-555-5555" className={styles.contactLink}><i className="fa fa-phone"></i> 1-555-555-5555</a>
+          <a href="mailto:sales@fakeemail.com" className={styles.contactLink}><i className="fa fa-envelope-square"></i> sales@fakeemail.com</a>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="outline-secondary" onClick={handleClose}>Close</Button>

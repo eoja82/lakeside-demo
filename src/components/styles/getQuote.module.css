@@ -4,6 +4,13 @@
   --darkText: rgb(33, 37, 41);
   --darkText-muted: rgb(33, 37, 41, .7);
 }
+.container {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
 #button {
   font: var(--font-family);
 }

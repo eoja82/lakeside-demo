@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styles from "./styles/getQuote.module.css"
+import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"
 
@@ -9,7 +10,7 @@ function Quote() {
   const handleShow = () => setShow(true)
 
   return (
-    <div>
+    <Container className={styles.container}>
       {/* trigger modal */}
       <Button variant="outline-dark" onClick={handleShow} size="lg" id={styles.button}>Get A Quote</Button>
 
@@ -26,7 +27,7 @@ function Quote() {
           <Button variant="outline-secondary" onClick={handleClose}>Close</Button>
         </Modal.Footer>
       </Modal>
-    </div>
+    </Container>
   )
 }
 

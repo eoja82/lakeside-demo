@@ -29,8 +29,9 @@ export default () => {
       </Helmet>
       <Header text="RENTAL EQUIPMENT" />
       <Subheader text="THE RIGHT TOOLS FOR THE JOB" />
+      <Quote />
       <Container>
-        <Row xs={1} sm={1} md={2} lg={3}>
+        <Row xs={1} sm={1} md={2} lg={3} style={{paddingBottom: "2.5rem"}}>
           {equipment.map( x => (
             <Col className="d-flex" style={{padding: "12px"}}>
               <Card>
@@ -48,9 +49,9 @@ export default () => {
           ))}
         </Row>
       </Container>
-      <div className={styles.quoteDiv}>
+      {/* <div className={styles.quoteDiv}>
         <Quote />
-      </div>   
+      </div> */}   
     </Layout>
   )
 }

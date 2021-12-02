@@ -12,10 +12,3 @@
   font-family: var(--font-family);
   color: var(--light-text-color);
 }
-.quoteDiv {
-  display: flex;
-  justify-content: center;
-  width: auto;
-  margin: 0 auto;
-  padding: 2rem 0;
-}

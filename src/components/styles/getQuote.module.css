@@ -1,9 +1,21 @@
+:root {
+  --font-family: "Open Sans", Arial, sans-serif;
+  --lightText: rgb(219, 190, 157);
+  --darkText: rgb(33, 37, 41);
+  --darkText-muted: rgb(33, 37, 41, .7);
+}
+#button {
+  font: var(--font-family);
+}
+#button:hover {
+  color: var(--lightText);
+}
 #modalHeader {
   background-color: rgb(0, 141, 203);
   color: rgb(240, 240, 240);
 }
 .contactLink {
-  color: #3e3e3e;
+  color: rgb(62, 62, 62);
   font-size: larger;
   text-decoration: none;
 }

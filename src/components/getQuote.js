@@ -11,7 +11,7 @@ function Quote() {
   return (
     <div>
       {/* trigger modal */}
-      <Button variant="primary" onClick={handleShow} size="lg">Get A Quote</Button>
+      <Button variant="outline-dark" onClick={handleShow} size="lg" id={styles.button}>Get A Quote</Button>
 
       {/* modal */}
       <Modal show={show} onHide={handleClose}>

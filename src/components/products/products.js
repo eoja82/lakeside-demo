@@ -27,8 +27,11 @@ function Product(props) {
       <Header text={titleInfo.toUpperCase()} />
       <Subheader text={props.product.subheader} />
       <p id={styles.description}>{props.product.description}</p>
+      <Container className={styles.getQuote}>
+        <Quote />
+      </Container>
       <Container>
-        <Row xs={1} sm={1} md={2} style={{marginBottom: "2rem"}}>
+        <Row xs={1} sm={1} md={2} style={{marginBottom: "2.5rem"}}>
           {props.product.products.map( (x, i) => (
             <Col style={{padding: "12px"}} key={i}>
               <Card>
@@ -49,9 +52,6 @@ function Product(props) {
             </Col>
           ))}
         </Row>
-        <Container className={styles.getQuote}>
-          <Quote />
-        </Container>
       </Container>
     </div>
   )

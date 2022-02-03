@@ -6,9 +6,11 @@ import Quote from "../components/getQuote"
 import { Link, graphql, useStaticQuery, withPrefix } from "gatsby"
 import styles from "./styles/index.module.css"
 import Card from "react-bootstrap/Card"
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
+import Image from "react-bootstrap/Image"
+import Row from "react-bootstrap/Row"
+
 
 
   const List = () => {
@@ -87,13 +89,15 @@ class Index extends React.Component {
               </p>
             </div>
           </Col>
-          <Col md={12} lg={6} as="img" src={withPrefix("/img/deck.jpg")} alt="Deck" style={{padding: "0"}}>
+          <Col md={12} lg={6} style={{padding: "0"}}>
+            <Image src={withPrefix("/img/deck.jpg")} alt="Deck" fluid />
           </Col>
         </Row>
       </Container>
       <Container fluid>
         <Row className="bg-dark">
-        <Col md={12} lg={6} as="img" src={withPrefix("/img/boomTruck2.jpg")} alt="Delivery truck" style={{padding: "0"}}>
+          <Col md={12} lg={6} style={{padding: "0"}}>
+            <Image src={withPrefix("/img/boomTruck2.jpg")} alt="Delivery truck" fluid />
           </Col>
           <Col md={12} lg={6} className={styles.col}>
             <div>

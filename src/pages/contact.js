@@ -33,7 +33,7 @@ class Contact extends React.Component {
           {employees.map( x => (
             <Col key={x.key} style={{padding: "12px"}}>
               <Card className="text-center" style={{border: "none"}}>
-                <Image src={withPrefix(x.src)} roundedCircle fluid />
+                <Image src={withPrefix(x.src)} alt={x.name} roundedCircle fluid />
                 <Card.Body>
                   <Card.Title as="h5" className={styles.cardTitle}>{x.name}</Card.Title>
                   <Card.Subtitle className={styles.cardSubtitle}>{x.position}</Card.Subtitle>

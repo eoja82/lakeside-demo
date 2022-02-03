@@ -39,8 +39,8 @@ import Row from "react-bootstrap/Row"
     <Container id={styles.listContainer}>
       <Row xs={1} sm={1} md={2} lg={3}>
         {list.map( x => (
-          <Col style={{padding: "12px"}}>
-            <Card className="text-center" key={x.key} style={{border: "none"}}>
+          <Col style={{padding: "12px"}} key={x.key}>
+            <Card className="text-center" style={{border: "none"}}>
               <Link to={x.path}>
                 <Card.Img varient="top" src={withPrefix(x.src)} style={{borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}} alt={x.alt} />
               </Link>

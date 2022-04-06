@@ -4,7 +4,7 @@ import Header from "../components/header"
 import Subheader from "../components/subheader"
 import Quote from "../components/getQuote"
 import { Helmet } from "react-helmet"
-import styles from "./styles/rental.module.css"
+import * as styles from "./styles/rental.module.css"
 import { withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
@@ -48,10 +48,7 @@ export default () => {
             </Col>
           ))}
         </Row>
-      </Container>
-      {/* <div className={styles.quoteDiv}>
-        <Quote />
-      </div> */}   
+      </Container>  
     </Layout>
   )
 }

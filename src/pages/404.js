@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import { withPrefix } from "gatsby"
-import styles from "./styles/404.module.css"
+import * as styles from "./styles/404.module.css"
 
-export default () => {
+const NotFound = () => {
   return (
     <Layout>
       <div className={styles.notFound} style={{backgroundImage: `url(${withPrefix("/img/graySiding.jpg")})`}}>
@@ -13,3 +13,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default NotFound

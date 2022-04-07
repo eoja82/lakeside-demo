@@ -1,11 +1,11 @@
 import React from "react"
-import styles from "./styles/footer.module.css"
+import * as styles from "./styles/footer.module.css"
 import { withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 
-export default () => {
+const Footer = () => {
   return (
     <Container fluid as="footer" id={styles.footer} style={{backgroundImage: `url(${withPrefix("/img/lake.jpg")})`}}>
       <Row xs={1} sm={1} md={1} lg={3} xl={4} className={"bg-dark " + styles.row} style={{"--bs-bg-opacity": ".85"}}>
@@ -36,3 +36,5 @@ export default () => {
     </Container>
   )
 }
+
+export default Footer

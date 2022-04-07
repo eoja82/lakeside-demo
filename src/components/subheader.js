@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styles from "./styles/subheader.module.css"
+import * as styles from "./styles/subheader.module.css"
 import Container from "react-bootstrap/Container"
 
 function Subheader(props) {

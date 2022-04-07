@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import styles from "./styles/header.module.css"
+import * as styles from "./styles/header.module.css"
 import { withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
 

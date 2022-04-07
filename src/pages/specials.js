@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import Subheader from "../components/subheader"
 import { Helmet } from "react-helmet"
-import styles from "./styles/specials.module.css"
+import * as styles from "./styles/specials.module.css"
 
 
 export default function Specials() {

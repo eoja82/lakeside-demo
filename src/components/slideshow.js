@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./styles/slideshow.module.css"
+import * as styles from "./styles/slideshow.module.css"
 import { withPrefix } from "gatsby"
 import Carousel from "react-bootstrap/Carousel"
 

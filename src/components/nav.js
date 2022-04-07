@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import styles from "./styles/nav.module.css"
+import * as styles from "./styles/nav.module.css"
 import { Link, withPrefix } from "gatsby"
 import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
@@ -13,7 +13,7 @@ function Navigation() {
     color: "rgb(255, 255, 255, .75)"
   }
   return (
-    <StaticQuery id={styles.container}
+    <StaticQuery
       query={graphql`
         query SlugQuery {
           allDataJson {

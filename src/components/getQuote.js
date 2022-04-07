@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styles from "./styles/getQuote.module.css"
+import * as styles from "./styles/getQuote.module.css"
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 import Modal from "react-bootstrap/Modal"

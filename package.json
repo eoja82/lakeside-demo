@@ -14,10 +14,10 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^2.32.13",
-    "gatsby-plugin-react-helmet": "^3.10.0",
-    "gatsby-source-filesystem": "^2.11.1",
-    "gatsby-transformer-json": "^2.11.0",
+    "gatsby": "^4.11.2",
+    "gatsby-plugin-react-helmet": "^5.11.0",
+    "gatsby-source-filesystem": "^4.11.1",
+    "gatsby-transformer-json": "^4.11.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-bootstrap": "^2.0.0",

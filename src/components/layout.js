@@ -4,7 +4,7 @@ import Footer from "./footer"
 import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div>
       <Helmet>
@@ -29,3 +29,5 @@ export default ({ children }) => {
     </div>
   )
 }
+
+export default Layout

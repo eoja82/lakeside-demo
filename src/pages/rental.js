@@ -19,7 +19,7 @@ const equipment = [
   {type: "Other Equipment", list: ["Drywall Lift", "Pex Tool", "Hammer Drill"], src: "/img/rental/hammerDrill.jpg", alt: "hammer drill", key: 5}
 ];
 
-export default () => {
+const Rental = () => {
   return (
     <Layout>
       <Helmet>
@@ -52,3 +52,5 @@ export default () => {
     </Layout>
   )
 }
+
+export default Rental

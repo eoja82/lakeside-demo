@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import styles from "./styles/products.module.css"
+import * as styles from "./styles/products.module.css"
 import Header from "../header"
 import Subheader from "../subheader"
 import Quote from "../getQuote"
@@ -40,7 +40,7 @@ function Product(props) {
                     <Row xs={1} sm={1} md={1} lg={2} className={"bg-dark " + styles.cardRow} style={{"--bs-bg-opacity": ".5"}}>
                       {x.suppliers.map( (x, i) => (
                         <Col key={i}>
-                          <Card.Link href={linkRegex.test(x.href) ? x.href : withPrefix(x.href)} className={styles.cardLink} target="_blank" rel="noopener noreferrer">{x.supplier} <i className={"fa fa-angle-right " + styles.rightArrow} style={{fontWeight: "bold"}}></i></Card.Link>
+                          <Card.Link href={linkRegex.test(x.href) ? x.href : withPrefix(x.href)} className={styles.cardLink} target="_blank" rel="noopener noreferrer">{x.supplier} <i className="fa fa-angle-right" style={{fontWeight: "bold"}}></i></Card.Link>
                         </Col>
                       ))}
                     </Row>

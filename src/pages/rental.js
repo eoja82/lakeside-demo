@@ -15,7 +15,7 @@ const equipment = [
   {type: "Skid Steer Attachments", list: ['Forks', 'Auger - 6", 9", and 15"', 'Brusher', 'Bucket', 'Root Grapple Bucket'], src: "/img/rental/skidSteerBucket.jpg", alt: "skid steer", key: 1},
   {type: "Nailers", list: ["Flooring Nailer", "Coil Roofing Nailer", "Finish Nailer", "Framing Nailer", "Brad Nailer"], src: "/img/rental/nailer.jpg", alt: "nailer", key: 2},
   {type: "Scaffolding", list: ["Scaffold", "Planks", "Wheels", "Levelers"], src: "/img/rental/scaffold.jpeg", alt: "scaffolding", key: 3},
-  {type: " Insulation Blower", list: ["Rental For Free With Qualifying Insulation Purchase", "100' Hose"], src: "/img/rental/insulationBlower.jpg", alt: "insulation blower", key: 4},
+  {type: " Insulation Blower", list: ["Rent For Free With Qualifying Insulation Purchase", "100' Hose"], src: "/img/rental/insulationBlower.jpg", alt: "insulation blower", key: 4},
   {type: "Other Equipment", list: ["Drywall Lift", "Pex Tool", "Hammer Drill"], src: "/img/rental/hammerDrill.jpg", alt: "hammer drill", key: 5}
 ];
 

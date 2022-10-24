@@ -3,10 +3,11 @@ import Navigation from "./nav"
 import Footer from "./footer"
 import { Helmet } from "react-helmet"
 import { withPrefix } from "gatsby"
+import SSRProvider from "react-bootstrap/SSRProvider"
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <SSRProvider>
       <Helmet>
         <html lang="en" />
         <meta charset="UTF-8" />
@@ -26,7 +27,7 @@ const Layout = ({ children }) => {
       <Navigation />
       <div>{children}</div>
       <Footer />
-    </div>
+    </SSRProvider>
   )
 }
 

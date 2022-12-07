@@ -1,7 +1,7 @@
 {
   "name": "lakeside-lumber",
   "private": true,
-  "description": "lakeside-lumber-website",
+  "description": "lakeside-lumber-demo-website",
   "version": "0.1.0",
   "license": "none",
   "scripts": {
@@ -30,9 +30,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/eoja82/lakeside-demo"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/eoja82/lakeside-demo/issues"
   }
 }

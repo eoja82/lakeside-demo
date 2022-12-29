@@ -40,14 +40,14 @@ function Navigation() {
               <Nav className="me-auto">
                 <NavDropdown title="Products" id="collapsible-nav-dropdown" className={styles.navLink}>
                   {data.allDataJson.nodes.map(({slug}, i) => {
-                      let split = slug.split("/")
-                      let listItem = split[2].replace(/-/g, " ")
-                      return (
-                        <NavDropdown.Item as="div" key={i}>
-                          <Link to={slug} className={styles.dropdownItem}>{listItem}</Link>
-                        </NavDropdown.Item>
-                      )
-                    })}
+                    let split = slug.split("/")
+                    let listItem = split[2].replace(/-/g, " ")
+                    return (
+                      <NavDropdown.Item as="div" key={i}>
+                        <Link to={slug} className={styles.dropdownItem}>{listItem}</Link>
+                      </NavDropdown.Item>
+                    )
+                  })}
                 </NavDropdown>
                 <Nav.Link as="div">
                   <Link to="/rental" activeStyle={activeStyles} className={styles.navLink}>Rental</Link>

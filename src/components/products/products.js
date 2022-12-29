@@ -20,10 +20,10 @@ function Product(props) {
   return (
     <div>
       <Helmet>
-          <title>{`Lakeside Lumber is your source for ${titleInfo}`}</title>
-          <meta name="description" content={props.product.description + props.product.descriptionLogos} />
-          <meta name="keywords" content={`marcell, bigfok, effie, deer river, talmoon, grand rapids, ${titleInfo}`} />
-        </Helmet>
+        <title>{`Lakeside Lumber is your source for ${titleInfo}`}</title>
+        <meta name="description" content={props.product.description + props.product.descriptionLogos} />
+        <meta name="keywords" content={`marcell, bigfok, effie, deer river, talmoon, grand rapids, ${titleInfo}`} />
+      </Helmet>
       <Header text={titleInfo.toUpperCase()} />
       <Subheader text={props.product.subheader} />
       <p id={styles.description}>{props.product.description}</p>

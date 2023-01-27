@@ -32,13 +32,13 @@ const Rental = () => {
       <Quote />
       <Container>
         <Row xs={1} sm={1} md={2} lg={3} style={{paddingBottom: "2.5rem"}}>
-          {equipment.map( x => (
-            <Col className="d-flex" style={{padding: "12px"}}>
+          {equipment.map( (x, i) => (
+            <Col className="d-flex" style={{padding: "12px"}} key={i}>
               <Card>
                 <Card.Img varient="top" src={withPrefix(x.src)} style={{borderBottomLeftRadius: "0", borderBottomRightRadius: "0"}} alt={x.alt} />
                 <Card.Body className="bg-dark" style={{borderBottomLeftRadius: "calc(.25rem - 1px)", borderBottomRightRadius: "calc(.25rem - 1px)"}}>
-                  <Card.Title as="h4" className={styles.cardTitle}>{x.type}</Card.Title>
-                  <Card.Text as="ul">
+                  <Card.Title as="h4" className={styles.cardTitle + " ps-2"}>{x.type}</Card.Title>
+                  <Card.Text as="ul" className="pe-1">
                     {x.list.map( (y, i) => (
                       <Card.Text as="li" className={styles.cardText} key={i}>{y}</Card.Text>
                     ))}
